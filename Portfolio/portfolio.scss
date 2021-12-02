@@ -1,0 +1,1155 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    a{
+        text-decoration: none;
+    }
+}
+.darkMode {
+    background: rgb(255, 255, 255);
+    filter: invert(1);
+    .header{
+        button{
+            filter: invert(1);
+        }
+    }
+    .marketData {
+        z-index: 10;
+        p {
+            filter: invert(1);
+        }
+    }
+    .container002,
+    .container001 {
+        button:hover {
+            filter: invert(1);
+        }
+        img {
+            filter: invert(1);
+        }
+    }
+    .menu {
+        button {
+            filter: invert(1);
+        }
+        button:hover {
+            filter: invert(1);
+        }
+        h1:hover {
+            filter: invert(1);
+            border-bottom: 1px solid rgba(56, 56, 56, 0.672);
+        }
+        .lightbox {
+            filter: invert(0.7);
+        }
+        .newIcon{
+            filter: invert(1);
+        }
+    }
+    .market {
+        .searchBar {
+            input {
+                background-color: rgb(255, 255, 255);
+            }
+            input:focus {
+                background-color: black;
+                color: rgb(255, 255, 255);
+                filter: invert(1);
+            }
+        }
+        .coins {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .coinDiv {
+                .coinDivLeft {
+                    img {
+                        filter: invert(1);
+                    }
+                }
+                .coinDivRight {
+                    .coinDivRightPrice {
+                        filter: invert(1);
+                    }
+                }
+            }
+        }
+        .coinInfromation {
+            display: none;
+            position: fixed;
+            overflow: scroll;
+            top: 60px;
+            height: 100%;
+            width: 100%;
+            background-color: rgb(255, 255, 255);
+            .coinInfromationProfile {
+                img {
+                    filter: invert(1);
+                }
+            }
+            .coinInfromationContent {
+                .coinInfromationContentMainValue {
+                    div {
+                        h1 {
+                            filter: invert(1);
+                        }
+                        h2 {
+                            filter: invert(1);
+                        }
+                    }
+                }
+            }
+            .tradingview-widget-container {
+                filter: invert(1);
+                #tradingview_858d7 {
+                    z-index: -1;
+                }
+            }
+        }
+    }
+    .addTransaction {
+        .addTransactionHeader {
+            filter: invert(1);
+            h1 {
+                filter: invert(1);
+                font-size: 40px;
+            }
+            img {
+                filter: invert(1);
+            }
+        }
+        .addTransactionCoinInfromation {
+            .addTransactionCoinInfromationContent {
+                .addTransactionCoinInfromationProfile {
+                    img {
+                        filter: invert(1);
+                    }
+                }
+                .addTransactionCoinInfromationAmount {
+                    input {
+                        background-color: rgb(255, 255, 255);
+                        outline: none;
+                    }
+                    input:focus {
+                        border: 1px solid rgb(52, 52, 52);
+                    }
+                }
+            }
+        }
+    }
+    .portfolio {
+        .profilePortfolio {
+            .leftProfilePortfolio {
+                filter: invert(1);
+            }
+        }
+        .portfolioMain {
+            .portfolioBalance {
+                .rightCurrentPortfolioBalance{
+                    .currentPortfolioBalance24h{
+                        filter: invert(1);
+                    }
+
+                }
+            }
+            .portfolioCoins {
+                .portfolioCoinsAvilable {
+                    .portfolioCoinsAvilableCoins {
+                        .leftPortfolioCoinsAvilableCoins {
+                            img {
+                                filter: invert(1);
+                            }
+                        }
+                        .rightPortfolioCoinsAvilableCoins{
+                            h2{
+                                filter: invert(1);
+                            }
+                        }
+                    }
+                }
+                .portfolioAddCoins{
+                    filter: invert(1);
+                }
+            }
+        }
+    }
+}
+.mainContainer {
+    font-family: roboto;
+    .header {
+        position: sticky;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 60px;
+        top: 0vh;
+        z-index: 999;
+        background-color: white;
+        box-shadow: 0 4px 20px -2px rgb(237, 237, 237);
+        h1 {
+            position: absolute;
+            font-weight: 300;
+            font-size: 20px;
+            padding-left: 29px;
+            top: 0;
+        }
+        a {
+            color: black;
+            text-decoration: none;
+        }
+        .logo {
+            width: 25px;
+            margin: 18px;
+        }
+        .buyCrypto {
+            width: 120px;
+            height: 38px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(0, 153, 255);
+            color: white;
+            position: absolute;
+            right: 70px;
+            top: 11.5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .buyCrypto:hover{
+            background-color: rgb(0, 120, 200);
+        }
+        img {
+            width: 25px;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+    }
+    .menu {
+        display: none;
+        position: sticky;
+        min-height: auto;
+        padding: 0px 30px 0px 30px;
+        top: 60px;
+        z-index: 10;
+        animation: fadein 0.5s;
+        background-color: rgb(255, 255, 255);
+        h1 {
+            font-weight: 400;
+            font-size: 18px;
+            padding: 15px 0px 15px 0px;
+            cursor: pointer;
+            border-bottom: 1px solid rgba(235, 235, 235, 0.672);
+        }
+        h1:hover {
+            color: rgb(0, 153, 255);
+        }
+        a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+        }
+        button {
+            margin: 15px 20px 0px 00px;
+            width: 100%;
+            height: 35px;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            background-color: rgb(223, 223, 223);
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: rgb(0, 153, 255);
+        }
+        .exitMenuIcon {
+            width: 30px;
+        }
+        .newIcon {
+            position: absolute;
+            left: 110px;
+            top: 112px;
+            width: 34px;
+            z-index: 9;
+            cursor: pointer;
+            border-radius: 30px;
+        }
+        .btnDarkModeIcon {
+            position: absolute;
+            right: 40px;
+            bottom: 132px;
+            width: 20px;
+            z-index: 9;
+            cursor: pointer;
+            background-color: rgb(244, 244, 244);
+            padding: 3px;
+            border-radius: 5px;
+            opacity: 0.8;
+        }
+        .getStarted {
+            background-color: rgb(0, 153, 255);
+            margin-bottom: 15px;
+        }
+        .btnDownArrow{
+            width: 15px;
+            position: absolute;
+            right: 45px;
+            top: 229px;
+
+        }
+        .companyMenu{
+            display: none;
+            font-weight: 300;
+            font-size: 18px;
+            background-color: rgba(235, 235, 235, 0.466);
+            padding: 12px 30px 12px 30px;
+            margin: 0px -30px 0px -30px;
+        }
+        .lightbox {
+            position: fixed;
+            top: auto;
+            margin-left: -30px;
+            height: 72vh;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.171);
+        }
+    }
+    .marketData {
+        display: flex;
+        align-items: center;
+        height: 40px;
+        overflow: auto;
+        background-color: white;
+        border-bottom: 1px solid rgba(205, 205, 205, 0.219);
+        padding-right: 20px;
+
+        div {
+            display: flex;
+            align-items: center;
+            height: 20px;
+            margin-left: 20px;
+            h6 {
+                font-size: 11px;
+                font-weight: 400;
+                color: black;
+                white-space: nowrap;
+            }
+            p {
+                color: rgb(2, 105, 223);
+                font-size: 11px;
+                font-weight: 400;
+                margin-left: 3px;
+                white-space: nowrap;
+            }
+        }
+    }
+    .lightboxCoins {
+        position: fixed;
+        display: none;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(128, 128, 128, 0.621);
+        z-index: 999;
+    }
+    .market {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 400px;
+        height: 500px;
+        display: none;
+        background-color: white;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        border-radius: 10px;
+        z-index: 999;
+        .closeMarket {
+            position: absolute;
+            opacity: 70%;
+            width: 20px;
+            right: 15px;
+            top: 15px;
+            cursor: pointer;
+            background-color: rgba(205, 205, 205, 0.479);
+            border-radius: 5px;
+            padding: 3px;
+        }
+        .closeMarket:hover {
+            opacity: 100%;
+        }
+        .searchBar {
+            height: 110px;
+            width: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin: 0px 2vw;
+            h1 {
+                align-self: flex-start;
+                width: 90vw;
+                margin-left: 0.5vw;
+                margin-bottom: 5px;
+                font-size: 14px;
+                font-weight: 400;
+                color: rgb(42, 42, 42);
+            }
+            input {
+                width: 100%;
+                height: 37px;
+                border: 1px solid rgb(236, 236, 236);
+                outline: none;
+                margin: 5px;
+                padding: 0px 10px 0px 30px;
+                border-radius: 4px;
+                background-image: url(/image/search.png);
+                background-size: 13px;
+                background-repeat: no-repeat;
+                background-position-y: center;
+                background-position-x: 10px;
+            }
+            ::placeholder {
+                color: rgb(178, 178, 178);
+                font-size: 12px;
+                font-weight: 200;
+            }
+            input:focus {
+                border: 1px solid rgb(2, 105, 223);
+            }
+            input:focus::placeholder {
+                color: transparent;
+            }
+        }
+        .headerCoins {
+            position: sticky;
+            top: 60px;
+            display: flex;
+            height: 50px;
+            z-index: 12;
+            background-color: white;
+            border-top: 1px solid rgb(243, 243, 243);
+            border-bottom: 1px solid rgb(243, 243, 243);
+            .headerCoinsLeft {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                width: 100%;
+                h3 {
+                    color: black;
+                    margin-left: 20px;
+                    font-weight: 300;
+                    font-size: 13px;
+                }
+                .nameCoins {
+                    margin-left: 35px;
+                }
+            }
+        }
+        .coins {
+            display: block;
+            flex-direction: column;
+            align-items: center;
+            max-height: 330px;
+            overflow: auto;
+            .noResults {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: rgb(51, 51, 51);
+                height: 70px;
+                margin-top: 20px;
+                padding: 0px 15px;
+                min-width: 200px;
+                width: 300px;
+                font-size: 1em;
+                font-weight: 300;
+                background-color: rgb(242, 242, 242);
+                border-radius: 5px;
+                z-index: 2;
+            }
+            .coinDiv {
+                display: flex;
+                min-height: 50px;
+                width: 100%;
+                background-color: rgb(255, 255, 255);
+                border-bottom: 1px solid rgba(243, 243, 243, 0.726);
+                cursor: pointer;
+                z-index: 11;
+                padding-left: 10px;
+                .coinDivLeft {
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+                    width: 100%;
+                    .coinDivLeftRank {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: auto;
+                        font-size: 8px;
+                        margin-left: 5px;
+                        padding: 2px 2.5px;
+                        font-weight: 300;
+                        background-color: rgb(240, 240, 240);
+                        color: rgb(42, 42, 42);
+                        border-radius: 2px;
+                    }
+                    .coinDivLeftImg {
+                        border-radius: 50%;
+                        width: 27px;
+                        margin-left: 15px;
+                    }
+                    .coinDivLeftName {
+                        font-weight: 300;
+                        font-size: 14px;
+                        margin-left: 10px;
+                        white-space: nowrap;
+                    }
+                    .coinDivLeftSymbol {
+                        font-weight: 400;
+                        font-size: 13px;
+                        margin-left: 6px;
+                        margin-top: 0px;
+                        color: rgb(137, 137, 137);
+                    }
+                }
+                .coinDivRight {
+                    display: flex;
+                    align-items: center;
+                    justify-content: end;
+                    width: 100%;
+                    padding: 10px;
+                    .coinDivRightNext {
+                        right: 20px;
+                        width: 22px;
+                        opacity: 60%;
+                    }
+                }
+            }
+            .coinDiv:hover {
+                background-color: rgb(250, 250, 250);
+                .coinDivRight {
+                    .coinDivRightNext {
+                        opacity: 100%;
+                    }
+                }
+            }
+        }
+        .loading {
+            position: sticky;
+            margin: auto;
+            margin-top: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 40px;
+            width: 30vw;
+            background-color: rgba(238, 238, 238, 0.562);
+            border-radius: 5px;
+            z-index: 1;
+            animation: fadein 1s ease-in-out infinite;
+            h1 {
+                font-size: 1em;
+                font-weight: 300;
+            }
+        }
+    }
+    .addTransaction {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 400px;
+        height: 500px;
+        display: none;
+        background-color: rgb(255, 255, 255);
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        border-radius: 10px;
+        z-index: 999;
+        .closeTransaction {
+            position: absolute;
+            opacity: 70%;
+            width: 20px;
+            right: 15px;
+            top: 15px;
+            cursor: pointer;
+            background-color: rgba(205, 205, 205, 0.479);
+            border-radius: 5px;
+            padding: 3px;
+        }
+        .returnToMarket {
+            position: absolute;
+            opacity: 70%;
+            width: 20px;
+            left: 15px;
+            top: 15px;
+            cursor: pointer;
+            background-color: rgba(205, 205, 205, 0.479);
+            border-radius: 5px;
+            padding: 3px;
+        }
+
+        .closeTransaction:hover,.returnToMarket:hover {
+            opacity: 100%;
+        }
+        .addTransactionHeader {
+            display: flex;
+            align-items: flex-end;
+            justify-content: start;
+            height: 70px;
+            margin: 20px 30px 0px 30px;
+            border-bottom: 1px solid rgb(237, 237, 237);
+            h1 {
+                font-size: 20px;
+                font-weight: 400;
+                margin-bottom: 15px;
+            }
+            img {
+                justify-self: start;
+                width: 15px;
+                margin: 0px 0px 19px 10px;
+            }
+        }
+        .addTransactionCoinInfromation {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 350px;
+            .addTransactionCoinInfromationContent {
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+                flex-direction: column;
+                height: 170px;
+                width: 100%;
+                .addTransactionCoinInfromationProfile {
+                    display: flex;
+                    align-items: center;
+                    height: 100px;
+                    width: 100%;
+                    padding-left: 30px;
+                    img {
+                        width: 30px;
+                    }
+                    h2 {
+                        font-size: 20px;
+                        margin-left: 6px;
+                    }
+                }
+                .addTransactionCoinInfromationAmount {
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    height: 100px;
+                    width: 100%;
+                    h3 {
+                        align-self: flex-start;
+                        margin-left: 7.5%;
+                        font-size: 16px;
+                    }
+                    input {
+                        height: 50px;
+                        width: 85%;
+                        margin-top: 10px;
+                        border-radius: 5px;
+                        padding-left: 15px;
+                        border: 1px solid gray;
+                        outline: none;
+                    }
+                    input:focus {
+                        border: 1px solid rgb(0, 0, 0);
+                    }
+                }
+            }
+            .totalSpent {
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+                flex-direction: column;
+                background-color: rgb(243, 243, 243);
+                border-radius: 10px;
+                height: 120px;
+                width: 85%;
+                margin: 20px;
+                padding-left: 30px;
+                h5 {
+                    font-weight: 300;
+                }
+                h2 {
+                    margin-top: 5px;
+                    font-weight: 400;
+                }
+            }
+        }
+        .addCoinTransaction {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 40px;
+            button {
+                width: 85%;
+                height: 40px;
+                border: none;
+                border-radius: 5px;
+                background-color: rgb(243, 243, 243);
+                cursor: pointer;
+            }
+            button:hover {
+                background-color: rgb(224, 224, 224);
+            }
+        }
+    }
+    .portfolio {
+        .profilePortfolio {
+            display: flex;
+            align-items: center;
+            height: 120px;
+            box-shadow: 0 4px 10px -2px rgb(234, 234, 234);
+            .leftProfilePortfolio {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 10%;
+                img {
+                    position: absolute;
+                    right: 0;
+                    width: 35px;
+                    height: 35px;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                }
+            }
+            .rightProfilePortfolio {
+                width: 90%;
+                h1 {
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+                h2 {
+                    margin-top: 2px;
+                    font-size: 11px;
+                    font-weight: 400;
+                    color: gray;
+                }
+            }
+        }
+        .portfolioMain {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            .portfolioBalance {
+                display: flex;
+                align-items: center;
+                margin: 30px;
+                width: 95%;
+                height: 130px;
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                border-radius: 8px;
+                .leftCurrentPortfolioBalance {
+                    display: flex;
+                    justify-content: start;
+                    flex-direction: column;
+                    width: 50%;
+                    padding: 0px 30px;
+                    h3 {
+                        font-size: 17px;
+                        font-weight: 300;
+                    }
+                    h1 {
+                        margin-top: 5px;
+                        font-size: 20px;
+                        font-weight: 400;
+                    }
+                }
+                .rightCurrentPortfolioBalance {
+                    position: relative;
+                    display: flex;
+                    justify-content: start;
+                    flex-direction: column;
+                    width: 50%;
+                    h3 {
+                        font-size: 17px;
+                        font-weight: 300;
+                        margin-top: 6px;
+                    }
+                    .currentPortfolioBalance24h{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-top: 5px;
+                        font-size: 16px;
+                        font-weight: 400;
+                        background-color: rgb(176, 176, 176);
+                        color: white;
+                        border-radius: 4px;
+                        width: 70px;
+                        height: 30px;
+                        padding: 2px 4px;
+                    }
+                    .Average24hChanges{
+                        position: absolute;
+                        left: 103px;
+                        top: 4px;
+                        font-size: 12px;
+                        color: gray;
+                    }
+                }
+            }
+            .portfolioCoins {
+                width: 95%;
+                height: 54vh;
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                border-radius: 8px;
+                margin-bottom: 40px;
+                .portfolioCoinsAvilable {
+                    position: relative;
+                    height: 85%;
+                    overflow: auto;
+                    .portfolioCoinsAvilableHeader {
+                        display: flex;
+                        position: sticky;
+                        top: 0;
+                        height: 50px;
+                        width: 100%;
+                        z-index: 2;
+                        .leftPortfolioCoinsAvilableHeader {
+                            background-color: rgb(255, 255, 255);
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            padding: 0px 40px 0px 30px;
+                            height: 50px;
+                            width: 50%;
+                            border-radius: 10px 0px 0px 0px;
+                            h2 {
+                                font-size: 15px;
+                                font-weight: 300;
+                            }
+                        }
+                        .rightPortfolioCoinsAvilableHeader {
+                            background-color: rgb(255, 255, 255);
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            padding: 0px 50px 0px 40px;
+                            height: 50px;
+                            width: 50%;
+                            border-radius: 0px 10px 0px 0px;
+                            h2 {
+                                font-size: 15px;
+                                font-weight: 300;
+                            }
+                        }
+                    }
+                    .portfolioCoinsAvilableCoins {
+                        display: flex;
+                        height: 70px;
+                        border-bottom: 1px solid rgb(243, 243, 243);
+                        margin: 0px 10px;
+                        z-index: 1;
+
+                        .leftPortfolioCoinsAvilableCoins {
+                            background-color: rgb(255, 255, 255);
+                            display: flex;
+                            align-items: center;
+                            position: relative;
+                            padding: 0px 20px;
+                            width: 50%;
+                            img {
+                                width: 30px;
+                            }
+                            h2 {
+                                margin-left: 6px;
+                                font-size: 15px;
+                                font-weight: 300;
+                            }
+                            h3 {
+                                position: absolute;
+                                right: 20px;
+                                font-size: 15px;
+                                font-weight: 400;
+                            }
+                        }
+                        .rightPortfolioCoinsAvilableCoins {
+                            background-color: rgb(255, 255, 255);
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            position: relative;
+                            padding: 0px 40px;
+                            width: 50%;
+                            h2 {
+                                font-size: 15px;
+                                font-weight: 300;
+                            }
+                            .rightPortfolioCoinsAvilableCoinsHolding {
+                                display: flex;
+                                align-items: flex-end;
+                                flex-direction: column;
+                                h2 {
+                                    font-size: 15px;
+                                    font-weight: 400;
+                                }
+                                h3 {
+                                    font-size: 15px;
+                                    font-weight: 300;
+                                }
+                            }
+                        }
+                    }
+                }
+                .portfolioAddCoins {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 15%;
+
+                    button {
+                        width: 90%;
+                        height: 40px;
+                        border: none;
+                        border-radius: 5px;
+                        background-color: rgb(0, 146, 231);
+                        color: whitesmoke;
+                        cursor: pointer;
+                        z-index: 2;
+
+                    }
+                    button:hover {
+                        background-color: rgb(0, 125, 197);
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 590px) {
+
+    .mainContainer {
+        font-family: roboto;
+        .header{
+            .buyCrypto{
+                width: 110px;
+                height: 38px;
+                right: 65px;
+                top: 11.5px;
+            }
+        }
+        .market {
+            width: 90%;
+            .headerCoins {
+                display: flex;
+                height: 50px;
+                border-bottom: 1px solid rgb(243, 243, 243);
+                z-index: 12;
+
+                .headerCoinsLeft {
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+                    width: 100%;
+                    h3 {
+                        margin-left: 20px;
+                        font-weight: 300;
+                        font-size: 11px;
+                    }
+                }
+                .headerCoinsRight {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 110%;
+                    padding: 0px 10px 0px 0px;
+                    h3 {
+                        font-weight: 300;
+                        font-size: 11px;
+                    }
+                }
+            }
+            .coins {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: auto;
+                overflow-y: auto;
+                .noResults {
+                    margin-top: 50px;
+                }
+                .coinDiv {
+                    display: flex;
+                    min-height: 50px;
+                    width: 100%;
+                    background-color: rgb(255, 255, 255);
+                    border-bottom: 1px solid rgba(243, 243, 243, 0.726);
+                    border-top: none;
+                    border-radius: 0px;
+                    z-index: 11;
+                    cursor: pointer;
+                    .coinDivLeft {
+                        display: flex;
+                        justify-content: start;
+                        align-items: center;
+                        width: 50%;
+                        .coinDivLeftImg {
+                            width: 27px;
+                            margin-left: 8px;
+                        }
+                        .coinDivLeftName {
+                            font-weight: 300;
+                            font-size: 11px;
+                            margin-left: 4px;
+                            white-space: nowrap;
+                        }
+                        .coinDivLeftSymbol {
+                            font-weight: 400;
+                            font-size: 11px;
+                            margin-left: 6px;
+                            margin-top: 0px;
+                            color: rgb(137, 137, 137);
+                        }
+                    }
+                    .coinDivRight {
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-evenly;
+                        width: 60%;
+                        padding: 10px;
+                        .coinDivRightNext {
+                            position: absolute;
+                            right: 20px;
+                            width: 22px;
+                            opacity: 60%;
+                        }
+                    }
+                }
+                .coinDiv:hover {
+                    background-color: rgb(250, 250, 250);
+                }
+            }
+
+        }
+        .addTransaction {
+            width: 90%;
+        }
+        .portfolio {
+            .profilePortfolio {
+                height: 80px;
+                .leftProfilePortfolio {
+                    width: 18%;
+                }
+                .rightProfilePortfolio {
+                    h1 {
+                        font-size: 13px;
+                    }
+                }
+            }
+            .portfolioMain {
+                .portfolioBalance {
+                    margin: 10px;
+                    height: 110px;
+                    .leftCurrentPortfolioBalance {
+                        width: 60%;
+                        padding: 0px 20px;
+
+                        h3 {
+                            font-size: 13px;
+                        }
+                        h1 {
+                            font-size: 18px;
+                        }
+                    }
+                    .rightCurrentPortfolioBalance {
+                        position: relative;
+                        width: 40%;
+                        h3 {
+                            font-size: 13px;
+                        }
+                        .Average24hChanges{
+                            position: absolute;
+                            left: 80px;
+                            top: 2px;
+                            font-size: 10px;
+                            color: gray;
+                        }
+                        .currentPortfolioBalance24h {
+                            font-size: 16px;
+                            height: 25px;
+
+                        }
+
+                    }
+                }
+                .portfolioCoins {
+                    height: 480px;
+
+                    .portfolioCoinsAvilable {
+                        .portfolioCoinsAvilableHeader {
+                            .leftPortfolioCoinsAvilableHeader {
+                                width: 50%;
+                                padding: 0px 20px 0px 15px;
+                                h2 {
+                                    font-size: 12px;
+                                }
+                            }
+                            .rightPortfolioCoinsAvilableHeader {
+                                width: 50%;
+                                padding: 0px 10px 0px 35px;
+                                h2 {
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                        .portfolioCoinsAvilableCoins {
+                            .leftPortfolioCoinsAvilableCoins {
+                                width: 60%;
+
+                                padding: 0px 0px;
+                                h2 {
+                                    font-size: 11px;
+                                }
+                                h3 {
+                                    font-size: 13px;
+                                }
+                            }
+                            .rightPortfolioCoinsAvilableCoins {
+                                width: 40%;
+                                padding: 0px 0px;
+
+                                h2 {
+                                    font-size: 12px;
+                                }
+                                .rightPortfolioCoinsAvilableCoinsHolding {
+                                    h2 {
+                                        font-size: 12px;
+                                    }
+                                    h3 {
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

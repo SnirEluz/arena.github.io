@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="coverter.js" defer></script>
+    <link rel="stylesheet" href="coverter.css">
+    <title>Arena - Cryptocurrencies, Bitcoin News & Chart.</title>
+    <meta property="og:title" content="Arena - Cryptocurrency Prices, Crypto News And More..." />
+    <meta property="og:url" content="https://snireluz.github.io/ai.github.io/index.html"/>
+    <link rel="canonical" href="https://snireluz.github.io/ai.github.io/index.html">
+    <meta name="description" content="Arena is a secure platform that makes it easy to get the newest data about cryptocurrency like Bitcoin, Ethereum, and more.">
+    <meta property="og:description" content="Arena - cryptocurrency, Newest Data about cryptocurrency. Chart Price & More">
+    <meta name="keywords" content="cryptocurrency, Arena, Chart, Price, platform, Bitcoin, Ethereum, SHIBA">
+    <meta property="og:image" content="hnet.com-image.ico">
+    <meta property="og:type" content="website" />
+    <meta property="og:locale"/>
+    <link rel="icon" href="/image/image.ico">
+
+    <!-- Pages Footer -->
+    <link rel="stylesheet" href="/Footer/footer.css">
+    <script>
+        $(function () {
+            $(".footer").load("/Footer/footer.html")
+        })
+    </script>
+</head>
+<body>
+    <div class="mainContainer">
+       <div class="header">
+            <img class="logo" src="/image/blockchain.png" alt="">
+            <h1 class="logo"><a href="/HomePage/index.html">ARENA</a></h1>
+            <a href="/BuyCrypto/buycrypto.html"><button class="buyCrypto"> Buy Crypto ₿</button></a>
+            <img class="menuHeaderIcon" src="/image/menu.png" alt="">
+        </div>
+        <div class="menu">
+            <a href="/HomePage/index.html"><h1>Home</h1></a>
+            <a href="/Market/market-api.html"><h1>Market</h1></a>
+            <a href="/Portfolio/portfolio.html"><h1>Portfolio</h1></a><img class="newIcon" src="/image/new.png" alt="">
+            <a href="/Portfolio/portfolio.html"><h1>News</h1></a>
+            <a href="/BuyCrypto/buycrypto.html"><h1>Buy Crypto</h1></a>
+            <a ><h1 class="btnDown">Company</h1></a><img class="btnDownArrow" src="/image/arrow-down-sign-to-navigate.png" alt="">
+            <a href="/Privet/privet.html"><h3 class="companyMenu">About us</h3></a>
+            <a href="/Privet/privet.html"><h3 class="companyMenu">Privacy Policy</h3></a>
+            <a href="/Privet/privet.html"><h3 class="companyMenu">Terms of use</h3></a>
+            <a href="/Privet/privet.html"><h3 class="companyMenu">FAQ</h3></a>
+
+            <a class="btnDarkMode"><h1>Theme</h1></a><img class="btnDarkModeIcon" src="/image/night-mode.png" alt="">
+            <button>Log in</button>
+            <button class="getStarted">Get Started</button>
+            <div class="lightbox">
+            </div>
+        </div>
+        <div class="marketData">
+            <div>
+                <h6>Cryptos:</h6>
+                <p class="totalCryptocurrencies"> 0</p>
+            </div>
+            <div>
+                <h6>Exchanges:</h6>
+                <p class="activeExchanges"> 0</p>
+            </div>
+            <div>
+                <h6>Market Cap:</h6>
+                <p class="totalMarketCap"> 0</p>
+            </div>
+            <div>
+                <h6>24h Vol:</h6>
+                <p class="totalVolume24h"> 0</p>
+            </div>
+            <div>
+                <h6>24h:</h6>
+                <p class="totalMarketCapYesterdayPercentageChange"> 0%</p>
+            </div>
+        </div>
+        <div class="lightboxCoins">
+        </div>
+        <div class="market">
+            <img class="closeMarket" src="/image/close.png" alt="">
+            <div class="searchBar">
+                <h1>Market</h1>
+                <input type="text" class="inpSearch" placeholder="Search For Coins...">
+            </div>
+            <div class="headerCoins">
+                <div class="headerCoinsLeft">
+                    <h3 class="rankCoins">Rank</h3>
+                    <h3 class="nameCoins">Name</h3>
+                </div>
+                <div class="headerCoinsRight">
+                </div>
+            </div>
+            <div class="coins">
+            </div>
+            <div class="loading">
+                <h1>Loading...</h1>
+            </div>
+        </div>
+        <div class="mainCoverter">
+            <div class="coverter">
+                <div class="coverterHeader">
+                    <h1>Cryptocurrency Converter</h1>
+                </div>
+                <div class="coverterPage">
+                    <div class="coverterPageAmount">
+                        <h1>Amount</h1>
+                        <input class="inputAmountConverter" value="1" type="number">
+                    </div>
+                    <div class="from">
+                        <h1 >From</h1>
+                    </div>
+                    <div class="coverterPageFrom">
+                        <img class="coinSymbolImageConverter" src="/image/BitcoinConverter.png" alt="">
+                        <h1 class="coinNameConverter">Bitcoin</h1>
+                        <h2 class="coinSymbolConverter">BTC</h2>
+                        <img class="arrowDown"  src="/image/down-chevron.png" alt="">
+                    </div>
+                    <div class="to">
+                        <h1 >To</h1>
+                    </div>
+                    <div class="currency">
+                        <select name="currencySelect" class="currencySelect" id="">
+                            <option value="0">USD - US Dollar '$'</option>
+                            <option value="1">AED - United Arab Emirates dirham 'د.إ' </option>
+                            <option value="2">AFN - Afghan afghani '؋' </option>
+                            <option value="3">ALL - Albanian lek 'L' </option>
+                            <option value="4">AMD - Armenian dram '֏' </option>
+                            <option value="5">ILS - Israeli New Shekel '₪' </option>
+                            <option value="6">EUR - Euro '€'</option>
+                        </select>
+                    </div>
+                    <div class="cs">
+                        <h1>Calculation summary</h1>
+                    </div>
+                    <div class="coverterPageTo">
+                        <h1 class="coinPriceAmountConverter">1 BTC =</h1>
+                        <h1 class="coinPriceConverter"> 0 USD</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,1535 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0px;
+}
+
+* a {
+  text-decoration: none;
+}
+
+.darkMode {
+  background: white;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.darkMode .header button {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.darkMode .marketData {
+  z-index: 10;
+}
+
+.darkMode .marketData p {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.darkMode .container002 button:hover,
+.darkMode .container001 button:hover {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.darkMode .container002 img,
+.darkMode .container001 img {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.darkMode .menu button {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.darkMode .menu button:hover {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.darkMode .menu h1:hover {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  border-bottom: 1px solid rgba(56, 56, 56, 0.672);
+}
+
+.darkMode .menu .lightbox {
+  -webkit-filter: invert(0.7);
+          filter: invert(0.7);
+}
+
+.darkMode .menu .newIcon {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.darkMode .market .searchBar input {
+  background-color: white;
+}
+
+.darkMode .market .searchBar input:focus {
+  background-color: black;
+  color: white;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.darkMode .market .coins {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.darkMode .market .coins .coinDiv .coinDivLeft img {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.darkMode .market .coins .coinDiv .coinDivRight .coinDivRightPrice {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.darkMode .market .coinInfromation {
+  display: none;
+  position: fixed;
+  overflow: scroll;
+  top: 60px;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+}
+
+.darkMode .market .coinInfromation .coinInfromationProfile img {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.darkMode .market .coinInfromation .coinInfromationContent .coinInfromationContentMainValue div h1 {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.darkMode .market .coinInfromation .coinInfromationContent .coinInfromationContentMainValue div h2 {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.darkMode .market .coinInfromation .tradingview-widget-container {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.darkMode .market .coinInfromation .tradingview-widget-container #tradingview_858d7 {
+  z-index: -1;
+}
+
+.darkMode .addTransaction .addTransactionHeader {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.darkMode .addTransaction .addTransactionHeader h1 {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  font-size: 40px;
+}
+
+.darkMode .addTransaction .addTransactionHeader img {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.darkMode .addTransaction .addTransactionCoinInfromation .addTransactionCoinInfromationContent .addTransactionCoinInfromationProfile img {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.darkMode .addTransaction .addTransactionCoinInfromation .addTransactionCoinInfromationContent .addTransactionCoinInfromationAmount input {
+  background-color: white;
+  outline: none;
+}
+
+.darkMode .addTransaction .addTransactionCoinInfromation .addTransactionCoinInfromationContent .addTransactionCoinInfromationAmount input:focus {
+  border: 1px solid #343434;
+}
+
+.darkMode .portfolio .profilePortfolio .leftProfilePortfolio {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.darkMode .portfolio .portfolioMain .portfolioBalance .rightCurrentPortfolioBalance .currentPortfolioBalance24h {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.darkMode .portfolio .portfolioMain .portfolioCoins .portfolioCoinsAvilable .portfolioCoinsAvilableCoins .leftPortfolioCoinsAvilableCoins img {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.darkMode .portfolio .portfolioMain .portfolioCoins .portfolioCoinsAvilable .portfolioCoinsAvilableCoins .rightPortfolioCoinsAvilableCoins h2 {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.darkMode .portfolio .portfolioMain .portfolioCoins .portfolioAddCoins {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.mainContainer {
+  font-family: roboto;
+}
+
+.mainContainer .header {
+  position: -webkit-sticky;
+  position: sticky;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 60px;
+  top: 0vh;
+  z-index: 999;
+  background-color: white;
+  -webkit-box-shadow: 0 4px 20px -2px #ededed;
+          box-shadow: 0 4px 20px -2px #ededed;
+}
+
+.mainContainer .header h1 {
+  position: absolute;
+  font-weight: 300;
+  font-size: 20px;
+  padding-left: 29px;
+  top: 0;
+}
+
+.mainContainer .header a {
+  color: black;
+  text-decoration: none;
+}
+
+.mainContainer .header .logo {
+  width: 25px;
+  margin: 18px;
+}
+
+.mainContainer .header .buyCrypto {
+  width: 120px;
+  height: 38px;
+  border: none;
+  border-radius: 5px;
+  background-color: #0099ff;
+  color: white;
+  position: absolute;
+  right: 70px;
+  top: 11.5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.mainContainer .header .buyCrypto:hover {
+  background-color: #0078c8;
+}
+
+.mainContainer .header img {
+  width: 25px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.mainContainer .menu {
+  display: none;
+  position: -webkit-sticky;
+  position: sticky;
+  min-height: auto;
+  padding: 0px 30px 0px 30px;
+  top: 60px;
+  z-index: 10;
+  -webkit-animation: fadein 0.5s;
+          animation: fadein 0.5s;
+  background-color: white;
+}
+
+.mainContainer .menu h1 {
+  font-weight: 400;
+  font-size: 18px;
+  padding: 15px 0px 15px 0px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(235, 235, 235, 0.672);
+}
+
+.mainContainer .menu h1:hover {
+  color: #0099ff;
+}
+
+.mainContainer .menu a {
+  color: black;
+  text-decoration: none;
+}
+
+.mainContainer .menu button {
+  margin: 15px 20px 0px 00px;
+  width: 100%;
+  height: 35px;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  background-color: #dfdfdf;
+  cursor: pointer;
+}
+
+.mainContainer .menu button:hover {
+  background-color: #0099ff;
+}
+
+.mainContainer .menu .exitMenuIcon {
+  width: 30px;
+}
+
+.mainContainer .menu .newIcon {
+  position: absolute;
+  left: 110px;
+  top: 112px;
+  width: 34px;
+  z-index: 9;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+.mainContainer .menu .btnDarkModeIcon {
+  position: absolute;
+  right: 40px;
+  bottom: 132px;
+  width: 20px;
+  z-index: 9;
+  cursor: pointer;
+  background-color: #f4f4f4;
+  padding: 3px;
+  border-radius: 5px;
+  opacity: 0.8;
+}
+
+.mainContainer .menu .getStarted {
+  background-color: #0099ff;
+  margin-bottom: 15px;
+}
+
+.mainContainer .menu .btnDownArrow {
+  width: 15px;
+  position: absolute;
+  right: 45px;
+  top: 229px;
+}
+
+.mainContainer .menu .companyMenu {
+  display: none;
+  font-weight: 300;
+  font-size: 18px;
+  background-color: rgba(235, 235, 235, 0.466);
+  padding: 12px 30px 12px 30px;
+  margin: 0px -30px 0px -30px;
+}
+
+.mainContainer .menu .lightbox {
+  position: fixed;
+  top: auto;
+  margin-left: -30px;
+  height: 72vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.171);
+}
+
+.mainContainer .marketData {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 40px;
+  overflow: auto;
+  background-color: white;
+  border-bottom: 1px solid rgba(205, 205, 205, 0.219);
+  padding-right: 20px;
+}
+
+.mainContainer .marketData div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 20px;
+  margin-left: 20px;
+}
+
+.mainContainer .marketData div h6 {
+  font-size: 11px;
+  font-weight: 400;
+  color: black;
+  white-space: nowrap;
+}
+
+.mainContainer .marketData div p {
+  color: #0269df;
+  font-size: 11px;
+  font-weight: 400;
+  margin-left: 3px;
+  white-space: nowrap;
+}
+
+.mainContainer .lightboxCoins {
+  position: fixed;
+  display: none;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(128, 128, 128, 0.621);
+  z-index: 999;
+}
+
+.mainContainer .market {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 400px;
+  height: 500px;
+  display: none;
+  background-color: white;
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 10px;
+  z-index: 999;
+}
+
+.mainContainer .market .closeMarket {
+  position: absolute;
+  opacity: 70%;
+  width: 20px;
+  right: 15px;
+  top: 15px;
+  cursor: pointer;
+  background-color: rgba(205, 205, 205, 0.479);
+  border-radius: 5px;
+  padding: 3px;
+}
+
+.mainContainer .market .closeMarket:hover {
+  opacity: 100%;
+}
+
+.mainContainer .market .searchBar {
+  height: 110px;
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0px 2vw;
+}
+
+.mainContainer .market .searchBar h1 {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  width: 90vw;
+  margin-left: 0.5vw;
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #2a2a2a;
+}
+
+.mainContainer .market .searchBar input {
+  width: 100%;
+  height: 37px;
+  border: 1px solid #ececec;
+  outline: none;
+  margin: 5px;
+  padding: 0px 10px 0px 30px;
+  border-radius: 4px;
+  background-image: url(/image/search.png);
+  background-size: 13px;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 10px;
+}
+
+.mainContainer .market .searchBar ::-webkit-input-placeholder {
+  color: #b2b2b2;
+  font-size: 12px;
+  font-weight: 200;
+}
+
+.mainContainer .market .searchBar :-ms-input-placeholder {
+  color: #b2b2b2;
+  font-size: 12px;
+  font-weight: 200;
+}
+
+.mainContainer .market .searchBar ::-ms-input-placeholder {
+  color: #b2b2b2;
+  font-size: 12px;
+  font-weight: 200;
+}
+
+.mainContainer .market .searchBar ::placeholder {
+  color: #b2b2b2;
+  font-size: 12px;
+  font-weight: 200;
+}
+
+.mainContainer .market .searchBar input:focus {
+  border: 1px solid #0269df;
+}
+
+.mainContainer .market .searchBar input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.mainContainer .market .searchBar input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.mainContainer .market .searchBar input:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+.mainContainer .market .searchBar input:focus::placeholder {
+  color: transparent;
+}
+
+.mainContainer .market .headerCoins {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50px;
+  z-index: 12;
+  background-color: white;
+  border-top: 1px solid #f3f3f3;
+  border-bottom: 1px solid #f3f3f3;
+}
+
+.mainContainer .market .headerCoins .headerCoinsLeft {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.mainContainer .market .headerCoins .headerCoinsLeft h3 {
+  color: black;
+  margin-left: 20px;
+  font-weight: 300;
+  font-size: 13px;
+}
+
+.mainContainer .market .headerCoins .headerCoinsLeft .nameCoins {
+  margin-left: 35px;
+}
+
+.mainContainer .market .coins {
+  display: block;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-height: 330px;
+  overflow: auto;
+}
+
+.mainContainer .market .coins .noResults {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #333333;
+  height: 70px;
+  margin-top: 20px;
+  padding: 0px 15px;
+  min-width: 200px;
+  width: 300px;
+  font-size: 1em;
+  font-weight: 300;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  z-index: 2;
+}
+
+.mainContainer .market .coins .coinDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 50px;
+  width: 100%;
+  background-color: white;
+  border-bottom: 1px solid rgba(243, 243, 243, 0.726);
+  cursor: pointer;
+  z-index: 11;
+  padding-left: 10px;
+}
+
+.mainContainer .market .coins .coinDiv .coinDivLeft {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.mainContainer .market .coins .coinDiv .coinDivLeft .coinDivLeftRank {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: auto;
+  font-size: 8px;
+  margin-left: 5px;
+  padding: 2px 2.5px;
+  font-weight: 300;
+  background-color: #f0f0f0;
+  color: #2a2a2a;
+  border-radius: 2px;
+}
+
+.mainContainer .market .coins .coinDiv .coinDivLeft .coinDivLeftImg {
+  border-radius: 50%;
+  width: 27px;
+  margin-left: 15px;
+}
+
+.mainContainer .market .coins .coinDiv .coinDivLeft .coinDivLeftName {
+  font-weight: 300;
+  font-size: 14px;
+  margin-left: 10px;
+  white-space: nowrap;
+}
+
+.mainContainer .market .coins .coinDiv .coinDivLeft .coinDivLeftSymbol {
+  font-weight: 400;
+  font-size: 13px;
+  margin-left: 6px;
+  margin-top: 0px;
+  color: #898989;
+}
+
+.mainContainer .market .coins .coinDiv .coinDivRight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  width: 100%;
+  padding: 10px;
+}
+
+.mainContainer .market .coins .coinDiv .coinDivRight .coinDivRightNext {
+  right: 20px;
+  width: 22px;
+  opacity: 60%;
+}
+
+.mainContainer .market .coins .coinDiv:hover {
+  background-color: #fafafa;
+}
+
+.mainContainer .market .coins .coinDiv:hover .coinDivRight .coinDivRightNext {
+  opacity: 100%;
+}
+
+.mainContainer .market .loading {
+  position: -webkit-sticky;
+  position: sticky;
+  margin: auto;
+  margin-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 40px;
+  width: 30vw;
+  background-color: rgba(238, 238, 238, 0.562);
+  border-radius: 5px;
+  z-index: 1;
+  -webkit-animation: fadein 1s ease-in-out infinite;
+          animation: fadein 1s ease-in-out infinite;
+}
+
+.mainContainer .market .loading h1 {
+  font-size: 1em;
+  font-weight: 300;
+}
+
+.mainContainer .addTransaction {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 400px;
+  height: 500px;
+  display: none;
+  background-color: white;
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 10px;
+  z-index: 999;
+}
+
+.mainContainer .addTransaction .closeTransaction {
+  position: absolute;
+  opacity: 70%;
+  width: 20px;
+  right: 15px;
+  top: 15px;
+  cursor: pointer;
+  background-color: rgba(205, 205, 205, 0.479);
+  border-radius: 5px;
+  padding: 3px;
+}
+
+.mainContainer .addTransaction .returnToMarket {
+  position: absolute;
+  opacity: 70%;
+  width: 20px;
+  left: 15px;
+  top: 15px;
+  cursor: pointer;
+  background-color: rgba(205, 205, 205, 0.479);
+  border-radius: 5px;
+  padding: 3px;
+}
+
+.mainContainer .addTransaction .closeTransaction:hover, .mainContainer .addTransaction .returnToMarket:hover {
+  opacity: 100%;
+}
+
+.mainContainer .addTransaction .addTransactionHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  height: 70px;
+  margin: 20px 30px 0px 30px;
+  border-bottom: 1px solid #ededed;
+}
+
+.mainContainer .addTransaction .addTransactionHeader h1 {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.mainContainer .addTransaction .addTransactionHeader img {
+  -ms-grid-column-align: start;
+      justify-self: start;
+  width: 15px;
+  margin: 0px 0px 19px 10px;
+}
+
+.mainContainer .addTransaction .addTransactionCoinInfromation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 350px;
+}
+
+.mainContainer .addTransaction .addTransactionCoinInfromation .addTransactionCoinInfromationContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 170px;
+  width: 100%;
+}
+
+.mainContainer .addTransaction .addTransactionCoinInfromation .addTransactionCoinInfromationContent .addTransactionCoinInfromationProfile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100px;
+  width: 100%;
+  padding-left: 30px;
+}
+
+.mainContainer .addTransaction .addTransactionCoinInfromation .addTransactionCoinInfromationContent .addTransactionCoinInfromationProfile img {
+  width: 30px;
+}
+
+.mainContainer .addTransaction .addTransactionCoinInfromation .addTransactionCoinInfromationContent .addTransactionCoinInfromationProfile h2 {
+  font-size: 20px;
+  margin-left: 6px;
+}
+
+.mainContainer .addTransaction .addTransactionCoinInfromation .addTransactionCoinInfromationContent .addTransactionCoinInfromationAmount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100px;
+  width: 100%;
+}
+
+.mainContainer .addTransaction .addTransactionCoinInfromation .addTransactionCoinInfromationContent .addTransactionCoinInfromationAmount h3 {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-left: 7.5%;
+  font-size: 16px;
+}
+
+.mainContainer .addTransaction .addTransactionCoinInfromation .addTransactionCoinInfromationContent .addTransactionCoinInfromationAmount input {
+  height: 50px;
+  width: 85%;
+  margin-top: 10px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid gray;
+  outline: none;
+}
+
+.mainContainer .addTransaction .addTransactionCoinInfromation .addTransactionCoinInfromationContent .addTransactionCoinInfromationAmount input:focus {
+  border: 1px solid black;
+}
+
+.mainContainer .addTransaction .addTransactionCoinInfromation .totalSpent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  height: 120px;
+  width: 85%;
+  margin: 20px;
+  padding-left: 30px;
+}
+
+.mainContainer .addTransaction .addTransactionCoinInfromation .totalSpent h5 {
+  font-weight: 300;
+}
+
+.mainContainer .addTransaction .addTransactionCoinInfromation .totalSpent h2 {
+  margin-top: 5px;
+  font-weight: 400;
+}
+
+.mainContainer .addTransaction .addCoinTransaction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 40px;
+}
+
+.mainContainer .addTransaction .addCoinTransaction button {
+  width: 85%;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f3f3f3;
+  cursor: pointer;
+}
+
+.mainContainer .addTransaction .addCoinTransaction button:hover {
+  background-color: #e0e0e0;
+}
+
+.mainContainer .portfolio .profilePortfolio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 120px;
+  -webkit-box-shadow: 0 4px 10px -2px #eaeaea;
+          box-shadow: 0 4px 10px -2px #eaeaea;
+}
+
+.mainContainer .portfolio .profilePortfolio .leftProfilePortfolio {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 10%;
+}
+
+.mainContainer .portfolio .profilePortfolio .leftProfilePortfolio img {
+  position: absolute;
+  right: 0;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.mainContainer .portfolio .profilePortfolio .rightProfilePortfolio {
+  width: 90%;
+}
+
+.mainContainer .portfolio .profilePortfolio .rightProfilePortfolio h1 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.mainContainer .portfolio .profilePortfolio .rightProfilePortfolio h2 {
+  margin-top: 2px;
+  font-size: 11px;
+  font-weight: 400;
+  color: gray;
+}
+
+.mainContainer .portfolio .portfolioMain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.mainContainer .portfolio .portfolioMain .portfolioBalance {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 30px;
+  width: 95%;
+  height: 130px;
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 8px;
+}
+
+.mainContainer .portfolio .portfolioMain .portfolioBalance .leftCurrentPortfolioBalance {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+  padding: 0px 30px;
+}
+
+.mainContainer .portfolio .portfolioMain .portfolioBalance .leftCurrentPortfolioBalance h3 {
+  font-size: 17px;
+  font-weight: 300;
+}
+
+.mainContainer .portfolio .portfolioMain .portfolioBalance .leftCurrentPortfolioBalance h1 {
+  margin-top: 5px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.mainContainer .portfolio .portfolioMain .portfolioBalance .rightCurrentPortfolioBalance {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+}
+
+.mainContainer .portfolio .portfolioMain .portfolioBalance .rightCurrentPortfolioBalance h3 {
+  font-size: 17px;
+  font-weight: 300;
+  margin-top: 6px;
+}
+
+.mainContainer .portfolio .portfolioMain .portfolioBalance .rightCurrentPortfolioBalance .currentPortfolioBalance24h {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: #b0b0b0;
+  color: white;
+  border-radius: 4px;
+  width: 70px;
+  height: 30px;
+  padding: 2px 4px;
+}
+
+.mainContainer .portfolio .portfolioMain .portfolioBalance .rightCurrentPortfolioBalance .Average24hChanges {
+  position: absolute;
+  left: 103px;
+  top: 4px;
+  font-size: 12px;
+  color: gray;
+}
+
+.mainContainer .portfolio .portfolioMain .portfolioCoins {
+  width: 95%;
+  height: 54vh;
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+
+.mainContainer .portfolio .portfolioMain .portfolioCoins .portfolioCoinsAvilable {
+  position: relative;
+  height: 85%;
+  overflow: auto;
+}
+
+.mainContainer .portfolio .portfolioMain .portfolioCoins .portfolioCoinsAvilable .portfolioCoinsAvilableHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: 50px;
+  width: 100%;
+  z-index: 2;
+}
+
+.mainContainer .portfolio .portfolioMain .portfolioCoins .portfolioCoinsAvilable .portfolioCoinsAvilableHeader .leftPortfolioCoinsAvilableHeader {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0px 40px 0px 30px;
+  height: 50px;
+  width: 50%;
+  border-radius: 10px 0px 0px 0px;
+}
+
+.mainContainer .portfolio .portfolioMain .portfolioCoins .portfolioCoinsAvilable .portfolioCoinsAvilableHeader .leftPortfolioCoinsAvilableHeader h2 {
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.mainContainer .portfolio .portfolioMain .portfolioCoins .portfolioCoinsAvilable .portfolioCoinsAvilableHeader .rightPortfolioCoinsAvilableHeader {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0px 50px 0px 40px;
+  height: 50px;
+  width: 50%;
+  border-radius: 0px 10px 0px 0px;
+}
+
+.mainContainer .portfolio .portfolioMain .portfolioCoins .portfolioCoinsAvilable .portfolioCoinsAvilableHeader .rightPortfolioCoinsAvilableHeader h2 {
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.mainContainer .portfolio .portfolioMain .portfolioCoins .portfolioCoinsAvilable .portfolioCoinsAvilableCoins {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 70px;
+  border-bottom: 1px solid #f3f3f3;
+  margin: 0px 10px;
+  z-index: 1;
+}
+
+.mainContainer .portfolio .portfolioMain .portfolioCoins .portfolioCoinsAvilable .portfolioCoinsAvilableCoins .leftPortfolioCoinsAvilableCoins {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  padding: 0px 20px;
+  width: 50%;
+}
+
+.mainContainer .portfolio .portfolioMain .portfolioCoins .portfolioCoinsAvilable .portfolioCoinsAvilableCoins .leftPortfolioCoinsAvilableCoins img {
+  width: 30px;
+}
+
+.mainContainer .portfolio .portfolioMain .portfolioCoins .portfolioCoinsAvilable .portfolioCoinsAvilableCoins .leftPortfolioCoinsAvilableCoins h2 {
+  margin-left: 6px;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.mainContainer .portfolio .portfolioMain .portfolioCoins .portfolioCoinsAvilable .portfolioCoinsAvilableCoins .leftPortfolioCoinsAvilableCoins h3 {
+  position: absolute;
+  right: 20px;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.mainContainer .portfolio .portfolioMain .portfolioCoins .portfolioCoinsAvilable .portfolioCoinsAvilableCoins .rightPortfolioCoinsAvilableCoins {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  padding: 0px 40px;
+  width: 50%;
+}
+
+.mainContainer .portfolio .portfolioMain .portfolioCoins .portfolioCoinsAvilable .portfolioCoinsAvilableCoins .rightPortfolioCoinsAvilableCoins h2 {
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.mainContainer .portfolio .portfolioMain .portfolioCoins .portfolioCoinsAvilable .portfolioCoinsAvilableCoins .rightPortfolioCoinsAvilableCoins .rightPortfolioCoinsAvilableCoinsHolding {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.mainContainer .portfolio .portfolioMain .portfolioCoins .portfolioCoinsAvilable .portfolioCoinsAvilableCoins .rightPortfolioCoinsAvilableCoins .rightPortfolioCoinsAvilableCoinsHolding h2 {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.mainContainer .portfolio .portfolioMain .portfolioCoins .portfolioCoinsAvilable .portfolioCoinsAvilableCoins .rightPortfolioCoinsAvilableCoins .rightPortfolioCoinsAvilableCoinsHolding h3 {
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.mainContainer .portfolio .portfolioMain .portfolioCoins .portfolioAddCoins {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 15%;
+}
+
+.mainContainer .portfolio .portfolioMain .portfolioCoins .portfolioAddCoins button {
+  width: 90%;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background-color: #0092e7;
+  color: whitesmoke;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.mainContainer .portfolio .portfolioMain .portfolioCoins .portfolioAddCoins button:hover {
+  background-color: #007dc5;
+}
+
+@media (max-width: 590px) {
+  .mainContainer {
+    font-family: roboto;
+  }
+  .mainContainer .header .buyCrypto {
+    width: 110px;
+    height: 38px;
+    right: 65px;
+    top: 11.5px;
+  }
+  .mainContainer .market {
+    width: 90%;
+  }
+  .mainContainer .market .headerCoins {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 50px;
+    border-bottom: 1px solid #f3f3f3;
+    z-index: 12;
+  }
+  .mainContainer .market .headerCoins .headerCoinsLeft {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  .mainContainer .market .headerCoins .headerCoinsLeft h3 {
+    margin-left: 20px;
+    font-weight: 300;
+    font-size: 11px;
+  }
+  .mainContainer .market .headerCoins .headerCoinsRight {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 110%;
+    padding: 0px 10px 0px 0px;
+  }
+  .mainContainer .market .headerCoins .headerCoinsRight h3 {
+    font-weight: 300;
+    font-size: 11px;
+  }
+  .mainContainer .market .coins {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: auto;
+    overflow-y: auto;
+  }
+  .mainContainer .market .coins .noResults {
+    margin-top: 50px;
+  }
+  .mainContainer .market .coins .coinDiv {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 50px;
+    width: 100%;
+    background-color: white;
+    border-bottom: 1px solid rgba(243, 243, 243, 0.726);
+    border-top: none;
+    border-radius: 0px;
+    z-index: 11;
+    cursor: pointer;
+  }
+  .mainContainer .market .coins .coinDiv .coinDivLeft {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 50%;
+  }
+  .mainContainer .market .coins .coinDiv .coinDivLeft .coinDivLeftImg {
+    width: 27px;
+    margin-left: 8px;
+  }
+  .mainContainer .market .coins .coinDiv .coinDivLeft .coinDivLeftName {
+    font-weight: 300;
+    font-size: 11px;
+    margin-left: 4px;
+    white-space: nowrap;
+  }
+  .mainContainer .market .coins .coinDiv .coinDivLeft .coinDivLeftSymbol {
+    font-weight: 400;
+    font-size: 11px;
+    margin-left: 6px;
+    margin-top: 0px;
+    color: #898989;
+  }
+  .mainContainer .market .coins .coinDiv .coinDivRight {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    width: 60%;
+    padding: 10px;
+  }
+  .mainContainer .market .coins .coinDiv .coinDivRight .coinDivRightNext {
+    position: absolute;
+    right: 20px;
+    width: 22px;
+    opacity: 60%;
+  }
+  .mainContainer .market .coins .coinDiv:hover {
+    background-color: #fafafa;
+  }
+  .mainContainer .addTransaction {
+    width: 90%;
+  }
+  .mainContainer .portfolio .profilePortfolio {
+    height: 80px;
+  }
+  .mainContainer .portfolio .profilePortfolio .leftProfilePortfolio {
+    width: 18%;
+  }
+  .mainContainer .portfolio .profilePortfolio .rightProfilePortfolio h1 {
+    font-size: 13px;
+  }
+  .mainContainer .portfolio .portfolioMain .portfolioBalance {
+    margin: 10px;
+    height: 110px;
+  }
+  .mainContainer .portfolio .portfolioMain .portfolioBalance .leftCurrentPortfolioBalance {
+    width: 60%;
+    padding: 0px 20px;
+  }
+  .mainContainer .portfolio .portfolioMain .portfolioBalance .leftCurrentPortfolioBalance h3 {
+    font-size: 13px;
+  }
+  .mainContainer .portfolio .portfolioMain .portfolioBalance .leftCurrentPortfolioBalance h1 {
+    font-size: 18px;
+  }
+  .mainContainer .portfolio .portfolioMain .portfolioBalance .rightCurrentPortfolioBalance {
+    position: relative;
+    width: 40%;
+  }
+  .mainContainer .portfolio .portfolioMain .portfolioBalance .rightCurrentPortfolioBalance h3 {
+    font-size: 13px;
+  }
+  .mainContainer .portfolio .portfolioMain .portfolioBalance .rightCurrentPortfolioBalance .Average24hChanges {
+    position: absolute;
+    left: 80px;
+    top: 2px;
+    font-size: 10px;
+    color: gray;
+  }
+  .mainContainer .portfolio .portfolioMain .portfolioBalance .rightCurrentPortfolioBalance .currentPortfolioBalance24h {
+    font-size: 16px;
+    height: 25px;
+  }
+  .mainContainer .portfolio .portfolioMain .portfolioCoins {
+    height: 480px;
+  }
+  .mainContainer .portfolio .portfolioMain .portfolioCoins .portfolioCoinsAvilable .portfolioCoinsAvilableHeader .leftPortfolioCoinsAvilableHeader {
+    width: 50%;
+    padding: 0px 20px 0px 15px;
+  }
+  .mainContainer .portfolio .portfolioMain .portfolioCoins .portfolioCoinsAvilable .portfolioCoinsAvilableHeader .leftPortfolioCoinsAvilableHeader h2 {
+    font-size: 12px;
+  }
+  .mainContainer .portfolio .portfolioMain .portfolioCoins .portfolioCoinsAvilable .portfolioCoinsAvilableHeader .rightPortfolioCoinsAvilableHeader {
+    width: 50%;
+    padding: 0px 10px 0px 35px;
+  }
+  .mainContainer .portfolio .portfolioMain .portfolioCoins .portfolioCoinsAvilable .portfolioCoinsAvilableHeader .rightPortfolioCoinsAvilableHeader h2 {
+    font-size: 12px;
+  }
+  .mainContainer .portfolio .portfolioMain .portfolioCoins .portfolioCoinsAvilable .portfolioCoinsAvilableCoins .leftPortfolioCoinsAvilableCoins {
+    width: 60%;
+    padding: 0px 0px;
+  }
+  .mainContainer .portfolio .portfolioMain .portfolioCoins .portfolioCoinsAvilable .portfolioCoinsAvilableCoins .leftPortfolioCoinsAvilableCoins h2 {
+    font-size: 11px;
+  }
+  .mainContainer .portfolio .portfolioMain .portfolioCoins .portfolioCoinsAvilable .portfolioCoinsAvilableCoins .leftPortfolioCoinsAvilableCoins h3 {
+    font-size: 13px;
+  }
+  .mainContainer .portfolio .portfolioMain .portfolioCoins .portfolioCoinsAvilable .portfolioCoinsAvilableCoins .rightPortfolioCoinsAvilableCoins {
+    width: 40%;
+    padding: 0px 0px;
+  }
+  .mainContainer .portfolio .portfolioMain .portfolioCoins .portfolioCoinsAvilable .portfolioCoinsAvilableCoins .rightPortfolioCoinsAvilableCoins h2 {
+    font-size: 12px;
+  }
+  .mainContainer .portfolio .portfolioMain .portfolioCoins .portfolioCoinsAvilable .portfolioCoinsAvilableCoins .rightPortfolioCoinsAvilableCoins .rightPortfolioCoinsAvilableCoinsHolding h2 {
+    font-size: 12px;
+  }
+  .mainContainer .portfolio .portfolioMain .portfolioCoins .portfolioCoinsAvilable .portfolioCoinsAvilableCoins .rightPortfolioCoinsAvilableCoins .rightPortfolioCoinsAvilableCoinsHolding h3 {
+    font-size: 14px;
+  }
+}
+
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=portfolio.css.map */

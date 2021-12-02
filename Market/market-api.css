@@ -1,0 +1,1653 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0px;
+}
+
+* a {
+  text-decoration: none;
+}
+
+.darkMode {
+  background: white;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.darkMode .header button {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.darkMode .menu button {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.darkMode .menu button:hover {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.darkMode .menu h1:hover {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  border-bottom: 1px solid rgba(56, 56, 56, 0.672);
+}
+
+.darkMode .menu .lightbox {
+  -webkit-filter: invert(0.7);
+          filter: invert(0.7);
+}
+
+.darkMode .menu .newIcon {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.darkMode .header {
+  z-index: 998;
+}
+
+.darkMode .header img {
+  z-index: 999;
+}
+
+.darkMode .marketData {
+  z-index: 10;
+}
+
+.darkMode .marketData p {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.darkMode .market .searchBar .watchListBtn, .darkMode .market .searchBar .portfolioBtn, .darkMode .market .searchBar .marketOverviewBtn, .darkMode .market .searchBar .watchListBtn {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.darkMode .market .searchBar input {
+  background-color: white;
+}
+
+.darkMode .market .searchBar input:focus {
+  background-color: black;
+  color: white;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.darkMode .market .coins {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.darkMode .market .coins .coinDiv .coinDivLeft img {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.darkMode .market .coins .coinDiv .coinDivRight {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.darkMode .market .coins .coinDiv .coinDivRight .coinDivRightPrice {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.darkMode .market .coinInfromation {
+  display: none;
+  position: fixed;
+  overflow: scroll;
+  top: 60px;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+}
+
+.darkMode .market .coinInfromation .coinInfromationProfile img {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.darkMode .market .coinInfromation .coinInfromationContent .coinInfromationContentMainValue div h1 {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.darkMode .market .coinInfromation .coinInfromationContent .coinInfromationContentMainValue div h2 {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.darkMode .market .coinInfromation .tradingview-widget-container {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.darkMode .market .coinInfromation .tradingview-widget-container #tradingview_858d7 {
+  z-index: -1;
+}
+
+.mainContainer {
+  font-family: roboto;
+  background-color: rgba(235, 235, 235, 0.37);
+}
+
+.mainContainer .header {
+  position: -webkit-sticky;
+  position: sticky;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 60px;
+  top: 0vh;
+  z-index: 999;
+  background-color: white;
+  -webkit-box-shadow: 0 4px 20px -2px #ededed;
+          box-shadow: 0 4px 20px -2px #ededed;
+}
+
+.mainContainer .header h1 {
+  position: absolute;
+  font-weight: 300;
+  font-size: 20px;
+  padding-left: 29px;
+  top: 0;
+}
+
+.mainContainer .header a {
+  color: black;
+  text-decoration: none;
+}
+
+.mainContainer .header .logo {
+  width: 25px;
+  margin: 18px;
+}
+
+.mainContainer .header .buyCrypto {
+  width: 120px;
+  height: 38px;
+  border: none;
+  border-radius: 5px;
+  background-color: #0099ff;
+  color: white;
+  position: absolute;
+  right: 70px;
+  top: 11.5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.mainContainer .header .buyCrypto:hover {
+  background-color: #0078c8;
+}
+
+.mainContainer .header img {
+  width: 25px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.mainContainer .menu {
+  display: none;
+  position: -webkit-sticky;
+  position: sticky;
+  min-height: auto;
+  padding: 0px 30px 0px 30px;
+  top: 60px;
+  z-index: 10;
+  -webkit-animation: fadein 0.5s;
+          animation: fadein 0.5s;
+  background-color: white;
+}
+
+.mainContainer .menu h1 {
+  font-weight: 400;
+  font-size: 18px;
+  padding: 15px 0px 15px 0px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(235, 235, 235, 0.672);
+}
+
+.mainContainer .menu h1:hover {
+  color: #0099ff;
+}
+
+.mainContainer .menu a {
+  color: black;
+  text-decoration: none;
+}
+
+.mainContainer .menu button {
+  margin: 15px 20px 0px 00px;
+  width: 100%;
+  height: 35px;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  background-color: #dfdfdf;
+  cursor: pointer;
+}
+
+.mainContainer .menu button:hover {
+  background-color: #0099ff;
+}
+
+.mainContainer .menu .exitMenuIcon {
+  width: 30px;
+}
+
+.mainContainer .menu .newIcon {
+  position: absolute;
+  left: 110px;
+  top: 112px;
+  width: 34px;
+  z-index: 9;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+.mainContainer .menu .btnDarkModeIcon {
+  position: absolute;
+  right: 40px;
+  bottom: 132px;
+  width: 20px;
+  z-index: 9;
+  cursor: pointer;
+  background-color: #f4f4f4;
+  padding: 3px;
+  border-radius: 5px;
+  opacity: 0.8;
+}
+
+.mainContainer .menu .getStarted {
+  background-color: #0099ff;
+  margin-bottom: 15px;
+}
+
+.mainContainer .menu .btnDownArrow {
+  width: 15px;
+  position: absolute;
+  right: 45px;
+  top: 229px;
+}
+
+.mainContainer .menu .companyMenu {
+  display: none;
+  font-weight: 300;
+  font-size: 18px;
+  background-color: rgba(235, 235, 235, 0.466);
+  padding: 12px 30px 12px 30px;
+  margin: 0px -30px 0px -30px;
+}
+
+.mainContainer .menu .lightbox {
+  position: fixed;
+  top: auto;
+  margin-left: -30px;
+  height: 72vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.171);
+}
+
+.mainContainer .marketData {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 40px;
+  overflow: auto;
+  background-color: white;
+  border-bottom: 1px solid rgba(205, 205, 205, 0.219);
+  padding-right: 20px;
+}
+
+.mainContainer .marketData div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 20px;
+  margin-left: 20px;
+}
+
+.mainContainer .marketData div h6 {
+  font-size: 11px;
+  font-weight: 400;
+  color: black;
+  white-space: nowrap;
+}
+
+.mainContainer .marketData div p {
+  color: #0269df;
+  font-size: 11px;
+  font-weight: 400;
+  margin-left: 3px;
+  white-space: nowrap;
+}
+
+.mainContainer .market .searchBar {
+  height: auto;
+  width: 90vw;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0px 4vw;
+}
+
+.mainContainer .market .searchBar h1 {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  width: 90vw;
+  margin: 20px 5px 0px 1vw;
+  font-size: 17px;
+  font-weight: 400;
+  color: #2a2a2a;
+}
+
+.mainContainer .market .searchBar .searchBarMain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.mainContainer .market .searchBar .searchBarMain input {
+  width: 90vw;
+  height: 37px;
+  border: 1px solid rgba(205, 205, 205, 0.219);
+  outline: none;
+  margin: 5px;
+  padding: 0px 120px 0px 30px;
+  border-radius: 4px;
+  background-image: url(/image/search.png);
+  background-size: 13px;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 10px;
+}
+
+.mainContainer .market .searchBar .searchBarMain ::-webkit-input-placeholder {
+  color: #b2b2b2;
+  font-size: 12px;
+  font-weight: 200;
+}
+
+.mainContainer .market .searchBar .searchBarMain :-ms-input-placeholder {
+  color: #b2b2b2;
+  font-size: 12px;
+  font-weight: 200;
+}
+
+.mainContainer .market .searchBar .searchBarMain ::-ms-input-placeholder {
+  color: #b2b2b2;
+  font-size: 12px;
+  font-weight: 200;
+}
+
+.mainContainer .market .searchBar .searchBarMain ::placeholder {
+  color: #b2b2b2;
+  font-size: 12px;
+  font-weight: 200;
+}
+
+.mainContainer .market .searchBar .searchBarMain input:focus {
+  border: 1px solid #0269df;
+}
+
+.mainContainer .market .searchBar .searchBarMain input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.mainContainer .market .searchBar .searchBarMain input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.mainContainer .market .searchBar .searchBarMain input:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+.mainContainer .market .searchBar .searchBarMain input:focus::placeholder {
+  color: transparent;
+}
+
+.mainContainer .market .searchBar .searchBarMain .clearInput {
+  position: absolute;
+  opacity: 90%;
+  width: 17px;
+  right: 89px;
+  bottom: 85px;
+  cursor: pointer;
+  background-color: rgba(205, 205, 205, 0.219);
+  border-radius: 5px;
+  padding: 4px;
+}
+
+.mainContainer .market .searchBar .searchBarMain button {
+  position: absolute;
+  height: 35px;
+  margin: 6px 1px 5px 0px;
+  border-radius: 0px 4px 4px 0px;
+  border: 0px;
+  width: 80px;
+  right: 0px;
+  background-color: rgba(205, 205, 205, 0.219);
+  cursor: pointer;
+}
+
+.mainContainer .market .searchBar .searchBarMain button:hover, .mainContainer .market .searchBar .searchBarMain .clearInput:hover {
+  background: #e9e9e9;
+}
+
+.mainContainer .market .searchBar .marketValues {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60px;
+  width: 100vw;
+  margin-left: 2vw;
+  padding: 0px 15px;
+  overflow: auto;
+  background-color: white;
+  border: 5px solid white;
+  border-radius: 30px 30px 0px 0px;
+}
+
+.mainContainer .market .searchBar .marketValues button {
+  margin-right: 12px;
+  min-width: auto;
+  height: 28px;
+  border: none;
+  background-color: #fbfbfb;
+  color: #414141;
+  border-radius: 5px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.mainContainer .market .searchBar .marketValues a {
+  text-decoration: none;
+}
+
+.mainContainer .market .searchBar .marketValues .watchListBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 100px;
+  background-color: rgba(232, 243, 255, 0.548);
+  color: #006ba9;
+  padding-right: 10px;
+}
+
+.mainContainer .market .searchBar .marketValues .watchListBtn img {
+  margin: 0px 4px 2px 0px;
+  opacity: 0.2;
+  width: 14px;
+}
+
+.mainContainer .market .searchBar .marketValues .portfolioBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 90px;
+  background-color: rgba(232, 243, 255, 0.568);
+  color: #006ba9;
+  padding-right: 10px;
+}
+
+.mainContainer .market .searchBar .marketValues .portfolioBtn img {
+  margin: 0px 4px 1px 0px;
+  opacity: 0.2;
+  width: 12px;
+}
+
+.mainContainer .market .searchBar .marketValues .marketOverviewBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 140px;
+  background-color: rgba(232, 243, 255, 0.568);
+  color: #006ba9;
+  padding-right: 10px;
+}
+
+.mainContainer .market .searchBar .marketValues .marketOverviewBtn img {
+  margin: 0px 4px 1px 0px;
+  opacity: 0.2;
+  width: 12px;
+}
+
+.mainContainer .market .searchBar .marketValues .watchListBtn:hover,
+.mainContainer .market .searchBar .marketValues .portfolioBtn:hover,
+.mainContainer .market .searchBar .marketValues .marketOverviewBtn:hover {
+  background-color: rgba(211, 232, 255, 0.548);
+}
+
+.mainContainer .market .headerCoins {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50px;
+  border-radius: 2px;
+  z-index: 9;
+  background-color: white;
+}
+
+.mainContainer .market .headerCoins img {
+  width: 5px;
+  margin: 0px 4px 2px 0px;
+}
+
+.mainContainer .market .headerCoins .headerCoinsLeft {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.mainContainer .market .headerCoins .headerCoinsLeft .changeRankArrowClick {
+  position: relative;
+}
+
+.mainContainer .market .headerCoins .headerCoinsLeft .changeRankArrowClick .changeRankArrowUp {
+  opacity: 0.4;
+  position: absolute;
+  top: 3px;
+  right: 33px;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+.mainContainer .market .headerCoins .headerCoinsLeft .changeRankArrowClick .changeRankArrowDown {
+  opacity: 0.4;
+  position: absolute;
+  top: 9px;
+  right: 33px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.mainContainer .market .headerCoins .headerCoinsLeft h3 {
+  color: black;
+  cursor: pointer;
+  margin-left: 20px;
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.mainContainer .market .headerCoins .headerCoinsLeft .nameCoins {
+  margin-left: 35px;
+  cursor: text;
+}
+
+.mainContainer .market .headerCoins .headerCoinsRight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding: 0px 20px 0px 10px;
+}
+
+.mainContainer .market .headerCoins .headerCoinsRight .changePriceArrowClick {
+  position: relative;
+}
+
+.mainContainer .market .headerCoins .headerCoinsRight .changePriceArrowClick .changePriceArrowUp {
+  opacity: 0.4;
+  position: absolute;
+  top: 3px;
+  right: 33px;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+.mainContainer .market .headerCoins .headerCoinsRight .changePriceArrowClick .changePriceArrowDown {
+  opacity: 0.4;
+  position: absolute;
+  top: 9px;
+  right: 33px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.mainContainer .market .headerCoins .headerCoinsRight .change24hArrowClick {
+  position: relative;
+}
+
+.mainContainer .market .headerCoins .headerCoinsRight .change24hArrowClick .change24hArrowUp {
+  opacity: 0.4;
+  position: absolute;
+  top: 3px;
+  right: 37px;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+.mainContainer .market .headerCoins .headerCoinsRight .change24hArrowClick .change24hArrowDown {
+  opacity: 0.4;
+  position: absolute;
+  top: 9px;
+  right: 37px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.mainContainer .market .headerCoins .headerCoinsRight .change7dArrowClick {
+  position: relative;
+}
+
+.mainContainer .market .headerCoins .headerCoinsRight .change7dArrowClick .change7dArrowUp {
+  opacity: 40%;
+  position: absolute;
+  top: 3px;
+  right: 27px;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+.mainContainer .market .headerCoins .headerCoinsRight .change7dArrowClick .change7dArrowDown {
+  opacity: 40%;
+  position: absolute;
+  top: 9px;
+  right: 27px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.mainContainer .market .headerCoins .headerCoinsRight h3 {
+  font-weight: 300;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.mainContainer .market .coins {
+  min-height: 1000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: auto;
+  overflow-y: auto;
+  background-color: white;
+}
+
+.mainContainer .market .coins .noResults {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #333333;
+  height: 70px;
+  margin-top: 20px 30px 0px 40px;
+  padding: 0px 15px;
+  min-width: 200px;
+  width: auto;
+  font-size: 1em;
+  font-weight: 300;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  z-index: 2;
+}
+
+.mainContainer .market .coins .coinDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 70px;
+  width: 98%;
+  background-color: white;
+  border-top: 1px solid #f3f3f3;
+  border-radius: 0px;
+  cursor: auto;
+  z-index: 8;
+}
+
+.mainContainer .market .coins .coinDiv .coinDivLeft {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.mainContainer .market .coins .coinDiv .coinDivLeft .coinDivLeftRank {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: auto;
+  font-size: 8px;
+  margin-left: 5px;
+  padding: 2px 2.5px;
+  font-weight: 300;
+  background-color: #f0f0f0;
+  color: #2a2a2a;
+  border-radius: 2px;
+}
+
+.mainContainer .market .coins .coinDiv .coinDivLeft .coinDivLeftImg {
+  border-radius: 50%;
+  width: 27px;
+  margin-left: 15px;
+}
+
+.mainContainer .market .coins .coinDiv .coinDivLeft .coinDivLeftName {
+  font-weight: 300;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.mainContainer .market .coins .coinDiv .coinDivLeft .coinDivLeftSymbol {
+  font-weight: 300;
+  font-size: 13px;
+  margin-left: 6px;
+  margin-top: 0px;
+  color: #616161;
+}
+
+.mainContainer .market .coins .coinDiv .coinDivRight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+}
+
+.mainContainer .market .coins .coinDiv .coinDivRight .coinDivRightPrice {
+  font-weight: 400;
+  font-size: 14px;
+  width: 50px;
+}
+
+.mainContainer .market .coins .coinDiv .coinDivRight .coinDivRight24Volume {
+  color: #82d603;
+  font-weight: 400;
+  font-size: 14px;
+  width: 50px;
+}
+
+.mainContainer .market .coins .coinDiv .coinDivRight .coinDivRight7daysVolume {
+  margin-right: 0px;
+  color: #82d603;
+  font-weight: 400;
+  font-size: 14px;
+  width: 50px;
+}
+
+.mainContainer .market .coins .coinDiv:hover {
+  background-color: #fafafa;
+}
+
+.mainContainer .market .pages {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: white;
+}
+
+.mainContainer .market .pages button {
+  cursor: pointer;
+  width: 50px;
+  height: 20px;
+  border: 0px;
+  margin: 5px;
+  padding: 2px;
+  border-radius: 5px;
+  background: #eaeaea;
+}
+
+.mainContainer .market .loading {
+  position: absolute;
+  left: 35vw;
+  top: 40vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 40px;
+  width: 35vw;
+  background-color: rgba(239, 239, 239, 0.423);
+  border-radius: 5px;
+  z-index: 1;
+  -webkit-animation: fadein 1s ease-in-out infinite;
+          animation: fadein 1s ease-in-out infinite;
+}
+
+.mainContainer .market .loading h1 {
+  font-size: 1em;
+  font-weight: 300;
+}
+
+.mainContainer .market .coinInfromation {
+  display: none;
+  position: fixed;
+  overflow: scroll;
+  top: 60px;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  z-index: 12;
+}
+
+.mainContainer .market .coinInfromation .coinInfromationHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  height: 60px;
+  padding-left: 20px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.mainContainer .market .coinInfromation .coinInfromationHeader h2 {
+  font-weight: 300;
+  font-size: 16px;
+  color: #575757;
+}
+
+.mainContainer .market .coinInfromation .coinInfromationHeader a {
+  text-decoration: none;
+}
+
+.mainContainer .market .coinInfromation .coinInfromationHeader .coinInfromationHeaderMarketCoin {
+  margin-left: 5px;
+}
+
+.mainContainer .market .coinInfromation .coinInfromationHeader .coinInfromationHeaderMarketCoinExit {
+  z-index: 900;
+  position: absolute;
+  right: 20px;
+  width: 25px;
+  cursor: pointer;
+}
+
+.mainContainer .market .coinInfromation .coinInfromationProfile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  position: relative;
+  height: 160px;
+  padding: 4vh;
+  padding-bottom: 55px;
+}
+
+.mainContainer .market .coinInfromation .coinInfromationProfile h1 {
+  margin-left: 10px;
+  font-weight: 400;
+}
+
+.mainContainer .market .coinInfromation .coinInfromationProfile img {
+  width: 40px;
+}
+
+.mainContainer .market .coinInfromation .coinInfromationProfile .coinInfromationName {
+  font-size: 28px;
+}
+
+.mainContainer .market .coinInfromation .coinInfromationProfile .coinInfromationSymbol {
+  color: gray;
+  font-size: 25px;
+}
+
+.mainContainer .market .coinInfromation .coinInfromationProfile .coinInfromationPairs {
+  position: absolute;
+  right: 4vw;
+  bottom: 38px;
+  color: gray;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.mainContainer .market .coinInfromation .coinInfromationProfile .coinInfromationPrice {
+  position: absolute;
+  right: 4vw;
+  bottom: 55px;
+  font-size: 25px;
+  margin-left: 20px;
+}
+
+.mainContainer .market .coinInfromation .coinInfromationContent {
+  height: auto;
+}
+
+.mainContainer .market .coinInfromation .coinInfromationContent .coinInfromationContentHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  height: 45px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.mainContainer .market .coinInfromation .coinInfromationContent .coinInfromationContentHeader .coinInfromationContentHeaderTitle {
+  font-size: 20px;
+  margin-left: 20px;
+  font-weight: 400;
+}
+
+.mainContainer .market .coinInfromation .coinInfromationContent .coinInfromationContentHeader img {
+  width: 20px;
+  margin-left: 5px;
+  margin-bottom: 2px;
+}
+
+.mainContainer .market .coinInfromation .coinInfromationContent .coinInfromationContentMainValue {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: auto;
+}
+
+.mainContainer .market .coinInfromation .coinInfromationContent .coinInfromationContentMainValue div {
+  background-color: #f8f8f8;
+  margin: 20px;
+  padding: 20px;
+  min-width: 240px;
+  height: 150px;
+  border-bottom: 1px solid #eeeeee;
+  border-radius: 5px;
+}
+
+.mainContainer .market .coinInfromation .coinInfromationContent .coinInfromationContentMainValue div h1 {
+  font-size: 14px;
+  color: #666666;
+}
+
+.mainContainer .market .coinInfromation .coinInfromationContent .coinInfromationContentMainValue div h2 {
+  color: black;
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.mainContainer .market .coinInfromation .coinInfromationContent .coinInfromationContentMainValue div h3 {
+  margin-top: 10px;
+  color: black;
+}
+
+.mainContainer .market .coinInfromation .coinInfromationContent .coinInfromationContentMainValue .divChange {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.mainContainer .market .coinInfromation .coinInfromationContent .coinInfromationContentMainValue .divChange h2 {
+  margin-bottom: 20px;
+}
+
+.mainContainer .market .coinInfromation .tradingview-widget-container {
+  height: 400px;
+  bottom: 10px;
+}
+
+.mainContainer .market .coinInfromation .tradingview-widget-container #tradingview_858d7 {
+  height: 400px;
+  margin: 20px;
+}
+
+.mainContainer .market .coinInfromation .coinInfromationsSecondContent {
+  margin: 20px;
+  padding: 4vh;
+  height: auto;
+  border: 1px solid #e7e7e7;
+}
+
+.mainContainer .market .coinInfromation .coinInfromationsSecondContent .secondContentHeader {
+  height: 50px;
+}
+
+.mainContainer .market .coinInfromation .coinInfromationsSecondContent .secondContentHeader h1 {
+  margin-top: 10px;
+  font-size: 24px;
+}
+
+.mainContainer .market .coinInfromation .coinInfromationsSecondContent .secondContentInfromation {
+  margin-top: 10px;
+}
+
+.mainContainer .market .coinInfromation .coinInfromationsSecondContent .secondContentInfromation h1 {
+  font-size: 16px;
+}
+
+.mainContainer .market .coinInfromation .coinInfromationsSecondContent .secondContentInfromation h2 {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #383838;
+}
+
+.mainContainer .market .coinInfromation .coinInfromationsSecondContent .secondContentInfromation p {
+  color: #4e4e4e;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 300;
+  max-width: 700px;
+}
+
+.mainContainer .market .coinInfromation .coinInfromationsSecondContent .secondContentLinks {
+  margin-top: 20px;
+  height: auto;
+}
+
+.mainContainer .market .coinInfromation .coinInfromationsSecondContent .secondContentLinks code {
+  padding: 2px 4px;
+  border-radius: 2px;
+  background-color: #eeeeee;
+}
+
+.mainContainer .market .coinInfromation .coinInfromationsSecondContent .secondContentLinks img {
+  width: 10px;
+  margin-right: 5px;
+  margin-top: 10px;
+}
+
+.mainContainer .market .coinInfromation .coinInfromationsSecondContent .secondContentLinks h3 {
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.mainContainer .market .coinInfromation .coinInfromationsSecondContent .secondContentLinks a {
+  color: #0c0c0c;
+  text-decoration: none;
+  font-weight: 200;
+  font-size: 13px;
+}
+
+.mainContainer .market .coinInfromation .emptyDiv {
+  height: 70px;
+}
+
+.mainContainer .market .coinInfromation2 {
+  display: none;
+  overflow: scroll;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  z-index: 12;
+}
+
+.mainContainer .market .coinInfromation2 .coinInfromationProfile2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  position: relative;
+  height: 160px;
+  padding: 2vh;
+  padding-bottom: 55px;
+}
+
+.mainContainer .market .coinInfromation2 .coinInfromationProfile2 h1 {
+  margin-left: 10px;
+  font-weight: 400;
+}
+
+.mainContainer .market .coinInfromation2 .coinInfromationProfile2 img {
+  width: 40px;
+}
+
+.mainContainer .market .coinInfromation2 .coinInfromationProfile2 .coinInfromationName2 {
+  font-size: 28px;
+}
+
+.mainContainer .market .coinInfromation2 .coinInfromationProfile2 .coinInfromationSymbol2 {
+  color: gray;
+  font-size: 22px;
+}
+
+.mainContainer .market .coinInfromation2 .coinInfromationProfile2 .coinInfromationPairs2 {
+  position: absolute;
+  right: 4vw;
+  bottom: 38px;
+  color: gray;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.mainContainer .market .coinInfromation2 .coinInfromationProfile2 .coinInfromationPrice2 {
+  position: absolute;
+  right: 4vw;
+  bottom: 55px;
+  font-size: 25px;
+  margin-left: 20px;
+}
+
+.mainContainer .market .coinInfromation2 .coinInfromationContent2 {
+  height: auto;
+}
+
+.mainContainer .market .coinInfromation2 .coinInfromationContent2 .coinInfromationContentHeader2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  height: 45px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.mainContainer .market .coinInfromation2 .coinInfromationContent2 .coinInfromationContentHeader2 .coinInfromationContentHeaderTitle2 {
+  font-size: 20px;
+  margin-left: 20px;
+  font-weight: 400;
+}
+
+.mainContainer .market .coinInfromation2 .coinInfromationContent2 .coinInfromationContentHeader2 img {
+  width: 20px;
+  margin-left: 5px;
+  margin-bottom: 2px;
+}
+
+.mainContainer .market .coinInfromation2 .coinInfromationContent2 .coinInfromationContentMainValue2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: auto;
+}
+
+.mainContainer .market .coinInfromation2 .coinInfromationContent2 .coinInfromationContentMainValue2 div {
+  background-color: #f8f8f8;
+  margin: 20px 20px 0px 20px;
+  padding: 20px;
+  min-width: 240px;
+  height: 150px;
+  border-bottom: 1px solid #eeeeee;
+  border-radius: 5px;
+}
+
+.mainContainer .market .coinInfromation2 .coinInfromationContent2 .coinInfromationContentMainValue2 div h1 {
+  font-size: 14px;
+  color: #666666;
+}
+
+.mainContainer .market .coinInfromation2 .coinInfromationContent2 .coinInfromationContentMainValue2 div h2 {
+  color: black;
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.mainContainer .market .coinInfromation2 .coinInfromationContent2 .coinInfromationContentMainValue2 div h3 {
+  margin-top: 10px;
+  color: black;
+}
+
+.mainContainer .market .coinInfromation2 .coinInfromationContent2 .coinInfromationContentMainValue2 .divChange {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.mainContainer .market .coinInfromation2 .coinInfromationContent2 .coinInfromationContentMainValue2 .divChange h2 {
+  margin-bottom: 20px;
+}
+
+.mainContainer .market .coinInfromation2 .coinInfromationContent2 .coinInfromationContentMainValue2 .div2 .AllMarket2 {
+  margin-top: 6px;
+}
+
+.mainContainer .market .coinInfromation2 .tradingview-widget-container {
+  height: 400px;
+  bottom: 10px;
+  top: 10px;
+}
+
+.mainContainer .market .coinInfromation2 .tradingview-widget-container #tradingview_4f92d {
+  height: 400px;
+  margin-top: 20px;
+}
+
+.mainContainer .market .coinInfromation2 .emptyDiv2 {
+  height: 50px;
+}
+
+@media (max-width: 590px) {
+  .mainContainer {
+    font-family: roboto;
+  }
+  .mainContainer .header .buyCrypto {
+    width: 110px;
+    height: 38px;
+    right: 65px;
+    top: 11.5px;
+  }
+  .mainContainer .market .headerCoins {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 50px;
+    border-bottom: 1px solid #f3f3f3;
+  }
+  .mainContainer .market .headerCoins .headerCoinsLeft {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  .mainContainer .market .headerCoins .headerCoinsLeft .changeRankArrowClick {
+    position: relative;
+  }
+  .mainContainer .market .headerCoins .headerCoinsLeft .changeRankArrowClick .changeRankArrowUp {
+    top: 1px;
+    right: 24px;
+  }
+  .mainContainer .market .headerCoins .headerCoinsLeft .changeRankArrowClick .changeRankArrowDown {
+    top: 7px;
+    right: 24px;
+  }
+  .mainContainer .market .headerCoins .headerCoinsLeft h3 {
+    margin-left: 20px;
+    font-weight: 300;
+    font-size: 11px;
+  }
+  .mainContainer .market .headerCoins .headerCoinsRight {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    padding: 0px 10px 0px 0px;
+  }
+  .mainContainer .market .headerCoins .headerCoinsRight .changePriceArrowClick {
+    position: relative;
+  }
+  .mainContainer .market .headerCoins .headerCoinsRight .changePriceArrowClick .changePriceArrowUp {
+    top: 1px;
+    right: 24px;
+  }
+  .mainContainer .market .headerCoins .headerCoinsRight .changePriceArrowClick .changePriceArrowDown {
+    top: 7px;
+    right: 24px;
+  }
+  .mainContainer .market .headerCoins .headerCoinsRight .change24hArrowClick {
+    position: relative;
+  }
+  .mainContainer .market .headerCoins .headerCoinsRight .change24hArrowClick .change24hArrowUp {
+    top: 1px;
+    right: 25px;
+  }
+  .mainContainer .market .headerCoins .headerCoinsRight .change24hArrowClick .change24hArrowDown {
+    top: 7px;
+    right: 25px;
+  }
+  .mainContainer .market .headerCoins .headerCoinsRight .change7dArrowClick .change7dArrowUp {
+    top: 1px;
+    right: 20px;
+  }
+  .mainContainer .market .headerCoins .headerCoinsRight .change7dArrowClick .change7dArrowDown {
+    top: 7px;
+    right: 20px;
+  }
+  .mainContainer .market .headerCoins .headerCoinsRight h3 {
+    font-weight: 300;
+    font-size: 11px;
+  }
+  .mainContainer .market .coins {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: auto;
+    overflow-y: auto;
+  }
+  .mainContainer .market .coins .noResults {
+    margin-top: 50px;
+  }
+  .mainContainer .market .coins .coinDiv {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 60px;
+    width: 98%;
+    border-bottom: 1px solid #f3f3f3;
+    border-top: none;
+    border-radius: 0px;
+    cursor: pointer;
+  }
+  .mainContainer .market .coins .coinDiv .coinDivLeft {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 50%;
+  }
+  .mainContainer .market .coins .coinDiv .coinDivLeft .coinDivLeftImg {
+    width: 27px;
+    margin-left: 5px;
+  }
+  .mainContainer .market .coins .coinDiv .coinDivLeft .coinDivLeftName {
+    font-weight: 300;
+    font-size: 11px;
+    margin-left: 4px;
+    white-space: nowrap;
+  }
+  .mainContainer .market .coins .coinDiv .coinDivLeft .coinDivLeftSymbol {
+    font-weight: 300;
+    font-size: 9px;
+    margin-left: 3px;
+    color: #444444;
+  }
+  .mainContainer .market .coins .coinDiv .coinDivRight {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    width: 60%;
+    padding: 10px;
+  }
+  .mainContainer .market .coins .coinDiv .coinDivRight .coinDivRightPrice {
+    position: absolute;
+    font-weight: 400;
+    font-size: 11px;
+    left: 10px;
+  }
+  .mainContainer .market .coins .coinDiv .coinDivRight .coinDivRight24Volume {
+    position: absolute;
+    color: #82d603;
+    font-weight: 400;
+    font-size: 11px;
+    left: 21vw;
+  }
+  .mainContainer .market .coins .coinDiv .coinDivRight .coinDivRight7daysVolume {
+    position: absolute;
+    color: #82d603;
+    font-weight: 400;
+    font-size: 11px;
+    right: 0px;
+  }
+  .mainContainer .market .coins .coinDiv:hover {
+    background-color: #fafafa;
+  }
+  .mainContainer .market .loading {
+    top: 350px;
+  }
+  .mainContainer .market .coinInfromation {
+    display: none;
+  }
+  .mainContainer .market .coinInfromation .coinInfromationHeader {
+    height: 50px;
+  }
+  .mainContainer .market .coinInfromation .coinInfromationHeader h2 {
+    font-size: 13px;
+  }
+  .mainContainer .market .coinInfromation .coinInfromationProfile .coinInfromationName {
+    margin-bottom: 8px;
+    font-size: 20px;
+  }
+  .mainContainer .market .coinInfromation .coinInfromationProfile .coinInfromationSymbol {
+    margin-bottom: 9px;
+    font-size: 18px;
+  }
+  .mainContainer .market .coinInfromation .coinInfromationProfile .coinInfromationPrice {
+    margin-bottom: 8px;
+    padding-right: 5px;
+    font-size: 20px;
+  }
+  .mainContainer .market .coinInfromation .coinInfromationProfile .coinInfromationPairs {
+    margin-bottom: 8px;
+    padding-right: 5px;
+    font-size: 12px;
+  }
+  .mainContainer .market .coinInfromation .coinInfromationContent .coinInfromationContentMainValue div {
+    min-width: 210px;
+    margin: 10px;
+  }
+  .mainContainer .market .coinInfromation .tradingview-widget-container #tradingview_858d7 {
+    margin: 10px;
+  }
+  .mainContainer .market .coinInfromation .coinInfromationsSecondContent {
+    margin: 10px;
+    padding: 2vh;
+  }
+  .mainContainer .market .coinInfromation .emptyDiv {
+    height: 60px;
+  }
+  .mainContainer .market .coinInfromation2 .coinInfromationProfile2 .coinInfromationName2 {
+    font-size: 20px;
+  }
+  .mainContainer .market .coinInfromation2 .coinInfromationProfile2 .coinInfromationSymbol2 {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1477px) {
+  .mainContainer .header {
+    padding: 0px 7vw;
+  }
+  .mainContainer .marketData {
+    padding: 0px 7vw;
+  }
+  .mainContainer .market .searchBar {
+    padding: 0px 6vw;
+  }
+  .mainContainer .market .searchBar h1 {
+    width: auto;
+  }
+  .mainContainer .market .searchBar .searchBarMain input {
+    width: 83vw;
+  }
+  .mainContainer .market .searchBar .searchBarMain button {
+    background: #e9e9e9;
+  }
+  .mainContainer .market .searchBar .marketValues {
+    padding: 0px 7vw;
+  }
+  .mainContainer .market .headerCoins {
+    padding: 0px 7vw;
+  }
+  .mainContainer .market .coins {
+    padding: 0px 7vw;
+  }
+  .mainContainer .market .coinInfromation, .mainContainer .market .coinInfromation2 {
+    padding: 0px 6vw;
+  }
+  .mainContainer .market .coinInfromation .coinInfromationHeader .coinInfromationHeaderMarketCoinExit, .mainContainer .market .coinInfromation2 .coinInfromationHeader .coinInfromationHeaderMarketCoinExit {
+    right: 7vw;
+  }
+  .mainContainer .footer .topHeader {
+    padding: 0px 10vw;
+  }
+  .mainContainer .footer .siteMap {
+    padding: 0px 10vw;
+  }
+  .mainContainer .footer .allRightReserv {
+    padding: 0px 10vw;
+  }
+}
+
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=market-api.css.map */

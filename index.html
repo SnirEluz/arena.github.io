@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="crypto-api.js" defer></script>
+    <link rel="stylesheet" href="crypto-api.css">
+    <title>Arena - Cryptocurrencies, Bitcoin News & Chart.</title>
+    <meta property="og:title" content="Arena - Cryptocurrency Prices, Crypto News And More..." />
+    <meta property="og:url" content="https://snireluz.github.io/ai.github.io/index.html"/>
+    <link rel="canonical" href="https://snireluz.github.io/ai.github.io/index.html">
+    <meta name="description" content="Arena is a secure platform that makes it easy to get the newest data about cryptocurrency like Bitcoin, Ethereum, and more.">
+    <meta property="og:description" content="Arena - cryptocurrency, Newest Data about cryptocurrency. Chart Price & More">
+    <meta name="keywords" content="cryptocurrency, Arena, Chart, Price, platform, Bitcoin, Ethereum, SHIBA">
+    <meta property="og:image" content="hnet.com-image.ico">
+    <meta property="og:type" content="website" />
+    <meta property="og:locale"/>
+    <link rel="icon" href="/image/image.ico">
+
+    <!-- Pages Footer -->
+    <link rel="stylesheet" type="text/css" href="/Footer/footer.css" >
+    <script >
+        $(function () {
+            $(".footer").load("/Footer/footer.html")
+        })
+    </script>
+</head>
+<body>
+    <div class="mainContainer">
+       <div class="header">
+            <img class="logo" src="/image/blockchain.png" alt="">
+            <h1 class="logo"><a href="/HomePage/index.html">ARENA</a></h1>
+            <a href="/BuyCrypto/buycrypto.html"><button class="buyCrypto"> Buy Crypto ₿</button></a>
+            <img class="menuHeaderIcon" src="/image/menu.png" alt="">
+        </div>
+        <div class="menu">
+            <a href="/HomePage/index.html"><h1>Home</h1></a>
+            <a href="/Market/market-api.html"><h1>Market</h1></a>
+            <a href="/Portfolio/portfolio.html"><h1>Portfolio</h1></a><img class="newIcon" src="/image/new.png" alt="">
+            <a href="/Portfolio/portfolio.html"><h1>News</h1></a>
+            <a href="/BuyCrypto/buycrypto.html"><h1>Buy Crypto</h1></a>
+            <a ><h1 class="btnDown">Company</h1></a><img class="btnDownArrow" src="/image/arrow-down-sign-to-navigate.png" alt="">
+            <a href="/Privet/privet.html"><h3 class="companyMenu">About us</h3></a>
+            <a href="/Privet/privet.html"><h3 class="companyMenu">Privacy Policy</h3></a>
+            <a href="/Privet/privet.html"><h3 class="companyMenu">Terms of use</h3></a>
+            <a href="/Privet/privet.html"><h3 class="companyMenu">FAQ</h3></a>
+
+            <a class="btnDarkMode"><h1>Theme</h1></a><img class="btnDarkModeIcon" src="/image/night-mode.png" alt="">
+            <button>Log in</button>
+            <button class="getStarted">Get Started</button>
+            <div class="lightbox">
+            </div>
+        </div>
+        <div class="marketData">
+            <div>
+                <h6>Cryptos:</h6>
+                <p class="totalCryptocurrencies"> 0</p>
+            </div>
+            <div>
+                <h6>Exchanges:</h6>
+                <p class="activeExchanges"> 0</p>
+            </div>
+            <div>
+                <h6>Market Cap:</h6>
+                <p class="totalMarketCap"> 0</p>
+            </div>
+            <div>
+                <h6>24h Vol:</h6>
+                <p class="totalVolume24h"> 0</p>
+            </div>
+            <div>
+                <h6>24h:</h6>
+                <p class="totalMarketCapYesterdayPercentageChange"> 0%</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="container001">
+                <div class="firstBaner">
+                    <h1>
+                        Become a crypto trader<br><b>in an instant</b>
+                    </h1>
+                    <button onclick="window.location.href='/Market/market-api.html'">GET STARTED</button>
+                </div>
+                <div class="secondBaner">
+                    <img src="/image/bitcoin.png" alt="">
+                </div>
+            </div>
+            <div class="tools">
+                <a href="/Converter/coverter.html"><div class="converterTool">
+                    <img src="/image/bitcoin (1).png" alt="">
+                    <h1>Converter</h1>
+                </div></a>
+                <a href="/Portfolio/portfolio.html"><div class="portfolioTool">
+                    <img src="/image/pie-chart (1).png" alt="">
+                    <h1>Portfolio</h1>
+                </div></a>
+                <div class="newsTool">
+                    <img src="/image/newspaper.png" alt="">
+                    <h1>News</h1>
+                </div>
+                <a href="/Market/market-api.html"><div class="marketTool">
+                    <img src="/image/transaction.png" alt="">
+                    <h1>Market</h1>
+                </div></a>
+            </div>
+            <div class="container002">
+                <div class="container002Title">
+                    <h1>News</h1>
+                    <img src="/image/newspaper.png" alt="">
+                </div>
+                <div class="container002News">
+                    <div class="container002NewsBaner">
+                        <img src="/image/baner1.jpeg" alt="">
+                        <h3>Get Started</h3>
+                        <img class="creditImgBanner" src="/image/bitcoin.png" alt=""><h6>Coins Base - 16h ago</h6>
+
+                    </div>
+                    <div class="container002NewsBaner">
+                        <img src="/image/baner2.jpeg" alt="">
+                        <h3>NFTs, explained</h3>
+                        <img class="creditImgBanner" src="/image/bitcoin.png" alt=""><h6>Coins Base - 16h ago</h6>
+
+                    </div>
+                    <div class="container002NewsBaner">
+                        <img src="/image/baner3.jpeg" alt="">
+                        <h3>SHIBA Has new ATH</h3>
+                        <img class="creditImgBanner" src="/image/bitcoin.png" alt=""><h6>Coins Base - 16h ago</h6>
+
+                    </div>
+                    <div class="container002NewsBaner">
+                        <img src="/image/baner4.png" alt="">
+                        <h3>Bitcoin on banking</h3>
+                        <img class="creditImgBanner" src="/image/bitcoin.png" alt=""><h6>Coins Base - 16h ago</h6>
+
+                    </div>
+                    <div class="container002NewsBaner">
+                        <img src="/image/baner5.jpeg" alt="">
+                        <h3>ETH Blockchain 2.0</h3>
+                        <img class="creditImgBanner" src="/image/bitcoin.png" alt=""><h6>Coins Base - 16h ago</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="market">
+            <div class="headerCoins">
+                <div class="headerCoinsLeft">
+                    <h3 class="rankCoins">Rank</h3>
+                    <h3 class="nameCoins">Name</h3>
+                </div>
+                <div class="headerCoinsRight">
+                    <h3>Price</h3>
+                    <h3>24h Change</h3>
+                    <h3>7d Change</h3>
+                </div>
+            </div>
+            <div class="coins">
+
+            </div>
+        </div>
+        <div class="footer">
+
+        </div>
+    </div>
+</body>
+</html>

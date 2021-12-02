@@ -1,0 +1,166 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  font-family: roboto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.darkMode {
+  background: white;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.darkMode .footer .startWithUs button {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.footer {
+  background-color: white;
+}
+
+.footer .startWithUs {
+  height: 200px;
+  background-color: rgba(245, 245, 245, 0.704);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer .startWithUs h1 {
+  font-size: 27px;
+}
+
+.footer .startWithUs .startWithUsBtn {
+  padding-top: 10px;
+}
+
+.footer .startWithUs .startWithUsBtn button {
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+  width: 140px;
+  height: 40px;
+  color: white;
+}
+
+.footer .startWithUs .startWithUsBtn .startWithUsBtn1 {
+  background-color: #0099ff;
+}
+
+.footer .startWithUs .startWithUsBtn .startWithUsBtn2 {
+  background-color: #d7d7d7;
+}
+
+.footer .topHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 70px;
+  padding-left: 7vw;
+}
+
+.footer .topHeader img {
+  width: 25px;
+}
+
+.footer .topHeader h2 {
+  font-size: 20px;
+  margin-left: 5px;
+}
+
+.footer .siteMap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 320px;
+  padding-left: 7vw;
+}
+
+.footer .siteMap h2 {
+  font-size: 16px;
+  color: #282828;
+  margin: 8px 0px 0px 5px;
+  font-weight: 400;
+  margin-bottom: 5px;
+  margin-top: 20px;
+}
+
+.footer .siteMap h3 {
+  font-size: 14px;
+  color: #82898f;
+  margin: 8px 0px 0px 5px;
+  font-weight: 400;
+}
+
+.footer .siteMap h3:hover {
+  color: #4b4f53;
+}
+
+.footer .socialMedia {
+  padding-left: 7vw;
+  height: 80px;
+}
+
+.footer .socialMedia h2 {
+  font-size: 16px;
+  color: #282828;
+  margin: 20px 0px 10px 5px;
+  font-weight: 400;
+}
+
+.footer .socialMedia .socialMediaIcon {
+  width: 20px;
+  margin: 5px 10px 0px 6px;
+  opacity: 0.9;
+}
+
+.footer .allRightReserv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 70px;
+  border-top: 1px #f0f0f0 solid;
+  margin: 0px 20px;
+}
+
+.footer .allRightReserv h3 {
+  font-size: 11px;
+  color: #a6adb3;
+  font-weight: 300;
+}
+/*# sourceMappingURL=footer.css.map */

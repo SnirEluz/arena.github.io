@@ -1,0 +1,121 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: roboto;
+}
+a{
+    text-decoration: none;
+}
+.darkMode {
+    background: rgb(255, 255, 255);
+    filter: invert(1);
+    .footer{
+        .startWithUs{
+            button{
+                filter: invert(1);
+            }
+        }
+    }
+}
+.footer{
+    background-color: rgb(255, 255, 255);
+
+    .startWithUs{
+        height: 200px;
+        background-color: rgba(245, 245, 245, 0.704);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        h1{
+            font-size: 27px;
+        }
+        .startWithUsBtn{
+            padding-top: 10px;
+            button{
+                border: none;
+                border-radius: 5px;
+                margin: 10px;
+                width: 140px;
+                height: 40px;
+                color: white;
+
+            }
+            .startWithUsBtn1{
+                background-color: rgb(0, 153, 255);
+            }
+            .startWithUsBtn2{
+                background-color: rgb(215, 215, 215);
+            }
+        }
+    }
+    .topHeader{
+        display: flex;
+        align-items: flex-end;
+        height: 70px;
+        padding-left: 7vw;
+        img{
+            width: 25px;
+        }
+        h2{
+            font-size: 20px;
+            margin-left: 5px;
+        }
+    }
+    .siteMap {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        height: 320px;
+        padding-left: 7vw;
+        h2 {
+            font-size: 16px;
+            color: rgb(40, 40, 40);
+            margin: 8px 0px 0px 5px;
+            font-weight: 400;
+            margin-bottom: 5px;
+            margin-top: 20px;
+        }
+        h3 {
+            font-size: 14px;
+            color: rgb(130, 137, 143);
+            margin: 8px 0px 0px 5px;
+            font-weight: 400;
+        }
+        h3:hover{
+            color: rgb(75, 79, 83);
+
+        }
+    }
+    .socialMedia{
+        padding-left: 7vw;
+        height: 80px;
+        h2{
+            font-size: 16px;
+            color: rgb(40, 40, 40);
+            margin: 20px 0px 10px 5px;
+            font-weight: 400;
+        }
+        .socialMediaIcon{
+            width: 20px;
+            margin: 5px 10px 0px 6px;
+            opacity: 0.9;
+
+        }
+    }
+    .allRightReserv{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 70px;
+        border-top: 1px rgb(240, 240, 240) solid;
+        margin: 0px 20px;
+        h3{
+            font-size: 11px;
+            color: rgb(166, 173, 179);
+            font-weight: 300;
+        }
+    }
+}
