@@ -320,7 +320,7 @@ menuHeaderIcon.addEventListener("click", () => {
     //appendChild
     header.appendChild(exitMenuIcon)
     //src
-    exitMenuIcon.src = "/arena.github.io/close.png"
+    exitMenuIcon.src = "/arena.github.io/image/close.png"
     //className
     exitMenuIcon.className = "exitMenu"
     //assemble
