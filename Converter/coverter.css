@@ -752,10 +752,21 @@
   font-size: 17px;
   width: 100%;
   height: 50px;
-  border-radius: 5px;
-  border: 1px solid #e0e9f1;
   background-color: none;
   padding-left: 15px;
+  border: 1px solid rgba(112, 112, 112, 0.219);
+  outline: none;
+  margin: 5px;
+  border-radius: 4px;
+  background-image: url(/arena.github.io/image/search.png);
+  background-size: 13px;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 10px;
+}
+
+.mainContainer .mainCoverter .coverter .coverterPage .coverterPageAmount input:focus {
+  border: 2px solid rgba(44, 44, 44, 0.219);
 }
 
 .mainContainer .mainCoverter .coverter .coverterPage .coverterPageAmount h1 {

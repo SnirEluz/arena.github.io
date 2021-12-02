@@ -74,8 +74,9 @@ a {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  height: 70px;
+  height: 90px;
   padding-left: 7vw;
+  margin-bottom: 20px;
 }
 
 .footer .topHeader img {
