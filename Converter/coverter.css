@@ -412,6 +412,7 @@
 }
 
 .mainContainer .market .searchBar input {
+  font-size: 17px;
   width: 100%;
   height: 37px;
   border: 1px solid #ececec;
