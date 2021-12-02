@@ -858,11 +858,8 @@
   border-radius: 5px;
 }
 
-.mainContainer .mainCoverter .coverter .coverterPage .currency select {
-  -webkit-appearance: none;
-}
-
 .mainContainer .mainCoverter .coverter .coverterPage .currency .currencySelect {
+  font-size: 17px;
   padding: 0px 20px;
   height: 70px;
   width: 100%;
@@ -873,8 +870,8 @@
   outline: none;
 }
 
-.mainContainer .mainCoverter .coverter .coverterPage .currency .currencySelect select {
-  -webkit-appearance: none;
+.mainContainer .mainCoverter .coverter .coverterPage .currency .currencySelect:focus {
+  font-size: 17px;
 }
 
 .mainContainer .mainCoverter .coverter .coverterPage .currency:hover, .mainContainer .mainCoverter .coverter .coverterPage .currencySelect:hover {
