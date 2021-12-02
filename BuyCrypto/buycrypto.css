@@ -8,6 +8,10 @@
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .darkMode .header button {
   -webkit-filter: invert(1);
           filter: invert(1);

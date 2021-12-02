@@ -5,6 +5,9 @@
         text-decoration: none;
     }
 }
+html {
+    scroll-behavior: smooth;
+}
 .darkMode {
     // background: rgb(255, 255, 255);
     // filter: invert(1);
@@ -31,19 +34,19 @@
             filter: invert(1);
         }
     }
-    .buyCrypto{
-        .headerBuyCrypto{
+    .buyCrypto {
+        .headerBuyCrypto {
             filter: grayscale(1);
-            button{
+            button {
                 filter: invert(1);
             }
         }
-        .exchanges{
-            div{
+        .exchanges {
+            div {
                 filter: invert(1);
             }
-            .moonPay{
-                .moonPayImg{
+            .moonPay {
+                .moonPayImg {
                     filter: invert(1);
                 }
             }
@@ -188,7 +191,12 @@
     }
     .buyCrypto {
         .headerBuyCrypto {
-            background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(237,241,245,1) 35%, rgba(235, 243, 250, 0.89) 100%);
+            background: linear-gradient(
+                0deg,
+                rgba(255, 255, 255, 1) 0%,
+                rgba(237, 241, 245, 1) 35%,
+                rgba(235, 243, 250, 0.89) 100%
+            );
             display: flex;
             align-items: flex-start;
             justify-content: center;
@@ -226,9 +234,9 @@
             border-radius: 30px 30px 0px 0px;
             background-color: rgb(255, 255, 255);
 
-            h3{
+            h3 {
                 font-weight: 300;
-                margin-top: 10px
+                margin-top: 10px;
             }
         }
         .exchanges {
@@ -284,7 +292,6 @@
             }
         }
     }
-
 }
 @media (max-width: 590px) {
     .mainContainer {
@@ -298,18 +305,18 @@
             }
         }
         .buyCrypto {
-            .headerBuyCrypto{
-                h1{
+            .headerBuyCrypto {
+                h1 {
                     font-size: 30px;
                 }
-                h4{
+                h4 {
                     font-size: 19px;
                     font-weight: 400;
                 }
             }
-            .exchangesTitle{
+            .exchangesTitle {
                 min-width: 240px;
-                h3{
+                h3 {
                     font-size: 14px;
                 }
             }
