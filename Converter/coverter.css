@@ -747,7 +747,7 @@
   border-radius: 5px;
 }
 
-.mainContainer .mainCoverter .coverter .coverterPage .coverterPageAmount input {
+.mainContainer .mainCoverter .coverter .coverterPage .coverterPageAmount input[type="number"] {
   font-size: 17px;
   width: 100%;
   height: 50px;
