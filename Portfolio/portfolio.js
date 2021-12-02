@@ -71,7 +71,7 @@ function createCoinDiv(bitcoinD, bitcoinI) {
         // right
         coinDivRight.className = "coinDivRight"
         coinDivRightNext.className = "coinDivRightNext"
-        coinDivRightNext.src = "/image/right.png"
+        coinDivRightNext.src = "/arena.github.io/image/right.png"
         // textContentLeft ------------------------------------ >>
         coinDivLeftRank.textContent = bitcoinD[i].cmc_rank
         coinDivLeftName.textContent = bitcoinD[i].name
@@ -99,17 +99,17 @@ function createCoinDiv(bitcoinD, bitcoinI) {
             // querySelector ------------------------------------------------>
             const addTransaction = document.querySelector(".addTransaction")
             addTransaction.innerHTML = `
-                    <img class="closeTransaction" src="/image/close.png" alt="">
-                    <img class="returnToMarket" src="/image/return.png" alt="">
+                    <img class="closeTransaction" src="/arena.github.io/image/close.png" alt="">
+                    <img class="returnToMarket" src="/arena.github.io/image/return.png" alt="">
                     <div class="addTransactionHeader">
                         <h1>Add Transaction</h1>
-                        <img src="/image/transaction.png" alt="">
+                        <img src="/arena.github.io/image/transaction.png" alt="">
 
                     </div>
                     <div class="addTransactionCoinInfromation">
                         <div class="addTransactionCoinInfromationContent">
                             <div class="addTransactionCoinInfromationProfile">
-                                <img src="/image/blockchain.png" alt="" class="addTransactionCoinImg">
+                                <img src="/arena.github.io/image/blockchain.png" alt="" class="addTransactionCoinImg">
                                 <h2 class="addTransactionCoinName">Bitcoin</h2>
                                 <h2 class="addTransactionCoinSymbol">BTC</h2>
                             </div>
@@ -320,7 +320,7 @@ menuHeaderIcon.addEventListener("click", () => {
     //appendChild
     header.appendChild(exitMenuIcon)
     //src
-    exitMenuIcon.src = "/image/close.png"
+    exitMenuIcon.src = "/arena.github.io/close.png"
     //className
     exitMenuIcon.className = "exitMenu"
     //assemble
@@ -356,7 +356,7 @@ btnDarkModeIcon.addEventListener("click", darkMode)
 if (localStorage.getItem("darkModeLocalStorage")) {
     darkMode()
 } else {
-    btnDarkModeIcon.src = "/image/sun.png"
+    btnDarkModeIcon.src = "/arena.github.io/image/sun.png"
 }
 function darkMode() {
     darkModeLocalStorage.push({ LS: true })
@@ -369,10 +369,10 @@ function darkMode() {
         btnDarkMode.style.filter = ""
         btnDarkMode.style.background = ""
         localStorage.clear("darkModeLocalStorage")
-        btnDarkModeIcon.src = "/image/sun.png"
+        btnDarkModeIcon.src = "/arena.github.io/image/sun.png"
     } else {
         btnDarkMode.style.filter = "invert(1)"
-        btnDarkModeIcon.src = "/image/night-mode.png"
+        btnDarkModeIcon.src = "/arena.github.io/image/night-mode.png"
     }
 }
 

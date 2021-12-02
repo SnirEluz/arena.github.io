@@ -868,7 +868,7 @@ menuHeaderIcon.addEventListener("click", () => {
     //appendChild
     header.appendChild(exitMenuIcon)
     //src
-    exitMenuIcon.src = "/image/close.png"
+    exitMenuIcon.src = "/arena.github.io/image/close.png"
     //className
     exitMenuIcon.className = "exitMenu"
     //assemble
@@ -904,7 +904,7 @@ btnDarkModeIcon.addEventListener("click", darkMode)
 if (localStorage.getItem("darkModeLocalStorage")) {
     darkMode()
 }else{
-    btnDarkModeIcon.src = "/image/sun.png"
+    btnDarkModeIcon.src = "/arena.github.io/image/sun.png"
 }
 function darkMode() {
     darkModeLocalStorage.push({ LS: true })
@@ -917,11 +917,11 @@ function darkMode() {
         btnDarkMode.style.filter = ""
         btnDarkMode.style.background = ""
         localStorage.clear("darkModeLocalStorage")
-        btnDarkModeIcon.src = "/image/sun.png"
+        btnDarkModeIcon.src = "/arena.github.io/image/sun.png"
 
     } else {
         btnDarkMode.style.filter = "invert(1)"
-        btnDarkModeIcon.src = "/image/night-mode.png"
+        btnDarkModeIcon.src = "/arena.github.io/image/night-mode.png"
 
     }
 }
