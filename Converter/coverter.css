@@ -2,7 +2,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0px;
-  -webkit-appearance:none;
+  -webkit-appearance: none;
 }
 
 * a {
@@ -759,11 +759,6 @@
   outline: none;
   margin: 5px;
   border-radius: 4px;
-  background-image: url(/arena.github.io/image/search.png);
-  background-size: 13px;
-  background-repeat: no-repeat;
-  background-position-y: center;
-  background-position-x: 10px;
 }
 
 .mainContainer .mainCoverter .coverter .coverterPage .coverterPageAmount input:focus {
@@ -872,6 +867,9 @@
 }
 
 .mainContainer .mainCoverter .coverter .coverterPage .currency .currencySelect {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
   font-size: 17px;
   padding: 0px 20px;
   height: 70px;
@@ -887,7 +885,8 @@
   font-size: 17px;
 }
 
-.mainContainer .mainCoverter .coverter .coverterPage .currency:hover, .mainContainer .mainCoverter .coverter .coverterPage .currencySelect:hover {
+.mainContainer .mainCoverter .coverter .coverterPage .currency:hover,
+.mainContainer .mainCoverter .coverter .coverterPage .currencySelect:hover {
   background-color: rgba(238, 238, 238, 0.96);
 }
 
