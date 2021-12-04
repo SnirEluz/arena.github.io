@@ -693,13 +693,23 @@
             }
         }
         .market {
-            width: 90%;
+            // display: block;
+            position: absolute;
+            top: 0px;
+            width: 100%;
+            height: 1000px;
+            border-radius: 30px 30px 0px 0px;
+            .closeMarket{
+                margin-top: 7px;
+            }
+            .searchBar{
+                margin: 10px 4vw 0px 4vw;
+            }
             .headerCoins {
                 display: flex;
-                height: 50px;
+                height: 40px;
                 border-bottom: 1px solid rgb(243, 243, 243);
                 z-index: 12;
-
                 .headerCoinsLeft {
                     display: flex;
                     justify-content: start;
@@ -727,8 +737,8 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                height: auto;
                 overflow-y: auto;
+                height: 440px;
                 .noResults {
                     margin-top: 50px;
                 }
@@ -784,6 +794,7 @@
                     background-color: rgb(250, 250, 250);
                 }
             }
+
         }
         .mainCoverter {
             .coverter {
