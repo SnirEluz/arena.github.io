@@ -1,0 +1,15 @@
+{
+    "background_color": "black",
+    "description": "Arena - cryptocurrency, Newest Data about cryptocurrency. Chart Price & More.",
+    "display": "standalone",
+    "icons": [
+      {
+        "src": "/image/mainLogoDark.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ],
+    "name": "Arena - Cryptocurrency & More...",
+    "short_name": "Arena",
+    "start_url": "/index.html"
+}
