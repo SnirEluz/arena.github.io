@@ -1,7 +1,11 @@
 const apiKey = {
+    // "snireluztttt"
     key: "d9b02f17-a168-4ef7-acf3-08fbc413b142"
+    // "zomereytan"
     // key: "fe405b4f-deab-45ec-8ef0-2539bf6cee94"
+    // "snireluzttt"
     // key: "8a98211b-7093-4f17-9547-e70386f2269c"
+    // "snireluz555"
     // key: "5f586b3d-9722-43a9-89a6-b1a5953d63a7"
 
 }
@@ -83,8 +87,8 @@ const cryptoApi = async () => {
             coinDivLeftName.textContent = bitcoinD.data[i].name
             coinDivLeftSymbol.textContent = bitcoinD.data[i].symbol
             // textContentRight ------------------------------------ >>
-            coinDivRightPrice.textContent = `$${new Number (bitcoinD.data[i].quote.USD.price).toLocaleString("en-GB",{maximumFractionDigits:2})}`
-            coinDivRightPrice.title = `$${new Number (bitcoinD.data[i].quote.USD.price).toLocaleString("en-GB",{maximumFractionDigits:5})}`
+            coinDivRightPrice.textContent = `$${new Number(bitcoinD.data[i].quote.USD.price).toLocaleString("en-GB", { maximumFractionDigits: 2 })}`
+            coinDivRightPrice.title = `$${new Number(bitcoinD.data[i].quote.USD.price).toLocaleString("en-GB", { maximumFractionDigits: 5 })}`
             coinDivRight24Volume.textContent = `${bitcoinD.data[i].quote.USD.percent_change_24h.toFixed(2)}%`
             coinDivRight7daysVolume.textContent = `${bitcoinD.data[i].quote.USD.percent_change_7d.toFixed(2)}% `
             // appendChild ------------------------------------------- >>
@@ -159,7 +163,7 @@ menuHeaderIcon.addEventListener("click", () => {
 
     });
 })
-$('.btnDownArrow, .btnDown').click(()=>{
+$('.btnDownArrow, .btnDown').click(() => {
     $(".companyMenu").slideToggle();
 })//
 
@@ -167,10 +171,9 @@ $('.btnDownArrow, .btnDown').click(()=>{
 const btnDarkMode = document.querySelector(".btnDarkMode")
 const btnDarkModeIcon = document.querySelector(".btnDarkModeIcon")
 btnDarkMode.addEventListener("click", darkMode)
-btnDarkModeIcon.addEventListener("click", darkMode)
 if (localStorage.getItem("darkModeLocalStorage")) {
     darkMode()
-}else{
+} else {
     btnDarkModeIcon.src = "/arena.github.io/image/sun.png"
 }
 function darkMode() {

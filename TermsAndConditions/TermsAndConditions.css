@@ -24,16 +24,6 @@
           filter: invert(1);
 }
 
-.darkMode .menu button {
-  -webkit-filter: invert(1);
-          filter: invert(1);
-}
-
-.darkMode .menu button:hover {
-  -webkit-filter: invert(1);
-          filter: invert(1);
-}
-
 .darkMode .menu h1:hover {
   -webkit-filter: invert(1);
           filter: invert(1);
@@ -46,6 +36,11 @@
 }
 
 .darkMode .menu .newIcon {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.darkMode .menu .getStarted {
   -webkit-filter: invert(1);
           filter: invert(1);
 }
@@ -97,17 +92,13 @@
   height: 38px;
   border: none;
   border-radius: 5px;
-  background-color: #0099ff;
+  background: linear-gradient(356deg, #478fff 0%, #0063ff 49%, #0063ff 100%);
   color: white;
   position: absolute;
   right: 70px;
   top: 11.5px;
   font-weight: bold;
   cursor: pointer;
-}
-
-.mainContainer .header .buyCrypto:hover {
-  background-color: #0078c8;
 }
 
 .mainContainer .header img {
@@ -120,8 +111,9 @@
   display: none;
   position: -webkit-sticky;
   position: sticky;
-  min-height: auto;
-  padding: 0px 30px 0px 30px;
+  overflow: scroll;
+  height: 94vh;
+  padding: 15px 30px 0px 30px;
   top: 60px;
   z-index: 10;
   -webkit-animation: fadein 0.5s;
@@ -131,6 +123,7 @@
 
 .mainContainer .menu h1 {
   font-weight: 400;
+  width: 100%;
   font-size: 18px;
   padding: 15px 0px 15px 0px;
   cursor: pointer;
@@ -138,7 +131,7 @@
 }
 
 .mainContainer .menu h1:hover {
-  color: #0099ff;
+  color: #0063ff;
 }
 
 .mainContainer .menu a {
@@ -147,18 +140,18 @@
 }
 
 .mainContainer .menu button {
-  margin: 15px 20px 0px 00px;
+  margin-top: 25px;
   width: 100%;
-  height: 35px;
+  height: 45px;
   border: none;
-  color: white;
+  color: black;
   border-radius: 5px;
-  background-color: #dfdfdf;
+  background-color: rgba(255, 255, 255, 0);
   cursor: pointer;
 }
 
 .mainContainer .menu button:hover {
-  background-color: #0099ff;
+  background-color: #f3f3f3;
 }
 
 .mainContainer .menu .exitMenuIcon {
@@ -168,36 +161,11 @@
 .mainContainer .menu .newIcon {
   position: absolute;
   left: 110px;
-  top: 112px;
+  top: 127px;
   width: 34px;
   z-index: 9;
   cursor: pointer;
   border-radius: 30px;
-}
-
-.mainContainer .menu .btnDarkModeIcon {
-  position: absolute;
-  right: 40px;
-  bottom: 132px;
-  width: 20px;
-  z-index: 9;
-  cursor: pointer;
-  background-color: #f4f4f4;
-  padding: 3px;
-  border-radius: 5px;
-  opacity: 0.8;
-}
-
-.mainContainer .menu .getStarted {
-  background-color: #0099ff;
-  margin-bottom: 15px;
-}
-
-.mainContainer .menu .btnDownArrow {
-  width: 15px;
-  position: absolute;
-  right: 45px;
-  top: 229px;
 }
 
 .mainContainer .menu .companyMenu {
@@ -209,13 +177,98 @@
   margin: 0px -30px 0px -30px;
 }
 
-.mainContainer .menu .lightbox {
-  position: fixed;
-  top: auto;
-  margin-left: -30px;
-  height: 72vh;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.171);
+.mainContainer .menu .btnDownArrow {
+  width: 15px;
+  position: absolute;
+  right: 45px;
+  top: 347px;
+}
+
+.mainContainer .menu .btnDarkMode {
+  position: relative;
+  z-index: 2;
+}
+
+.mainContainer .menu .btnDarkMode .btnDarkModeIcon {
+  position: absolute;
+  right: 10px;
+  top: 16px;
+  width: 20px;
+  z-index: 1;
+  cursor: pointer;
+  background-color: #f4f4f4;
+  padding: 3px;
+  border-radius: 5px;
+  opacity: 0.8;
+}
+
+.mainContainer .menu .btnAddToHomeScreen {
+  position: relative;
+}
+
+.mainContainer .menu .btnAddToHomeScreen .btnAddToHomeScreenIcon {
+  position: absolute;
+  right: 10px;
+  top: 16px;
+  width: 20px;
+  z-index: 9;
+  cursor: pointer;
+  padding: 3px;
+  border-radius: 5px;
+  opacity: 0.8;
+}
+
+.mainContainer .menu .getStarted {
+  background: linear-gradient(356deg, #478fff 0%, #0063ff 49%, #0063ff 100%);
+  color: white;
+  margin-top: 20px;
+}
+
+.mainContainer .menu .subMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 70px;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.mainContainer .menu .subMenu h3 {
+  margin: 10px;
+  font-size: 13px;
+  color: #646464;
+}
+
+.mainContainer .menu .subMenu h3:hover {
+  color: black;
+}
+
+.mainContainer .menu .socialMedia {
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.mainContainer .menu .socialMedia .socialMediaIcon {
+  width: 20px;
+  margin: 5px 15px 0px 15px;
+  opacity: 0.7;
+}
+
+.mainContainer .menu .socialMedia .socialMediaIcon:hover {
+  opacity: 1;
 }
 
 .mainContainer .TermsAndConditions {

@@ -149,7 +149,6 @@ function createCoinDiv(bitcoinD, bitcoinI) {
                 amountCalc = inpAddTransactionCoinAmount.value * bitcoinD[i].quote.USD.price
                 totalSpentAmount.textContent = `$${amountCalc.toLocaleString("en-GB", { maximumFractionDigits: 2 })}`
             })
-
             $(".closeTransaction").click(() => {
                 addTransaction.style.display = "none"
                 document.body.style.overflow = "auto";
@@ -219,11 +218,11 @@ function createCoinDiv(bitcoinD, bitcoinI) {
                         rightPortfolioCoinsAvilableCoins24h.style.color = "green"
                     }
                     // localStorage ------------------------------------ >>
-                    arrayCoinsLs.push({ name: bitcoinD[i].name, price: bitcoinD[i].quote.USD.price, amount: inpAddTransactionCoinAmount.value, Last24h: bitcoinD[i].quote.USD.percent_change_24h })
+                    arrayCoinsLs.push({ name: bitcoinD[i].name, symbol: bitcoinD[i].symbol, price: bitcoinD[i].quote.USD.price, amount: inpAddTransactionCoinAmount.value, Last24h: bitcoinD[i].quote.USD.percent_change_24h })
                     localStorage.setItem("arrayCoinsLs", JSON.stringify(arrayCoinsLs))
                     let totalAmount = arrayCoinsLs.reduce(function (sum, value) { return sum + value.price * value.amount; }, 0)
                     let average = arrayCoinsLs.reduce(function (sum, value) { return sum + value.Last24h; }, 0) / arrayCoinsLs.length;
-                    console.log(average)
+                    console.log(totalAmount)
                     // reduceTotal ------------------------------------ >>
                     const currentPortfolioBalance = document.querySelector(".currentPortfolioBalance")
                     const currentPortfolioBalance24h = document.querySelector(".currentPortfolioBalance24h")
@@ -240,12 +239,38 @@ function createCoinDiv(bitcoinD, bitcoinI) {
                         currentPortfolioBalance24h.style.color = "white"
                         currentPortfolioBalance24h.style.backgroundColor = "rgb(56, 182, 56)"
                     }
-
+                    // linesPie ------------------------------------ >>
+                    const colorArray = [
+                        { color: "#30d208" },
+                        { color: "#de7428" },
+                        { color: "#00c3ff" },
+                        { color: "#ff13b891" },
+                        { color: "#00ff8c91" },
+                        { color: "#cc00ff91" },
+                        { color: "#fffb0091" },
+                        { color: "#ffaa0091" },
+                    ]
+                    const lines = document.querySelector(".lines");
+                    $(".lines").children().remove()
+                    let aaa = arrayCoinsLs.sort(function (a, b) { return b.price - a.price * a.amount;},0)
+                    let total = aaa.reduce(function (sum, value) { return sum + value.price * value.amount; }, 0)
+                    console.log(aaa)
+                    for (let a = 0; a < arrayCoinsLs.length; a++) {
+                        const tab = document.createElement("div")
+                        lines.appendChild(tab)
+                        let xyz = (arrayCoinsLs[a].price * arrayCoinsLs[a].amount) * 100 / total
+                        tab.style.backgroundColor = colorArray[a].color;
+                        tab.style.width = `${xyz}%`;
+                        tab.textContent = `${arrayCoinsLs[a].symbol + " " + xyz.toFixed(0)}%`;
+                        tab.className = "tab"
+                        if(tab.style.width < "10%"){
+                            tab.textContent = ""
+                        }
+                    }
                 } else {
                     inpAddTransactionCoinAmount.style.border = "1px solid red"
                 }
             })
-
             totalSpentAmount.textContent = "$0.00"
             inpAddTransactionCoinAmount.value = ""
         })

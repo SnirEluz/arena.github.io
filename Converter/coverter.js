@@ -147,7 +147,7 @@ function createCoinDiv(bitcoinD, bitcoinI, currencyD) {
     }
 }//
 const cryptoApi = async () => {
-    let numberOfCoins = 10
+    let numberOfCoins = 100
     try {
         // getApi ------------------------------------------ >>
         const bitcoinData = await fetch(`https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?start=1&limit=${numberOfCoins}&CMC_PRO_API_KEY=${apiKey.key}`)

@@ -51,6 +51,7 @@ let darkModeLocalStorage = []
 let array = []
 let arrayCoinsD = []
 let arrayCoinsI = []
+
 // marketValue --------------------------------------------------->
 function colorsValueMenu(spot, gainers, losers) {
     $(`.${spot}`).css("background-color", "rgb(235, 235, 235)")
@@ -162,6 +163,8 @@ $(".change7dArrowClick").click(() => {
         createCoinDiv(arrayCoinsD, arrayCoinsI)
     }
 })
+
+// market ------------------------------------------------------->
 function createCoinDiv(bitcoinD, bitcoinI) {
     coins.innerHTML = ""
     const newArrayD = arrayCoinsD.filter(coin => coin.name.toLowerCase().includes(inpSearch.value.toLowerCase()))
@@ -687,7 +690,7 @@ function createCoinDivSearch(bitcoinD, bitcoinI) {
     }
 }
 const cryptoApi = async () => {
-    let numberOfCoins = 200
+    let numberOfCoins = 50
     try {
         // getApi ------------------------------------------ >>
         //#region
@@ -786,7 +789,7 @@ const cryptoApi = async () => {
                     "symbol": `CRYPTOCAP:TOTAL`,
                     "interval": "1",
                     "timezone": "Etc/UTC",
-                    "theme": "light",
+                    "theme": `${darkLight}`,
                     "style": "3",
                     "locale": "en",
                     "toolbar_bg": "#f1f3f6",
@@ -799,6 +802,18 @@ const cryptoApi = async () => {
                     "container_id": "tradingview_4f92d"
                 }
             );
+            if (bitcoinM.data.quote.USD.total_market_cap_yesterday_percentage_change <= 0) {
+                MarketCapPercent2.style.color = "red"
+            } else {
+                MarketCapPercent2.textContent = `+${bitcoinM.data.quote.USD.total_market_cap_yesterday_percentage_change.toFixed(2)}%`
+                MarketCapPercent2.style.color = "green"
+            }
+            if (bitcoinM.data.quote.USD.total_market_cap_yesterday_percentage_change.toFixed(2) <= 0) {
+                dayVolumePercent2.style.color = "red"
+            } else {
+                dayVolumePercent2.textContent = `+${bitcoinM.data.quote.USD.total_market_cap_yesterday_percentage_change.toFixed(2)}%`
+                dayVolumePercent2.style.color = "green"
+            }
         })
         const searchBtn = document.querySelector(".searchBtn")
         searchBtn.addEventListener("click", function (e) {
@@ -896,7 +911,7 @@ menuHeaderIcon.addEventListener("click", () => {
 $('.btnDownArrow, .btnDown').click(()=>{
     $(".companyMenu").slideToggle();
 })//
-// darkModd --------------------------------------------------->
+// darkModd ----------------------------------------------------->
 const btnDarkMode = document.querySelector(".btnDarkMode")
 const btnDarkModeIcon = document.querySelector(".btnDarkModeIcon")
 btnDarkMode.addEventListener("click", darkMode)

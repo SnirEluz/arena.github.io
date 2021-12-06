@@ -5,9 +5,7 @@ const header = document.querySelector(".header")
 
 
 let darkModeLocalStorage = []
-$('.openPayment').click(function(){
-    $(this).parent(".buyAndPaymentMethod").siblings(".payment").slideToggle("slow")
-})//
+
 // menuHeader --------------------------------------------------->
 menuHeaderIcon.addEventListener("click", () => {
     //display
@@ -32,6 +30,7 @@ menuHeaderIcon.addEventListener("click", () => {
         menuHeaderIcon.style.display = "block"
         exitMenuIcon.style.display = "none"
         document.body.style.overflow = "auto";
+
     })
     document.addEventListener("click", (e) => {
         if (e.target.closest(".lightbox")) {

@@ -1,0 +1,713 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0px;
+}
+
+* a {
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.darkMode {
+  background: white;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.darkMode .header button {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.darkMode .menu h1:hover {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  border-bottom: 1px solid rgba(56, 56, 56, 0.672);
+}
+
+.darkMode .menu .lightbox {
+  -webkit-filter: invert(0.7);
+          filter: invert(0.7);
+}
+
+.darkMode .menu .newIcon {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.darkMode .menu .getStarted {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.darkMode .faqMain .faqMenuMain .faqMenu a {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+.darkMode .faqMain .faqMenuMain .faqMenu a .faqMenuChoise img {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+.darkMode .faqMain .faqMenuMain .faqMap .faqMapLine {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.darkMode .faqMain .shareSocial .shareSocialIcons {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.darkMode .faqMain .shareSocial h3 {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.darkMode .faqMain .shareSocial a {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.mainContainer {
+  font-family: roboto;
+}
+
+.mainContainer .header {
+  position: -webkit-sticky;
+  position: sticky;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 60px;
+  top: 0vh;
+  z-index: 999;
+  background-color: white;
+  -webkit-box-shadow: 0 4px 20px -2px #ededed;
+          box-shadow: 0 4px 20px -2px #ededed;
+}
+
+.mainContainer .header h1 {
+  position: absolute;
+  font-weight: 300;
+  font-size: 20px;
+  padding-left: 29px;
+  top: 0;
+}
+
+.mainContainer .header a {
+  color: black;
+  text-decoration: none;
+}
+
+.mainContainer .header .logo {
+  width: 25px;
+  margin: 18px;
+}
+
+.mainContainer .header .buyCrypto {
+  width: 120px;
+  height: 38px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(356deg, #478fff 0%, #0063ff 49%, #0063ff 100%);
+  color: white;
+  position: absolute;
+  right: 70px;
+  top: 11.5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.mainContainer .header img {
+  width: 25px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.mainContainer .menu {
+  display: none;
+  position: -webkit-sticky;
+  position: sticky;
+  overflow: scroll;
+  height: 94vh;
+  padding: 15px 30px 0px 30px;
+  top: 60px;
+  z-index: 10;
+  -webkit-animation: fadein 0.5s;
+          animation: fadein 0.5s;
+  background-color: white;
+}
+
+.mainContainer .menu h1 {
+  font-weight: 400;
+  width: 100%;
+  font-size: 18px;
+  padding: 15px 0px 15px 0px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(235, 235, 235, 0.672);
+}
+
+.mainContainer .menu h1:hover {
+  color: #0063ff;
+}
+
+.mainContainer .menu a {
+  color: black;
+  text-decoration: none;
+}
+
+.mainContainer .menu button {
+  margin-top: 25px;
+  width: 100%;
+  height: 45px;
+  border: none;
+  color: black;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+}
+
+.mainContainer .menu button:hover {
+  background-color: #f3f3f3;
+}
+
+.mainContainer .menu .exitMenuIcon {
+  width: 30px;
+}
+
+.mainContainer .menu .newIcon {
+  position: absolute;
+  left: 110px;
+  top: 127px;
+  width: 34px;
+  z-index: 9;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+.mainContainer .menu .companyMenu {
+  display: none;
+  font-weight: 300;
+  font-size: 18px;
+  background-color: rgba(235, 235, 235, 0.466);
+  padding: 12px 30px 12px 30px;
+  margin: 0px -30px 0px -30px;
+}
+
+.mainContainer .menu .btnDownArrow {
+  width: 15px;
+  position: absolute;
+  right: 45px;
+  top: 347px;
+}
+
+.mainContainer .menu .btnDarkMode {
+  position: relative;
+  z-index: 2;
+}
+
+.mainContainer .menu .btnDarkMode .btnDarkModeIcon {
+  position: absolute;
+  right: 10px;
+  top: 16px;
+  width: 20px;
+  z-index: 1;
+  cursor: pointer;
+  background-color: #f4f4f4;
+  padding: 3px;
+  border-radius: 5px;
+  opacity: 0.8;
+}
+
+.mainContainer .menu .btnAddToHomeScreen {
+  position: relative;
+}
+
+.mainContainer .menu .btnAddToHomeScreen .btnAddToHomeScreenIcon {
+  position: absolute;
+  right: 10px;
+  top: 16px;
+  width: 20px;
+  z-index: 9;
+  cursor: pointer;
+  padding: 3px;
+  border-radius: 5px;
+  opacity: 0.8;
+}
+
+.mainContainer .menu .getStarted {
+  background: linear-gradient(356deg, #478fff 0%, #0063ff 49%, #0063ff 100%);
+  color: white;
+  margin-top: 20px;
+}
+
+.mainContainer .menu .subMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 70px;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.mainContainer .menu .subMenu h3 {
+  margin: 10px;
+  font-size: 13px;
+  color: #646464;
+}
+
+.mainContainer .menu .subMenu h3:hover {
+  color: black;
+}
+
+.mainContainer .menu .socialMedia {
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.mainContainer .menu .socialMedia .socialMediaIcon {
+  width: 20px;
+  margin: 5px 15px 0px 15px;
+  opacity: 0.7;
+}
+
+.mainContainer .menu .socialMedia .socialMediaIcon:hover {
+  opacity: 1;
+}
+
+.mainContainer .faqMain {
+  background-color: rgba(235, 235, 235, 0.37);
+}
+
+.mainContainer .faqMain .faqHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 200px;
+  padding: 0px 5%;
+}
+
+.mainContainer .faqMain .faqMenuMain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  border-radius: 20px 20px 0px 00px;
+  padding: 60px 10px 20px 10px;
+  background-color: white;
+}
+
+.mainContainer .faqMain .faqMenuMain .faqMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 70%;
+  padding: 0px 5%;
+}
+
+.mainContainer .faqMain .faqMenuMain .faqMenu a {
+  width: 100%;
+  font-size: 9px;
+  font-weight: 400;
+  color: black;
+}
+
+.mainContainer .faqMain .faqMenuMain .faqMenu a .faqMenuChoise {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #0062ff11;
+  border-left: 3px solid #0063ff;
+  padding: 13px 30px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.mainContainer .faqMain .faqMenuMain .faqMenu a .faqMenuChoise img {
+  width: 17px;
+}
+
+.mainContainer .faqMain .faqMenuMain .faqMap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 0px 30px;
+  width: 30%;
+}
+
+.mainContainer .faqMain .faqMenuMain .faqMap .faqMapLine {
+  height: 170px;
+  width: 30px;
+  border-left: 1px solid #0063ff;
+}
+
+.mainContainer .faqMain .faqMenuMain .faqMap .faqMapLine .pin {
+  height: 1px;
+  width: 13px;
+  margin-bottom: 35px;
+  background-color: #0063ff;
+}
+
+.mainContainer .faqMain .faqMenuMain .faqMap .faqMapLinks {
+  height: 100%;
+}
+
+.mainContainer .faqMain .faqMenuMain .faqMap .faqMapLinks h3 {
+  color: #4a4a4a;
+  font-size: 16px;
+  margin-bottom: 20px;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.mainContainer .faqMain .faqMenuMain .faqMap .faqMapLinks h3:hover {
+  color: #050505;
+  font-weight: 400;
+}
+
+.mainContainer .faqMain .faqAnswer {
+  background-color: white;
+  border-radius: 0px 0px 20px 20px;
+  padding-bottom: 20px;
+  height: auto;
+}
+
+.mainContainer .faqMain .faqAnswer .category {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 40px 0px 20px 0px;
+  margin: 0px 9vw 10px 9vw;
+  border-bottom: 1px solid #efefef;
+}
+
+.mainContainer .faqMain .faqAnswer .category h1 {
+  font-size: 25px;
+}
+
+.mainContainer .faqMain .faqAnswer .category img {
+  background-color: #5f9cff11;
+  border-radius: 50%;
+  width: 35px;
+  padding: 5px;
+  margin-left: 20px;
+}
+
+.mainContainer .faqMain .faqAnswer .faqAnswerDiv {
+  padding: 0px 7vw;
+}
+
+.mainContainer .faqMain .faqAnswer .faqAnswerDiv a {
+  color: #0063ff;
+  text-decoration: none;
+}
+
+.mainContainer .faqMain .faqAnswer .faqAnswerDiv h1 {
+  padding: 20px 20px 0px 20px;
+  font-size: 18px;
+}
+
+.mainContainer .faqMain .faqAnswer .faqAnswerDiv p {
+  padding: 20px 20px 20px 30px;
+  font-size: 16px;
+  color: #3d3d3d;
+  font-weight: 300;
+}
+
+.mainContainer .faqMain .faqAnswer .faqAnswerDiv table {
+  margin: 30px 10px;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.mainContainer .faqMain .faqAnswer .faqAnswerDiv table td,
+.mainContainer .faqMain .faqAnswer .faqAnswerDiv table th {
+  border: 1px solid #eeeeeeac;
+  text-align: left;
+  padding: 25px 10px;
+}
+
+.mainContainer .faqMain .faqAnswer .faqAnswerDiv table a {
+  color: #0063ff;
+  text-decoration: none;
+}
+
+.mainContainer .faqMain .faqAnswer .faqAnswerDiv table td:nth-child(even) {
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.mainContainer .faqMain .faqAnswer .faqAnswerDiv table tr:nth-child(even) {
+  background-color: #4b90ff11;
+}
+
+.mainContainer .faqMain .faqAnswer .faqAnswerDiv table tr:hover {
+  background-color: #1a6ff811;
+}
+
+.mainContainer .faqMain .faqAnswer .faqAnswerDiv .howToBuy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  height: auto;
+  padding: 0vh 5vw 0vw 5vw;
+}
+
+.mainContainer .faqMain .faqAnswer .faqAnswerDiv .howToBuy div {
+  position: relative;
+  width: 32vw;
+  min-width: 290px;
+  min-height: 160px;
+  height: auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 10px 20px;
+}
+
+.mainContainer .faqMain .faqAnswer .faqAnswerDiv .howToBuy div h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.mainContainer .faqMain .faqAnswer .faqAnswerDiv .howToBuy div h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #0063ff;
+  color: #0063ff;
+  padding: 3px;
+  width: 35px;
+  height: 35px;
+  font-size: 15px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.mainContainer .faqMain .faqAnswer .faqAnswerDiv .howToBuy div .lastOne {
+  background-color: #0063ff;
+  color: #ffffff;
+}
+
+.mainContainer .faqMain .faqAnswer .faqAnswerDiv .howToBuy div h5 {
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 300;
+  color: #404040;
+}
+
+.mainContainer .faqMain .shareSocial {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 150px;
+  padding-left: 7vw;
+}
+
+.mainContainer .faqMain .shareSocial h2 {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.mainContainer .faqMain .shareSocial .shareSocialIcons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.mainContainer .faqMain .shareSocial .shareSocialIcons .socialimg {
+  width: 20px;
+  margin-right: 5px;
+}
+
+.mainContainer .faqMain .shareSocial h5 {
+  margin-top: 15px;
+  font-weight: 400;
+}
+
+.mainContainer .faqMain .shareSocial h5 a {
+  color: #0063ff;
+  text-decoration: none;
+}
+
+.mainContainer .jumpTop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  margin: 30px;
+  border-radius: 50%;
+  background-color: #f4f4f4;
+}
+
+.mainContainer .jumpTop img {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+  width: 17px;
+}
+
+@media (max-width: 590px) {
+  .mainContainer {
+    font-family: roboto;
+  }
+  .mainContainer .header .buyCrypto {
+    width: 110px;
+    height: 38px;
+    right: 65px;
+    top: 11.5px;
+  }
+  .mainContainer .faqMain .faqHeader {
+    height: 140px;
+  }
+  .mainContainer .faqMain .faqHeader h1 {
+    font-size: 20px;
+  }
+  .mainContainer .faqMain .faqMenuMain {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    padding-top: 30px;
+  }
+  .mainContainer .faqMain .faqMenuMain .faqMenu {
+    width: 100%;
+  }
+  .mainContainer .faqMain .faqMenuMain .faqMenu a {
+    font-size: 8px;
+  }
+  .mainContainer .faqMain .faqMenuMain .faqMenu a .faqMenuChoise {
+    padding: 13px 20px;
+  }
+  .mainContainer .faqMain .faqMenuMain .faqMenu a .faqMenuChoise img {
+    width: 10px;
+  }
+  .mainContainer .faqMain .faqMenuMain .faqMap {
+    margin-bottom: 20px;
+  }
+  .mainContainer .faqMain .faqMenuMain .faqMap .faqMapLinks h3 {
+    margin-top: 5px;
+    margin-left: 5px;
+  }
+  .mainContainer .faqMain .faqAnswer .category {
+    margin: 0px 25px 10px 25px;
+  }
+  .mainContainer .faqMain .faqAnswer .faqAnswerDiv {
+    padding: 0px 2vw;
+  }
+  .mainContainer .faqMain .faqAnswer .faqAnswerDiv h1 {
+    font-size: 17px;
+  }
+  .mainContainer .faqMain .faqAnswer .faqAnswerDiv p {
+    padding: 20px 20px 20px 20px;
+  }
+  .mainContainer .faqMain .faqAnswer .faqAnswerDiv table {
+    width: 95%;
+  }
+}
+
+@media (min-width: 1377px) {
+  .mainContainer .header {
+    padding: 0px 7vw;
+  }
+  .mainContainer .header .buyCrypto {
+    right: 12%;
+  }
+  .mainContainer .faqMain .faqHeader {
+    padding: 0px 14vw;
+  }
+  .mainContainer .faqMain .faqMenuMain {
+    padding: 60px 9vw 20px 9vw;
+  }
+  .mainContainer .faqMain .faqAnswer {
+    padding: 0px 28vw 20px 5vw;
+  }
+}
+/*# sourceMappingURL=faq.css.map */

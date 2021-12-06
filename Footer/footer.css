@@ -15,7 +15,7 @@ a {
           filter: invert(1);
 }
 
-.darkMode .footer .startWithUs button {
+.darkMode .footer .startWithUs .startWithUsBtn1 {
   -webkit-filter: invert(1);
           filter: invert(1);
 }
@@ -60,11 +60,11 @@ a {
 }
 
 .footer .startWithUs .startWithUsBtn .startWithUsBtn1 {
-  background-color: #0099ff;
+  background: linear-gradient(356deg, #478fff 0%, #0063ff 49%, #0063ff 100%);
 }
 
 .footer .startWithUs .startWithUsBtn .startWithUsBtn2 {
-  background-color: #d7d7d7;
+  color: black;
 }
 
 .footer .topHeader {
@@ -74,9 +74,8 @@ a {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  height: 90px;
+  height: 70px;
   padding-left: 7vw;
-  margin-bottom: 20px;
 }
 
 .footer .topHeader img {
@@ -163,5 +162,20 @@ a {
   font-size: 11px;
   color: #a6adb3;
   font-weight: 300;
+}
+
+@media (min-width: 1477px) {
+  .mainContainer .footer .topHeader {
+    padding: 0px 10vw;
+  }
+  .mainContainer .footer .siteMap {
+    padding: 0px 10vw;
+  }
+  .mainContainer .footer .socialMedia {
+    padding: 0px 10vw;
+  }
+  .mainContainer .footer .allRightReserv {
+    padding: 0px 10vw;
+  }
 }
 /*# sourceMappingURL=footer.css.map */
