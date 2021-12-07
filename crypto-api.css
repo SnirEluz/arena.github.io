@@ -45,6 +45,26 @@
           filter: invert(1);
 }
 
+.darkMode .goToFaq {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.darkMode .goToFaq h3 {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.darkMode .goToFaq .readMore {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.darkMode .goToFaq .closeGoToFaq {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
 .darkMode .container002 button:hover,
 .darkMode .newsTool button:hover,
 .darkMode .container001 button:hover {
@@ -57,6 +77,11 @@
 .darkMode .container001 img {
   -webkit-filter: invert(1);
           filter: invert(1);
+}
+
+.darkMode .tredingCoins {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
 }
 
 .darkMode .market .coins .coinDiv .coinDivLeft img {
@@ -341,6 +366,43 @@
   white-space: nowrap;
 }
 
+.mainContainer .container .goToFaq {
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  padding: 0px 20px;
+  height: 38px;
+  background-color: #2176ff27;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  -webkit-animation: fadein 1.5s;
+          animation: fadein 1.5s;
+}
+
+.mainContainer .container .goToFaq img {
+  width: 14px;
+  height: 14px;
+}
+
+.mainContainer .container .goToFaq h3 {
+  font-size: 13px;
+  font-weight: 300;
+  margin-left: 5px;
+}
+
+.mainContainer .container .goToFaq .readMore {
+  color: #0062ff;
+  font-weight: 400;
+}
+
+.mainContainer .container .goToFaq .closeGoToFaq {
+  position: absolute;
+  cursor: pointer;
+  right: 20px;
+}
+
 .mainContainer .container .container001 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -409,6 +471,59 @@
   border-radius: 50%;
   -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
           box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.mainContainer .container .tredingCoins {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  overflow: auto;
+  height: auto;
+  padding-left: 20px;
+  width: 100vw;
+}
+
+.mainContainer .container .tredingCoins .tredingCoinsDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-width: 150px;
+  height: 100px;
+  padding-left: 20px;
+  margin: 10px 10px 20px 10px;
+  background-color: #dbe3f027;
+  border-radius: 10px;
+}
+
+.mainContainer .container .tredingCoins .tredingCoinsDiv .tredingCoinsDivSymbol {
+  margin-bottom: 6px;
+  font-size: 13px;
+  color: #6c6c6c;
+}
+
+.mainContainer .container .tredingCoins .tredingCoinsDiv .tredingCoinsDivPrice {
+  margin-bottom: 4px;
+  font-size: 18px;
+  color: black;
+}
+
+.mainContainer .container .tredingCoins .tredingCoinsDiv .tredingCoinsDivName {
+  font-weight: 400;
+  font-size: 17px;
+  color: #6c6c6c;
 }
 
 .mainContainer .container .tools {
@@ -751,6 +866,15 @@
   .mainContainer .menu .socialMedia {
     height: 60px;
   }
+  .mainContainer .container .goToFaq {
+    padding: 0px 10px;
+  }
+  .mainContainer .container .goToFaq h3 {
+    font-size: 11px;
+  }
+  .mainContainer .container .goToFaq .closeGoToFaq {
+    right: 10px;
+  }
   .mainContainer .container .container001 {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -817,6 +941,22 @@
     border-radius: 50%;
     -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
             box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+  .mainContainer .container .tredingCoins {
+    padding-left: 10px;
+  }
+  .mainContainer .container .tredingCoins .tredingCoinsDiv {
+    margin-left: 5px;
+    min-width: 130px;
+  }
+  .mainContainer .container .tredingCoins .tredingCoinsDiv .tredingCoinsDivSymbol {
+    font-size: 11px;
+  }
+  .mainContainer .container .tredingCoins .tredingCoinsDiv .tredingCoinsDivPrice {
+    font-size: 16px;
+  }
+  .mainContainer .container .tredingCoins .tredingCoinsDiv .tredingCoinsDivName {
+    font-size: 12px;
   }
   .mainContainer .container .container002 {
     overflow: auto;

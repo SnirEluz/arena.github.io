@@ -25,6 +25,18 @@ market.appendChild(coins)
 // market.appendChild(tools)
 mainContainer.appendChild(footer)
 // cryptoApi ---------------------------------------------------->
+// getApiTradingCoins ------------- >>
+for (let i = 0; i < 7; i++) {
+    $(".tredingCoins").html($(".tredingCoins").html() + `
+        <a href="/Market/market-api.html">
+            <div class="tredingCoinsDiv">
+                <h2 class="tredingCoinsDivSymbol">..... / .....</h2>
+                <h2 class="tredingCoinsDivPrice">0.00</h2>
+                <h2 class="tredingCoinsDivName">.....</h2>
+            </div>
+        </a>
+    `)
+}
 let darkModeLocalStorage = []
 const cryptoApi = async () => {
     let numberOfCoins = 10
@@ -40,8 +52,21 @@ const cryptoApi = async () => {
         const bitcoinI = await bitcoinInfo.json()
         const bitcoinMarket = await fetch(`https://pro-api.coinmarketcap.com/v1/global-metrics/quotes/latest?CMC_PRO_API_KEY=${apiKey.key}`)
         const bitcoinM = await bitcoinMarket.json()
-        console.log(bitcoinI)
-        //#region marketData
+        // getApiTradingCoins ------------------------------------------ >>
+        $.get("https://api.coingecko.com/api/v3/search/trending", (status) => {
+            $(".tredingCoinsDiv").remove()
+            for (let i = 0; i < status.coins.length; i++) {
+                $(".tredingCoins").html($(".tredingCoins").html() + `
+            <a href="/Market/market-api.html">
+                <div class="tredingCoinsDiv">
+                    <h2 class="tredingCoinsDivSymbol">${status.coins[i].item.symbol}/USDT</h2>
+                    <h2 class="tredingCoinsDivPrice">${(status.coins[i].item.price_btc * bitcoinD.data[0].quote.USD.price).toLocaleString("en-GB", { maximumFractionDigits: 2 })}</h2>
+                    <h2 class="tredingCoinsDivName">${status.coins[i].item.name}</h2>
+                </div>
+            </a>
+        `)
+            }
+        });        //#region marketData
         const totalCryptocurrencies = document.querySelector(".totalCryptocurrencies")
         const activeExchanges = document.querySelector(".activeExchanges")
         const totalMarketCap = document.querySelector(".totalMarketCap")
@@ -165,8 +190,10 @@ menuHeaderIcon.addEventListener("click", () => {
 })
 $('.btnDownArrow, .btnDown').click(() => {
     $(".companyMenu").slideToggle();
-})//
-
+})
+// goToFaq?
+setTimeout(() => { $(".goToFaq").css("display", "flex"); }, 2000);
+$(".closeGoToFaq").click(() => { $(".goToFaq").hide() })//
 // darkModd --------------------------------------------------->
 const btnDarkMode = document.querySelector(".btnDarkMode")
 const btnDarkModeIcon = document.querySelector(".btnDarkModeIcon")

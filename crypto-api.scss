@@ -33,6 +33,18 @@
             filter: invert(1);
         }
     }
+    .goToFaq {
+        filter: invert(1);
+        h3 {
+            filter: invert(1);
+        }
+        .readMore {
+            filter: invert(1);
+        }
+        .closeGoToFaq {
+            filter: invert(1);
+        }
+    }
     .container002,
     .newsTool,
     .container001 {
@@ -42,6 +54,9 @@
         img {
             filter: invert(1);
         }
+    }
+    .tredingCoins {
+        filter: grayscale(1);
     }
     .market {
         .coins {
@@ -276,6 +291,34 @@
         }
     }
     .container {
+        .goToFaq {
+            display: none;
+            align-items: center;
+            position: relative;
+            padding: 0px 20px;
+            height: 38px;
+            background-color: #2176ff27;
+            transition: 0.2s ease-in-out;
+            animation: fadein 1.5s;
+            img {
+                width: 14px;
+                height: 14px;
+            }
+            h3 {
+                font-size: 13px;
+                font-weight: 300;
+                margin-left: 5px;
+            }
+            .readMore {
+                color: #0062ff;
+                font-weight: 400;
+            }
+            .closeGoToFaq {
+                position: absolute;
+                cursor: pointer;
+                right: 20px;
+            }
+        }
         .container001 {
             display: flex;
             height: 400px;
@@ -317,6 +360,42 @@
                     transform: skewY(10deg);
                     border-radius: 50%;
                     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                }
+            }
+        }
+        .tredingCoins {
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            overflow: auto;
+            height: auto;
+            padding-left: 20px;
+            width: 100vw;
+            .tredingCoinsDiv {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                min-width: 150px;
+                height: 100px;
+                padding-left: 20px;
+                margin: 10px 10px 20px 10px;
+                background-color: #dbe3f027;
+                border-radius: 10px;
+
+                .tredingCoinsDivSymbol {
+                    margin-bottom: 6px;
+                    font-size: 13px;
+                    color: rgb(108, 108, 108);
+                }
+                .tredingCoinsDivPrice {
+                    margin-bottom: 4px;
+                    font-size: 18px;
+                    color: black;
+                }
+                .tredingCoinsDivName {
+                    font-weight: 400;
+                    font-size: 17px;
+                    color: rgb(108, 108, 108);
                 }
             }
         }
@@ -554,6 +633,15 @@
             }
         }
         .container {
+            .goToFaq {
+                padding: 0px 10px;
+                h3 {
+                    font-size: 11px;
+                }
+                .closeGoToFaq {
+                    right: 10px;
+                }
+            }
             .container001 {
                 display: flex;
                 height: 350px;
@@ -599,6 +687,22 @@
                         transform: skewY(10deg);
                         border-radius: 50%;
                         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                    }
+                }
+            }
+            .tredingCoins {
+                padding-left: 10px;
+                .tredingCoinsDiv {
+                    margin-left: 5px;
+                    min-width: 130px;
+                    .tredingCoinsDivSymbol {
+                        font-size: 11px;
+                    }
+                    .tredingCoinsDivPrice {
+                        font-size: 16px;
+                    }
+                    .tredingCoinsDivName {
+                        font-size: 12px;
                     }
                 }
             }
