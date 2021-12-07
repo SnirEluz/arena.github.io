@@ -183,7 +183,6 @@ menuHeaderIcon.addEventListener("click", () => {
             menuHeaderIcon.style.display = "block"
             exitMenuIcon.style.display = "none"
             document.body.style.overflow = "auto";
-            $(".companyMenu").css("display", "none");
         };
 
     });
