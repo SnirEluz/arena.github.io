@@ -922,13 +922,8 @@
     min-width: 110px;
     height: 40px;
     margin-top: 20px;
-    background-color: black;
-    color: white;
     border-radius: 3px;
     cursor: pointer;
-  }
-  .mainContainer .container .container001 .firstBaner button:hover {
-    background-color: #0099ff;
   }
   .mainContainer .container .container001 .secondBaner {
     display: -webkit-box;
