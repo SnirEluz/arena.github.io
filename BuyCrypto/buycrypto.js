@@ -51,7 +51,6 @@ $('.btnDownArrow, .btnDown').click(()=>{
 const btnDarkMode = document.querySelector(".btnDarkMode")
 const btnDarkModeIcon = document.querySelector(".btnDarkModeIcon")
 btnDarkMode.addEventListener("click", darkMode)
-btnDarkModeIcon.addEventListener("click", darkMode)
 if (localStorage.getItem("darkModeLocalStorage")) {
     darkMode()
 }else{
