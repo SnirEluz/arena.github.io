@@ -48,6 +48,9 @@
     .container002,
     .newsTool,
     .container001 {
+        button {
+            filter: invert(1);
+        }
         button:hover {
             filter: invert(1);
         }
@@ -340,13 +343,23 @@
                     width: 200px;
                     height: 40px;
                     margin-top: 20px;
-                    background-color: rgb(0, 0, 0);
+                    background: linear-gradient(
+                        356deg,
+                        rgba(71, 143, 255, 1) 0%,
+                        rgba(0, 99, 255, 1) 49%,
+                        rgba(0, 99, 255, 1) 100%
+                    );
                     color: rgb(255, 255, 255);
                     border-radius: 3px;
                     cursor: pointer;
                 }
                 button:hover {
-                    background-color: rgb(0, 153, 255);
+                    background: linear-gradient(
+                        356deg,
+                        rgba(71, 143, 255, 1) 0%,
+                        rgb(0, 98, 255) 49%,
+                        rgb(45, 125, 255) 100%
+                    );
                 }
             }
             .secondBaner {

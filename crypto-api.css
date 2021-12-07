@@ -65,6 +65,13 @@
           filter: invert(1);
 }
 
+.darkMode .container002 button,
+.darkMode .newsTool button,
+.darkMode .container001 button {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
 .darkMode .container002 button:hover,
 .darkMode .newsTool button:hover,
 .darkMode .container001 button:hover {
@@ -440,14 +447,14 @@
   width: 200px;
   height: 40px;
   margin-top: 20px;
-  background-color: black;
+  background: linear-gradient(356deg, #478fff 0%, #0063ff 49%, #0063ff 100%);
   color: white;
   border-radius: 3px;
   cursor: pointer;
 }
 
 .mainContainer .container .container001 .firstBaner button:hover {
-  background-color: #0099ff;
+  background: linear-gradient(356deg, #478fff 0%, #0062ff 49%, #2d7dff 100%);
 }
 
 .mainContainer .container .container001 .secondBaner {
