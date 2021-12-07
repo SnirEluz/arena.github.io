@@ -208,12 +208,12 @@
   border: none;
   color: black;
   border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: #f3f3f3;
   cursor: pointer;
 }
 
 .mainContainer .menu button:hover {
-  background-color: #f3f3f3;
+  background-color: #eeeeee;
 }
 
 .mainContainer .menu .exitMenuIcon {
@@ -869,6 +869,10 @@
   }
   .mainContainer .menu .subMenu {
     height: 60px;
+  }
+  .mainContainer .menu .subMenu h3 {
+    font-size: 12px;
+    white-space: nowrap;
   }
   .mainContainer .menu .socialMedia {
     height: 60px;

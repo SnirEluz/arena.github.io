@@ -21,10 +21,10 @@
         .lightbox {
             filter: invert(0.7);
         }
-        .newIcon{
+        .newIcon {
             filter: invert(1);
         }
-        .getStarted{
+        .getStarted {
             filter: invert(1);
         }
     }
@@ -163,11 +163,11 @@
             border: none;
             color: rgb(0, 0, 0);
             border-radius: 5px;
-            background-color: rgba(255, 255, 255, 0);
+            background-color: rgb(243, 243, 243);
             cursor: pointer;
         }
         button:hover {
-            background-color: rgb(243, 243, 243);
+            background-color: rgb(238, 238, 238);
         }
         .exitMenuIcon {
             width: 30px;
@@ -634,21 +634,25 @@
                 top: 11.5px;
             }
         }
-        .menu{
-            .getStarted{
+        .menu {
+            .getStarted {
                 margin-top: 10px;
             }
-            .subMenu{
+            .subMenu {
                 height: 60px;
+                h3 {
+                    font-size: 12px;
+                    white-space: nowrap;
+                }
             }
-            .socialMedia{
+            .socialMedia {
                 height: 60px;
             }
         }
         .container {
             .goToFaq {
                 padding: 0px 15px;
-                img{
+                img {
                     width: 12px;
                     height: 12px;
                 }

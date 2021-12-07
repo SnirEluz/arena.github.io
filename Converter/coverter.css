@@ -934,6 +934,7 @@
   height: 70px;
   width: 100%;
   background-color: inherit;
+  color: black;
   border-radius: 5px;
   border: none;
   cursor: pointer;
