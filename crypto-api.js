@@ -56,9 +56,9 @@ const cryptoApi = async () => {
         const bitcoinMarket = await fetch(`https://api.coingecko.com/api/v3/global`)
         const bitcoinM = await bitcoinMarket.json()
         console.log(bitcoinM)
-        const marketGeco = await fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&page=1&per_page=10`)
+        const marketGeco = await fetch(`https://api.coingecko.com/api/v3/coins?per_page=10`)
         const marketG = await marketGeco.json()
-        console.log(marketG[0])
+        console.log(marketG)
         // getApiTradingCoins ------------------------------------------ >>
         $.get("https://api.coingecko.com/api/v3/search/trending", (status) => {
             console.log(status)
@@ -111,7 +111,7 @@ const cryptoApi = async () => {
             coinDivLeftImg.className = "coinDivLeftImg"
             coinDivLeftName.className = "coinDivLeftName"
             coinDivLeftSymbol.className = "coinDivLeftSymbol"
-            coinDivLeftImg.src = marketG[i].image
+            coinDivLeftImg.src = marketG[i].image.small
             // coinDivLeftImg.src = bitcoinI.data[array[i]].logo
             // right
             coinDivRight.className = "coinDivRight"
@@ -119,7 +119,7 @@ const cryptoApi = async () => {
             coinDivRight24Volume.className = "coinDivRight24Volume"
             coinDivRight7daysVolume.className = "coinDivRight7daysVolume"
             // contentInfromationLefr ------------------------------------ >>
-            coinDivLeftRank.textContent = marketG[i].market_cap_rank
+            coinDivLeftRank.textContent = marketG[i].market_data.market_cap_rank
             coinDivLeftName.textContent = marketG[i].name
             coinDivLeftSymbol.textContent = marketG[i].symbol
             // coinDivLeftRank.textContent = bitcoinD.data[i].cmc_rank
@@ -154,10 +154,10 @@ const cryptoApi = async () => {
             //     "roi": null,
             //     "last_updated": "2021-12-11T21:49:38.684Z"
             // }
-            coinDivRightPrice.textContent = `$${new Number(marketG[i].current_price).toLocaleString("en-GB", { maximumFractionDigits: 2 })}`
-            coinDivRightPrice.title = `$${new Number(marketG[i].current_price).toLocaleString("en-GB", { maximumFractionDigits: 5 })}`
-            coinDivRight24Volume.textContent = `${marketG[i].price_change_percentage_24h.toFixed(2)}%`
-            coinDivRight7daysVolume.textContent = `${marketG[i].price_change_percentage_24h.toFixed(2)}% `
+            coinDivRightPrice.textContent = `$${new Number(marketG[i].market_data.current_price.usd).toLocaleString("en-GB", { maximumFractionDigits: 2 })}`
+            coinDivRightPrice.title = `$${new Number(marketG[i].market_data.current_price.usd).toLocaleString("en-GB", { maximumFractionDigits: 5 })}`
+            coinDivRight24Volume.textContent = `${marketG[i].market_data.price_change_percentage_24h.toFixed(2)}%`
+            coinDivRight7daysVolume.textContent = `${marketG[i].market_data.price_change_percentage_7d.toFixed(2)}% `
             // coinDivRightPrice.textContent = `$${new Number(bitcoinD.data[i].quote.USD.price).toLocaleString("en-GB", { maximumFractionDigits: 2 })}`
             // coinDivRightPrice.title = `$${new Number(bitcoinD.data[i].quote.USD.price).toLocaleString("en-GB", { maximumFractionDigits: 5 })}`
             // coinDivRight24Volume.textContent = `${bitcoinD.data[i].quote.USD.percent_change_24h.toFixed(2)}%`
@@ -176,15 +176,15 @@ const cryptoApi = async () => {
             coinDivRight.appendChild(coinDivRight24Volume)
             coinDivRight.appendChild(coinDivRight7daysVolume)
             //#region ifElse / Green / Red
-            if (marketG[i].price_change_percentage_24h.toFixed(2) <= 0) {
+            if (marketG[i].market_data.price_change_percentage_24h.toFixed(2) <= 0) {
                 coinDivRight24Volume.style.color = "red"
             } else {
-                coinDivRight24Volume.textContent = `+${marketG[i].price_change_percentage_24h.toFixed(2)}%`
+                coinDivRight24Volume.textContent = `+${marketG[i].market_data.price_change_percentage_24h.toFixed(2)}%`
             }
-            if (marketG[i].price_change_percentage_24h.toFixed(2) <= 0) {
+            if (marketG[i].market_data.price_change_percentage_7d.toFixed(2) <= 0) {
                 coinDivRight7daysVolume.style.color = "red"
             } else {
-                coinDivRight7daysVolume.textContent = `+${marketG[i].price_change_percentage_24h.toFixed(2)}%`
+                coinDivRight7daysVolume.textContent = `+${marketG[i].market_data.price_change_percentage_7d.toFixed(2)}%`
             }
             //#endregion
             coinDiv.addEventListener("click", function () {

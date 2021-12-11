@@ -798,6 +798,7 @@
 .mainContainer .market .coins .coinDiv .coinDivLeft .coinDivLeftImg {
   width: 30px;
   margin-left: 15px;
+  border-radius: 50%;
 }
 
 .mainContainer .market .coins .coinDiv .coinDivLeft .coinDivLeftName {
@@ -1108,6 +1109,7 @@
   .mainContainer .market .coins .coinDiv .coinDivLeft .coinDivLeftImg {
     width: 28px;
     margin-left: 10px;
+    border-radius: 50%;
   }
   .mainContainer .market .coins .coinDiv .coinDivLeft .coinDivLeftName {
     font-weight: 300;
