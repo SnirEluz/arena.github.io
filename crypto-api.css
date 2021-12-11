@@ -826,7 +826,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
-  padding: 10px;
+  padding-right: 10px;
 }
 
 .mainContainer .market .coins .coinDiv .coinDivRight .coinDivRightPrice {
@@ -848,6 +848,7 @@
   color: #82d603;
   font-weight: 400;
   font-size: 14px;
+  text-align: right;
   width: 50px;
 }
 
@@ -1130,17 +1131,17 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     width: 60%;
-    padding: 10px;
+    padding-right: 10px;
   }
   .mainContainer .market .coins .coinDiv .coinDivRight .coinDivRightPrice {
     position: absolute;
     font-weight: 400;
     font-size: 12px;
-    left: 10px;
+    left: 5px;
   }
   .mainContainer .market .coins .coinDiv .coinDivRight .coinDivRight24Volume {
     position: absolute;

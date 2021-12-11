@@ -596,7 +596,7 @@
                     align-items: center;
                     justify-content: space-between;
                     width: 100%;
-                    padding: 10px;
+                    padding-right: 10px;
                     .coinDivRightPrice {
                         color: rgb(0, 0, 0);
                         font-weight: 400;
@@ -614,6 +614,7 @@
                         color: rgb(130, 214, 3);
                         font-weight: 400;
                         font-size: 14px;
+                        text-align: right;
                         width: 50px;
                     }
                 }
@@ -836,14 +837,14 @@
                         position: relative;
                         display: flex;
                         align-items: center;
-                        justify-content: space-evenly;
+                        justify-content: space-between;
                         width: 60%;
-                        padding: 10px;
+                        padding-right: 10px;
                         .coinDivRightPrice {
                             position: absolute;
                             font-weight: 400;
                             font-size: 12px;
-                            left: 10px;
+                            left: 5px;
                         }
                         .coinDivRight24Volume {
                             position: absolute;
