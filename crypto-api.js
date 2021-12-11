@@ -68,7 +68,7 @@ const cryptoApi = async () => {
                     <a href="/Market/market-api.html">
                         <div class="tredingCoinsDiv">
                             <h2 class="tredingCoinsDivSymbol">${status.coins[i].item.symbol}/USD</h2>
-                            <h2 class="tredingCoinsDivPrice">$${(status.coins[i].item.price_btc * marketG[0].current_price).toLocaleString("en-GB", { maximumFractionDigits: 2 })}</h2>
+                            <h2 class="tredingCoinsDivPrice">$${(status.coins[i].item.price_btc * marketG[i].market_data.current_price.usd).toLocaleString("en-GB", { maximumFractionDigits: 2 })}</h2>
                             <h2 class="tredingCoinsDivName">${status.coins[i].item.name}</h2>
                         </div>
                     </a>
