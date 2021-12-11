@@ -32,53 +32,63 @@ for (let i = 0; i < 7; i++) {
             <div class="tredingCoinsDiv">
                 <h2 class="tredingCoinsDivSymbol">..... / .....</h2>
                 <h2 class="tredingCoinsDivPrice">0.00</h2>
-                <h2 class="tredingCoinsDivName">.....</h2>
+                <h2 class="tredingCoinsDivName">Bitcoin</h2>
             </div>
         </a>
     `)
 }
+const array = []
 let darkModeLocalStorage = []
 const cryptoApi = async () => {
     let numberOfCoins = 10
     try {
         // getApi ------------------------------------------ >>
-        const array = []
-        const bitcoinData = await fetch(`https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?start=1&limit=${numberOfCoins}&CMC_PRO_API_KEY=${apiKey.key}`)
-        const bitcoinD = await bitcoinData.json()
-        for (let i = 0; i < numberOfCoins; i++) {
-            array.push(bitcoinD.data[i].id)
-        }
-        const bitcoinInfo = await fetch(`https://pro-api.coinmarketcap.com/v1/cryptocurrency/info?id=${array}&CMC_PRO_API_KEY=${apiKey.key}`)
-        const bitcoinI = await bitcoinInfo.json()
-        const bitcoinMarket = await fetch(`https://pro-api.coinmarketcap.com/v1/global-metrics/quotes/latest?CMC_PRO_API_KEY=${apiKey.key}`)
+        // const bitcoinData = await fetch(`https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?start=1&limit=${numberOfCoins}&convert=USD&CMC_PRO_API_KEY=${apiKey.key}`)
+        // const bitcoinD = await bitcoinData.json()
+        // for (let i = 0; i < numberOfCoins; i++) {
+        //     array.push(bitcoinD.data[i].id)
+        // }
+        // const bitcoinInfo = await fetch(`https://pro-api.coinmarketcap.com/v1/cryptocurrency/info?id=${array}&CMC_PRO_API_KEY=${apiKey.key}`)
+        // const bitcoinI = await bitcoinInfo.json()
+        // console.log(bitcoinI)
+        // const bitcoinMarket = await fetch(`https://pro-api.coinmarketcap.com/v1/global-metrics/quotes/latest?CMC_PRO_API_KEY=${apiKey.key}`)
+        // const bitcoinM = await bitcoinMarket.json()
+        const bitcoinMarket = await fetch(`https://api.coingecko.com/api/v3/global`)
         const bitcoinM = await bitcoinMarket.json()
+        console.log(bitcoinM)
+        const marketGeco = await fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&page=1&per_page=10`)
+        const marketG = await marketGeco.json()
+        console.log(marketG[0])
         // getApiTradingCoins ------------------------------------------ >>
         $.get("https://api.coingecko.com/api/v3/search/trending", (status) => {
+            console.log(status)
             $(".tredingCoinsDiv").remove()
             for (let i = 0; i < status.coins.length; i++) {
                 $(".tredingCoins").html($(".tredingCoins").html() + `
-            <a href="/Market/market-api.html">
-                <div class="tredingCoinsDiv">
-                    <h2 class="tredingCoinsDivSymbol">${status.coins[i].item.symbol}/USDT</h2>
-                    <h2 class="tredingCoinsDivPrice">${(status.coins[i].item.price_btc * bitcoinD.data[0].quote.USD.price).toLocaleString("en-GB", { maximumFractionDigits: 2 })}</h2>
-                    <h2 class="tredingCoinsDivName">${status.coins[i].item.name}</h2>
-                </div>
-            </a>
-        `)
+                    <a href="/Market/market-api.html">
+                        <div class="tredingCoinsDiv">
+                            <h2 class="tredingCoinsDivSymbol">${status.coins[i].item.symbol}/USD</h2>
+                            <h2 class="tredingCoinsDivPrice">$${(status.coins[i].item.price_btc * marketG[0].current_price).toLocaleString("en-GB", { maximumFractionDigits: 2 })}</h2>
+                            <h2 class="tredingCoinsDivName">${status.coins[i].item.name}</h2>
+                        </div>
+                    </a>
+                `)
             }
-        });        //#region marketData
+        });
+        //#region marketData
         const totalCryptocurrencies = document.querySelector(".totalCryptocurrencies")
         const activeExchanges = document.querySelector(".activeExchanges")
         const totalMarketCap = document.querySelector(".totalMarketCap")
         const totalVolume24h = document.querySelector(".totalVolume24h")
         const totalMarketCapYesterdayPercentageChange = document.querySelector(".totalMarketCapYesterdayPercentageChange")
 
-        totalCryptocurrencies.textContent = `${new Number(bitcoinM.data.total_cryptocurrencies).toLocaleString("en-GB")}`
-        activeExchanges.textContent = `${new Number(bitcoinM.data.active_exchanges).toLocaleString("en-GB")}`
-        totalMarketCap.textContent = `$${new Number(bitcoinM.data.quote.USD.total_market_cap).toLocaleString("en-GB", { maximumFractionDigits: 0 })}`
-        totalVolume24h.textContent = `$${new Number(bitcoinM.data.quote.USD.total_volume_24h).toLocaleString("en-GB", { maximumFractionDigits: 0 })}`
-        totalMarketCapYesterdayPercentageChange.textContent = `${bitcoinM.data.quote.USD.total_market_cap_yesterday_percentage_change.toFixed(2)}%`
+        totalCryptocurrencies.textContent = `${new Number(bitcoinM.data.active_cryptocurrencies).toLocaleString("en-GB")}`
+        activeExchanges.textContent = `${new Number(bitcoinM.data.markets).toLocaleString("en-GB")}`
+        totalMarketCap.textContent = `$${new Number(bitcoinM.data.total_market_cap.usd).toLocaleString("en-GB", { maximumFractionDigits: 0 })}`
+        totalVolume24h.textContent = `$${new Number(bitcoinM.data.total_volume.usd).toLocaleString("en-GB", { maximumFractionDigits: 0 })}`
+        totalMarketCapYesterdayPercentageChange.textContent = `${bitcoinM.data.market_cap_percentage.usdc.toFixed(2)}%`
         //#endregion
+
         for (let i = 0; i < numberOfCoins; i++) {
             // createElement ------------------------------------------ >>
             const coinDiv = document.createElement("div")
@@ -101,21 +111,57 @@ const cryptoApi = async () => {
             coinDivLeftImg.className = "coinDivLeftImg"
             coinDivLeftName.className = "coinDivLeftName"
             coinDivLeftSymbol.className = "coinDivLeftSymbol"
-            coinDivLeftImg.src = bitcoinI.data[array[i]].logo
+            coinDivLeftImg.src = marketG[i].image
+            // coinDivLeftImg.src = bitcoinI.data[array[i]].logo
             // right
             coinDivRight.className = "coinDivRight"
             coinDivRightPrice.className = "coinDivRightPrice"
             coinDivRight24Volume.className = "coinDivRight24Volume"
             coinDivRight7daysVolume.className = "coinDivRight7daysVolume"
             // contentInfromationLefr ------------------------------------ >>
-            coinDivLeftRank.textContent = bitcoinD.data[i].cmc_rank
-            coinDivLeftName.textContent = bitcoinD.data[i].name
-            coinDivLeftSymbol.textContent = bitcoinD.data[i].symbol
+            coinDivLeftRank.textContent = marketG[i].market_cap_rank
+            coinDivLeftName.textContent = marketG[i].name
+            coinDivLeftSymbol.textContent = marketG[i].symbol
+            // coinDivLeftRank.textContent = bitcoinD.data[i].cmc_rank
+            // coinDivLeftName.textContent = bitcoinD.data[i].name
+            // coinDivLeftSymbol.textContent = bitcoinD.data[i].symbol
             // textContentRight ------------------------------------ >>
-            coinDivRightPrice.textContent = `$${new Number(bitcoinD.data[i].quote.USD.price).toLocaleString("en-GB", { maximumFractionDigits: 2 })}`
-            coinDivRightPrice.title = `$${new Number(bitcoinD.data[i].quote.USD.price).toLocaleString("en-GB", { maximumFractionDigits: 5 })}`
-            coinDivRight24Volume.textContent = `${bitcoinD.data[i].quote.USD.percent_change_24h.toFixed(2)}%`
-            coinDivRight7daysVolume.textContent = `${bitcoinD.data[i].quote.USD.percent_change_7d.toFixed(2)}% `
+            // {
+            //     "id": "bitcoin",
+            //     "symbol": "btc",
+            //     "name": "Bitcoin",
+            //     "image": "https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579",
+            //     "current_price": 48505,
+            //     "market_cap": 916658208212,
+            //     "market_cap_rank": 1,
+            //     "fully_diluted_valuation": 1018595727820,
+            //     "total_volume": 24322196615,
+            //     "high_24h": 49336,
+            //     "low_24h": 47033,
+            //     "price_change_24h": 407.64,
+            //     "price_change_percentage_24h": 0.84753,
+            //     "market_cap_change_24h": 3734436152,
+            //     "market_cap_change_percentage_24h": 0.40906,
+            //     "circulating_supply": 18898393,
+            //     "total_supply": 21000000,
+            //     "max_supply": 21000000,
+            //     "ath": 69045,
+            //     "ath_change_percentage": -29.69992,
+            //     "ath_date": "2021-11-10T14:24:11.849Z",
+            //     "atl": 67.81,
+            //     "atl_change_percentage": 71481.24787,
+            //     "atl_date": "2013-07-06T00:00:00.000Z",
+            //     "roi": null,
+            //     "last_updated": "2021-12-11T21:49:38.684Z"
+            // }
+            coinDivRightPrice.textContent = `$${new Number(marketG[i].current_price).toLocaleString("en-GB", { maximumFractionDigits: 2 })}`
+            coinDivRightPrice.title = `$${new Number(marketG[i].current_price).toLocaleString("en-GB", { maximumFractionDigits: 5 })}`
+            coinDivRight24Volume.textContent = `${marketG[i].price_change_percentage_24h.toFixed(2)}%`
+            coinDivRight7daysVolume.textContent = `${marketG[i].price_change_percentage_24h.toFixed(2)}% `
+            // coinDivRightPrice.textContent = `$${new Number(bitcoinD.data[i].quote.USD.price).toLocaleString("en-GB", { maximumFractionDigits: 2 })}`
+            // coinDivRightPrice.title = `$${new Number(bitcoinD.data[i].quote.USD.price).toLocaleString("en-GB", { maximumFractionDigits: 5 })}`
+            // coinDivRight24Volume.textContent = `${bitcoinD.data[i].quote.USD.percent_change_24h.toFixed(2)}%`
+            // coinDivRight7daysVolume.textContent = `${bitcoinD.data[i].quote.USD.percent_change_7d.toFixed(2)}% `
             // appendChild ------------------------------------------- >>
             coins.appendChild(coinDiv)
             // left
@@ -130,15 +176,15 @@ const cryptoApi = async () => {
             coinDivRight.appendChild(coinDivRight24Volume)
             coinDivRight.appendChild(coinDivRight7daysVolume)
             //#region ifElse / Green / Red
-            if (bitcoinD.data[i].quote.USD.percent_change_24h.toFixed(2) <= 0) {
+            if (marketG[i].price_change_percentage_24h.toFixed(2) <= 0) {
                 coinDivRight24Volume.style.color = "red"
             } else {
-                coinDivRight24Volume.textContent = `+${bitcoinD.data[i].quote.USD.percent_change_24h.toFixed(2)}%`
+                coinDivRight24Volume.textContent = `+${marketG[i].price_change_percentage_24h.toFixed(2)}%`
             }
-            if (bitcoinD.data[i].quote.USD.percent_change_7d.toFixed(2) <= 0) {
+            if (marketG[i].price_change_percentage_24h.toFixed(2) <= 0) {
                 coinDivRight7daysVolume.style.color = "red"
             } else {
-                coinDivRight7daysVolume.textContent = `+${bitcoinD.data[i].quote.USD.percent_change_7d.toFixed(2)}%`
+                coinDivRight7daysVolume.textContent = `+${marketG[i].price_change_percentage_24h.toFixed(2)}%`
             }
             //#endregion
             coinDiv.addEventListener("click", function () {
@@ -174,7 +220,6 @@ menuHeaderIcon.addEventListener("click", () => {
         menuHeaderIcon.style.display = "block"
         exitMenuIcon.style.display = "none"
         document.body.style.overflow = "auto";
-
     })
     document.addEventListener("click", (e) => {
         if (e.target.closest(".lightbox")) {
@@ -186,11 +231,12 @@ menuHeaderIcon.addEventListener("click", () => {
         };
 
     });
+
 })
 $('.btnDownArrow, .btnDown').click(() => {
     $(".companyMenu").slideToggle();
 })
-// goToFaq?
+// goToFaq`
 setTimeout(() => { $(".goToFaq").css("display", "flex"); }, 2000);
 $(".closeGoToFaq").click(() => { $(".goToFaq").hide() })//
 // darkModd --------------------------------------------------->
@@ -222,3 +268,27 @@ function darkMode() {
 }
 
 
+
+
+
+// News[5] --------------------------------------------------->
+const newsApi = async () => {
+    try {
+        const newsData = await fetch(`https://min-api.cryptocompare.com/data/v2/news/?lang=EN`)
+        const newsD = await newsData.json()
+        const container002NewsBaner = document.querySelector(".container002NewsBaner")
+        const container002News = document.querySelector(".container002News")
+        console.log(newsD)
+        for (let i = 0; i < 5; i++) {
+            container002News.innerHTML +=`
+                <div class="container002NewsBaner">
+                    <img class="container002NewsBanerImg" src=${newsD.Data[i].imageurl} alt="">
+                    <h3 class="container002NewsBanerTitle">${(newsD.Data[i].title.substring(0, 25) + "...")}</h3>
+                    <img class="creditImgBanner" src="/arena.github.io/image/bitcoin.png" alt="">
+                    <h6 class="creditNameBanner">${newsD.Data[i].source} - 16h ago</h6>
+                </div>
+            `
+        }
+    } catch (error) { }
+}
+newsApi()
