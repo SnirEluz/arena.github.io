@@ -121,7 +121,7 @@ const cryptoApi = async () => {
             // contentInfromationLefr ------------------------------------ >>
             coinDivLeftRank.textContent = marketG[i].market_data.market_cap_rank
             coinDivLeftName.textContent = marketG[i].name
-            coinDivLeftSymbol.textContent = marketG[i].symbol
+            coinDivLeftSymbol.textContent = marketG[i].symbol.toUpperCase()
             // coinDivLeftRank.textContent = bitcoinD.data[i].cmc_rank
             // coinDivLeftName.textContent = bitcoinD.data[i].name
             // coinDivLeftSymbol.textContent = bitcoinD.data[i].symbol
@@ -188,7 +188,7 @@ const cryptoApi = async () => {
             }
             //#endregion
             coinDiv.addEventListener("click", function () {
-                location.href = "/Market/market-api.html"
+                location.href = "/arena.github.io/Market/market-api.html"
             })
         }
     } catch (error) {
