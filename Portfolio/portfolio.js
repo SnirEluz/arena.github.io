@@ -17,8 +17,7 @@ market.appendChild(coins)//
 let darkModeLocalStorage = []
 let array = []
 let arrayCoinsLs = []
-let arrayCoinsD = []
-let arrayCoinsI = []
+let marketG = []
 $(".addCoin").click(() => {
     console.log("work")
     cryptoApi()//
@@ -42,11 +41,9 @@ $(".closeMarket").click(() => {
 
 })
 // function ()=> ---------------------------------------------------->
-function createCoinDiv(bitcoinD, bitcoinI) {
+function createCoinDiv(marketG) {
     coins.innerHTML = ""
-    const newArrayD = arrayCoinsD.filter(coin => coin.name.toLowerCase().includes(inpSearch.value.toLowerCase()))
-    for (let i = 0; i < newArrayD.length; i++) {
-        console.log(newArrayD.length)
+    for (let i = 0; i < marketG.length; i++) {
         // console.log(newArray)
         // createElement ------------------------------------------ >>
         const coinDiv = document.createElement("div")
@@ -67,15 +64,15 @@ function createCoinDiv(bitcoinD, bitcoinI) {
         coinDivLeftImg.className = "coinDivLeftImg"
         coinDivLeftName.className = "coinDivLeftName"
         coinDivLeftSymbol.className = "coinDivLeftSymbol"
-        coinDivLeftImg.src = bitcoinI[array[i]].logo
+        coinDivLeftImg.src = marketG[i].image.small
         // right
         coinDivRight.className = "coinDivRight"
         coinDivRightNext.className = "coinDivRightNext"
         coinDivRightNext.src = "/arena.github.io/image/right.png"
         // textContentLeft ------------------------------------ >>
-        coinDivLeftRank.textContent = bitcoinD[i].cmc_rank
-        coinDivLeftName.textContent = bitcoinD[i].name
-        coinDivLeftSymbol.textContent = bitcoinD[i].symbol
+        coinDivLeftRank.textContent = marketG[i].market_data.market_cap_rank
+        coinDivLeftName.textContent = marketG[i].name
+        coinDivLeftSymbol.textContent = marketG[i].symbol.toUpperCase()
         // appendChild ------------------------------------------- >>
         coins.appendChild(coinDiv)
         // left
@@ -137,16 +134,16 @@ function createCoinDiv(bitcoinD, bitcoinI) {
             const addTransactionCoinName = document.querySelector(".addTransactionCoinName")
             const addTransactionCoinSymbol = document.querySelector(".addTransactionCoinSymbol")
             // textContentLeft ------------------------------------ >>
-            addTransactionCoinImg.src = bitcoinI[array[i]].logo
-            addTransactionCoinName.textContent = bitcoinD[i].name
-            addTransactionCoinSymbol.textContent = bitcoinD[i].symbol
+            addTransactionCoinImg.src = marketG[i].image.small
+            addTransactionCoinName.textContent = marketG[i].name
+            addTransactionCoinSymbol.textContent = marketG[i].symbol
             // calculate -------
             inpAddTransactionCoinAmount.addEventListener("keyup", function () {
-                amountCalc = inpAddTransactionCoinAmount.value * bitcoinD[i].quote.USD.price
+                amountCalc = inpAddTransactionCoinAmount.value * marketG[i].market_data.current_price.usd
                 totalSpentAmount.textContent = `$${amountCalc.toLocaleString("en-GB", { maximumFractionDigits: 2 })}`
             })
             inpAddTransactionCoinAmount.addEventListener("click", function () {
-                amountCalc = inpAddTransactionCoinAmount.value * bitcoinD[i].quote.USD.price
+                amountCalc = inpAddTransactionCoinAmount.value * marketG[i].market_data.current_price.usd
                 totalSpentAmount.textContent = `$${amountCalc.toLocaleString("en-GB", { maximumFractionDigits: 2 })}`
             })
             $(".closeTransaction").click(() => {
@@ -202,23 +199,23 @@ function createCoinDiv(bitcoinD, bitcoinI) {
                     rightPortfolioCoinsAvilableCoinsPriceAvilable.className = "rightPortfolioCoinsAvilableCoinsPriceAvilable"
                     rightPortfolioCoinsAvilableCoinsAmountAvilable.className = "rightPortfolioCoinsAvilableCoinsAmountAvilable"
                     // // textContentLeft ------------------------------------ >>
-                    leftPortfolioCoinsAvilableCoinsImg.src = bitcoinI[array[i]].logo
-                    leftPortfolioCoinsAvilableCoinsName.textContent = bitcoinD[i].name
-                    leftPortfolioCoinsAvilableCoinsSymbol.textContent = bitcoinD[i].symbol
-                    leftPortfolioCoinsAvilableCoinsPrice.textContent = `$${new Number(bitcoinD[i].quote.USD.price).toLocaleString("en-GB", { maximumFractionDigits: 2 })}`
-                    rightPortfolioCoinsAvilableCoins24h.textContent = `${bitcoinD[i].quote.USD.percent_change_24h.toFixed(2)}%`
-                    newPriceAvilable = inpAddTransactionCoinAmount.value * bitcoinD[i].quote.USD.price
+                    leftPortfolioCoinsAvilableCoinsImg.src = marketG[i].image.small
+                    leftPortfolioCoinsAvilableCoinsName.textContent = marketG[i].name
+                    leftPortfolioCoinsAvilableCoinsSymbol.textContent = marketG[i].symbol
+                    leftPortfolioCoinsAvilableCoinsPrice.textContent = `$${new Number(marketG[i].market_data.current_price.usd).toLocaleString("en-GB", { maximumFractionDigits: 2 })}`
+                    rightPortfolioCoinsAvilableCoins24h.textContent = `${marketG[i].market_data.price_change_percentage_24h.toFixed(2)}%`
+                    newPriceAvilable = inpAddTransactionCoinAmount.value * marketG[i].market_data.current_price.usd
                     rightPortfolioCoinsAvilableCoinsPriceAvilable.textContent = `$${new Number(newPriceAvilable).toLocaleString("en-GB", { maximumFractionDigits: 2 })}`
                     rightPortfolioCoinsAvilableCoinsAmountAvilable.textContent = inpAddTransactionCoinAmount.value
 
-                    if (bitcoinD[i].quote.USD.percent_change_24h.toFixed(2) <= 0) {
+                    if (marketG[i].market_data.price_change_percentage_24h.toFixed(2) <= 0) {
                         rightPortfolioCoinsAvilableCoins24h.style.color = "red"
                     } else {
-                        rightPortfolioCoinsAvilableCoins24h.textContent = `+${bitcoinD[i].quote.USD.percent_change_24h.toFixed(2)}% `
+                        rightPortfolioCoinsAvilableCoins24h.textContent = `+${marketG[i].market_data.price_change_percentage_24h.toFixed(2)}% `
                         rightPortfolioCoinsAvilableCoins24h.style.color = "green"
                     }
                     // localStorage ------------------------------------ >>
-                    arrayCoinsLs.push({ name: bitcoinD[i].name, symbol: bitcoinD[i].symbol, price: bitcoinD[i].quote.USD.price, amount: inpAddTransactionCoinAmount.value, Last24h: bitcoinD[i].quote.USD.percent_change_24h })
+                    arrayCoinsLs.push({ name: marketG[i].name, symbol: marketG[i].symbol, price: marketG[i].market_data.current_price.usd, amount: inpAddTransactionCoinAmount.value, Last24h: marketG[i].market_data.price_change_percentage_24h })
                     localStorage.setItem("arrayCoinsLs", JSON.stringify(arrayCoinsLs))
                     let totalAmount = arrayCoinsLs.reduce(function (sum, value) { return sum + value.price * value.amount; }, 0)
                     let average = arrayCoinsLs.reduce(function (sum, value) { return sum + value.Last24h; }, 0) / arrayCoinsLs.length;
@@ -277,56 +274,40 @@ function createCoinDiv(bitcoinD, bitcoinI) {
     }
 }//
 const cryptoApi = async () => {
-    let numberOfCoins = 100
     try {
+
         // getApi ------------------------------------------ >>
-        //#region
-        const bitcoinData = await fetch(`https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?start=1&limit=${numberOfCoins}&CMC_PRO_API_KEY=${apiKey.key}`)
-        const bitcoinD = await bitcoinData.json()
-        array = []
-        for (let i = 0; i < numberOfCoins; i++) {
-            array.push(bitcoinD.data[i].id)
-        }
-        const bitcoinInfo = await fetch(`https://pro-api.coinmarketcap.com/v1/cryptocurrency/info?id=${array}&CMC_PRO_API_KEY=${apiKey.key}`)
-        const bitcoinI = await bitcoinInfo.json()
-        arrayCoinsD = bitcoinD.data
-        arrayCoinsI = bitcoinI.data
-        console.log(arrayCoinsD[0].quote.USD.price)
+        const marketGeco = await fetch(`https://api.coingecko.com/api/v3/coins?per_page=250`)
+        const marketG = await marketGeco.json()
+        newmarketG = marketG
+
         $(".loading").css("display", "none")
-        const newArrayD = arrayCoinsD.filter(coin => coin.name.toLowerCase().includes(inpSearch.value.toLowerCase()))
-        inpSearch.addEventListener("keyup", function () {
-            const newArrayD = arrayCoinsD.filter(coin => coin.name.toLowerCase().includes(inpSearch.value.toLowerCase()))
-            if (!newArrayD.length) {
-                coins.innerHTML = `
-                <h1 class="noResults">No results for '${inpSearch.value}'</h1>
-                `
-            } else {
-                createCoinDiv(newArrayD, arrayCoinsI)
-            }
+        inpSearch.addEventListener("keyup", function (e) {
+            const newArrayD = marketG.filter(coin => coin.name.toLowerCase().includes(inpSearch.value.toLowerCase()))
+            createCoinDiv(newArrayD)
         })
-        //#endregion
         // createDivCoin ------------------------------------------ >>
 
-        createCoinDiv(newArrayD, arrayCoinsI)
+        createCoinDiv(marketG)
+
     } catch (error) {
     }
 }//
 // cryptoApiNarket --------------------------------------------------->
 const cryptoApiNarket = async () => {
     try {
-        const bitcoinMarket = await fetch(`https://pro-api.coinmarketcap.com/v1/global-metrics/quotes/latest?CMC_PRO_API_KEY=${apiKey.key}`)
+        const bitcoinMarket = await fetch(`https://api.coingecko.com/api/v3/global`)
         const bitcoinM = await bitcoinMarket.json()
-        //#region marketData
         const totalCryptocurrencies = document.querySelector(".totalCryptocurrencies")
         const activeExchanges = document.querySelector(".activeExchanges")
         const totalMarketCap = document.querySelector(".totalMarketCap")
         const totalVolume24h = document.querySelector(".totalVolume24h")
         const totalMarketCapYesterdayPercentageChange = document.querySelector(".totalMarketCapYesterdayPercentageChange")
-        totalCryptocurrencies.textContent = `${new Number(bitcoinM.data.total_cryptocurrencies).toLocaleString("en-GB")}`
-        activeExchanges.textContent = `${new Number(bitcoinM.data.active_exchanges).toLocaleString("en-GB")}`
-        totalMarketCap.textContent = `$${new Number(bitcoinM.data.quote.USD.total_market_cap).toLocaleString("en-GB", { maximumFractionDigits: 0 })}`
-        totalVolume24h.textContent = `$${new Number(bitcoinM.data.quote.USD.total_volume_24h).toLocaleString("en-GB", { maximumFractionDigits: 0 })}`
-        totalMarketCapYesterdayPercentageChange.textContent = `${bitcoinM.data.quote.USD.total_market_cap_yesterday_percentage_change.toFixed(2)}%`
+        totalCryptocurrencies.textContent = `${new Number(bitcoinM.data.active_cryptocurrencies).toLocaleString("en-GB")}`
+        activeExchanges.textContent = `${new Number(bitcoinM.data.markets).toLocaleString("en-GB")}`
+        totalMarketCap.textContent = `$${new Number(bitcoinM.data.total_market_cap.usd).toLocaleString("en-GB", { maximumFractionDigits: 0 })}`
+        totalVolume24h.textContent = `$${new Number(bitcoinM.data.total_volume.usd).toLocaleString("en-GB", { maximumFractionDigits: 0 })}`
+        totalMarketCapYesterdayPercentageChange.textContent = `${bitcoinM.data.market_cap_percentage.usdc.toFixed(2)}%`
         //#endregion
 
     } catch {
