@@ -31,7 +31,7 @@ market.appendChild(coins)//
 let darkModeLocalStorage = []
 let array = []
 let arrayCoinsLs = []
-let arrayCoinsD = []
+let marketG = []
 let arrayCoinsI = []
 
 
@@ -57,11 +57,12 @@ $(".closeMarket").click(() => {
 
 })
 // function ()=> ---------------------------------------------------->
-function createCoinDiv(bitcoinD, bitcoinI, currencyD) {
+function createCoinDiv(marketG,currencyD) {
+    console.log("1")
+
     coins.innerHTML = ""
-    const newArrayD = arrayCoinsD.filter(coin => coin.name.toLowerCase().includes(inpSearch.value.toLowerCase()))
-    for (let i = 0; i < newArrayD.length; i++) {
-        console.log(newArrayD.length)
+    for (let i = 0; i < marketG.length; i++) {
+        console.log(marketG.length)
         // console.log(newArray)
         // createElement ------------------------------------------ >>
         const coinDiv = document.createElement("div")
@@ -82,15 +83,15 @@ function createCoinDiv(bitcoinD, bitcoinI, currencyD) {
         coinDivLeftImg.className = "coinDivLeftImg"
         coinDivLeftName.className = "coinDivLeftName"
         coinDivLeftSymbol.className = "coinDivLeftSymbol"
-        coinDivLeftImg.src = bitcoinI[array[i]].logo
+        coinDivLeftImg.src = marketG[i].image.small
         // right
         coinDivRight.className = "coinDivRight"
         coinDivRightNext.className = "coinDivRightNext"
         coinDivRightNext.src = "/arena.github.io/image/right.png"
         // textContentLeft ------------------------------------ >>
-        coinDivLeftRank.textContent = bitcoinD[i].cmc_rank
-        coinDivLeftName.textContent = bitcoinD[i].name
-        coinDivLeftSymbol.textContent = bitcoinD[i].symbol
+        coinDivLeftRank.textContent = marketG[i].market_data.market_cap_rank
+        coinDivLeftName.textContent = marketG[i].name
+        coinDivLeftSymbol.textContent = marketG[i].symbol.toUpperCase()
         // appendChild ------------------------------------------- >>
         coins.appendChild(coinDiv)
         // left
@@ -122,22 +123,22 @@ function createCoinDiv(bitcoinD, bitcoinI, currencyD) {
             $(".lightboxCoins").css("display", "none")
             market.style.display = "none"
             document.body.style.overflow = "auto";
-            coinSymbolImageConverter.src = bitcoinI[array[i]].logo
-            coinNameConverter.textContent = bitcoinD[i].name
-            coinSymbolConverter.textContent = bitcoinD[i].symbol
-            let newPrice = inputAmountConverter.value * (bitcoinD[i].quote.USD.price.toFixed(2) * curencyArray[currencySelect.value].currentPrice)
-            coinPriceAmountConverter.textContent = `${inputAmountConverter.value + " " + bitcoinD[i].symbol + " ="}`
+            coinSymbolImageConverter.src = marketG[i].image.small
+            coinNameConverter.textContent = marketG[i].name
+            coinSymbolConverter.textContent = marketG[i].symbol
+            let newPrice = inputAmountConverter.value * (marketG[i].market_data.current_price.usd.toFixed(2) * curencyArray[currencySelect.value].currentPrice)
+            coinPriceAmountConverter.textContent = `${inputAmountConverter.value + " " + marketG[i].symbol + " ="}`
             coinPriceConverter.textContent = newPrice.toLocaleString("en-GB", { maximumFractionDigits: 2 }) + " " + curencyArray[currencySelect.value].currenctName
-            coinPriceAmountConverter.textContent = `${inputAmountConverter.value + " " + bitcoinD[i].symbol} =`
+            coinPriceAmountConverter.textContent = `${inputAmountConverter.value + " " + marketG[i].symbol} =`
 
             // -------------------------Converter--------------------------//
             inputAmountConverter.addEventListener("keyup", function () {
-                let newPrice = inputAmountConverter.value * (bitcoinD[i].quote.USD.price.toFixed(2) * curencyArray[currencySelect.value].currentPrice)
-                coinPriceAmountConverter.textContent = `${inputAmountConverter.value + " " + bitcoinD[i].symbol + " ="}`
+                let newPrice = inputAmountConverter.value * (marketG[i].market_data.current_price.usd.toFixed(2) * curencyArray[currencySelect.value].currentPrice)
+                coinPriceAmountConverter.textContent = `${inputAmountConverter.value + " " + marketG[i].symbol + " ="}`
                 coinPriceConverter.textContent = newPrice.toLocaleString("en-GB", { maximumFractionDigits: 2 }) + " " + curencyArray[currencySelect.value].currenctName
             })
             currencySelect.addEventListener("change", function () {
-                let newPrice = inputAmountConverter.value * (bitcoinD[i].quote.USD.price.toFixed(2) * curencyArray[currencySelect.value].currentPrice)
+                let newPrice = inputAmountConverter.value * (marketG[i].market_data.current_price.usd.toFixed(2) * curencyArray[currencySelect.value].currentPrice)
                 coinPriceConverter.textContent = newPrice.toLocaleString("en-GB", { maximumFractionDigits: 2 }) + " " + curencyArray[currencySelect.value].currenctName
 
             })
@@ -147,36 +148,21 @@ function createCoinDiv(bitcoinD, bitcoinI, currencyD) {
     }
 }//
 const cryptoApi = async () => {
-    let numberOfCoins = 100
     try {
         // getApi ------------------------------------------ >>
-        const bitcoinData = await fetch(`https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?start=1&limit=${numberOfCoins}&CMC_PRO_API_KEY=${apiKey.key}`)
-        const bitcoinD = await bitcoinData.json()
-        array = []
-        for (let i = 0; i < numberOfCoins; i++) {
-            array.push(bitcoinD.data[i].id)
-        }
-        const bitcoinInfo = await fetch(`https://pro-api.coinmarketcap.com/v1/cryptocurrency/info?id=${array}&CMC_PRO_API_KEY=${apiKey.key}`)
-        const bitcoinI = await bitcoinInfo.json()
+        const marketGeco = await fetch(`https://api.coingecko.com/api/v3/coins?per_page=250`)
+        const marketG = await marketGeco.json()
         const currencyData = await fetch(`https://freecurrencyapi.net/api/v2/latest?apikey=${apiKeyCurrency.key}`)
         const currencyD = await currencyData.json()
-        arrayCoinsD = bitcoinD.data
-        arrayCoinsI = bitcoinI.data
-        console.log(arrayCoinsD[0].quote.USD.price)
+        newmarketG = marketG
+        // console.log(arrayCoinsD[0].quote.USD.price)
         $(".loading").css("display", "none")
-        const newArrayD = arrayCoinsD.filter(coin => coin.name.toLowerCase().includes(inpSearch.value.toLowerCase()))
-        inpSearch.addEventListener("keyup", function () {
-            const newArrayD = arrayCoinsD.filter(coin => coin.name.toLowerCase().includes(inpSearch.value.toLowerCase()))
-            if (!newArrayD.length) {
-                coins.innerHTML = `
-                <h1 class="noResults">No results for '${inpSearch.value}'</h1>
-                `
-            } else {
-                createCoinDiv(newArrayD, arrayCoinsI,currencyD)
-            }
+        inpSearch.addEventListener("keyup", function (e) {
+            const newArrayD = marketG.filter(coin => coin.name.toLowerCase().includes(inpSearch.value.toLowerCase()))
+            createCoinDiv(newArrayD,currencyD)
         })
         // createDivCoin ------------------------------------------ >>
-        createCoinDiv(newArrayD, arrayCoinsI, currencyD)
+        createCoinDiv(marketG,currencyD)
     } catch (error) {
     }
 }//
@@ -184,10 +170,11 @@ const cryptoApi = async () => {
 // cryptoApiNarket --------------------------------------------------->
 const cryptoApiNarket = async () => {
     try {
-        const bitcoinMarket = await fetch(`https://pro-api.coinmarketcap.com/v1/global-metrics/quotes/latest?CMC_PRO_API_KEY=${apiKey.key}`)
+        const bitcoinMarket = await fetch(`https://api.coingecko.com/api/v3/global`)
         const bitcoinM = await bitcoinMarket.json()
-        const bitcoinData = await fetch(`https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?start=1&limit=1&CMC_PRO_API_KEY=${apiKey.key}`)
-        const bitcoinD = await bitcoinData.json()
+        console.log(bitcoinM)
+        const marketGeco = await fetch(`https://api.coingecko.com/api/v3/coins?per_page=250`)
+        const marketG = await marketGeco.json()
         const currencyData = await fetch(`https://freecurrencyapi.net/api/v2/latest?apikey=${apiKeyCurrency.key}`)
         const currencyD = await currencyData.json()
         const totalCryptocurrencies = document.querySelector(".totalCryptocurrencies")
@@ -195,11 +182,12 @@ const cryptoApiNarket = async () => {
         const totalMarketCap = document.querySelector(".totalMarketCap")
         const totalVolume24h = document.querySelector(".totalVolume24h")
         const totalMarketCapYesterdayPercentageChange = document.querySelector(".totalMarketCapYesterdayPercentageChange")
-        totalCryptocurrencies.textContent = `${new Number(bitcoinM.data.total_cryptocurrencies).toLocaleString("en-GB")}`
-        activeExchanges.textContent = `${new Number(bitcoinM.data.active_exchanges).toLocaleString("en-GB")}`
-        totalMarketCap.textContent = `$${new Number(bitcoinM.data.quote.USD.total_market_cap).toLocaleString("en-GB", { maximumFractionDigits: 0 })}`
-        totalVolume24h.textContent = `$${new Number(bitcoinM.data.quote.USD.total_volume_24h).toLocaleString("en-GB", { maximumFractionDigits: 0 })}`
-        totalMarketCapYesterdayPercentageChange.textContent = `${bitcoinM.data.quote.USD.total_market_cap_yesterday_percentage_change.toFixed(2)}%`
+        totalCryptocurrencies.textContent = `${new Number(bitcoinM.data.active_cryptocurrencies).toLocaleString("en-GB")}`
+        activeExchanges.textContent = `${new Number(bitcoinM.data.markets).toLocaleString("en-GB")}`
+        totalMarketCap.textContent = `$${new Number(bitcoinM.data.total_market_cap.usd).toLocaleString("en-GB", { maximumFractionDigits: 0 })}`
+        totalVolume24h.textContent = `$${new Number(bitcoinM.data.total_volume.usd).toLocaleString("en-GB", { maximumFractionDigits: 0 })}`
+        totalMarketCapYesterdayPercentageChange.textContent = `${bitcoinM.data.market_cap_percentage.usdc.toFixed(2)}%`
+
 
         console.log(currencyD)
 
@@ -213,14 +201,14 @@ const cryptoApiNarket = async () => {
             { currentPrice: currencyD.data.ILS, currenctName: "ILS ₪" },
             { currentPrice: currencyD.data.EUR, currenctName: "EUR €" }
         ]
-        coinPriceConverter.textContent = `${new Number(bitcoinD.data[0].quote.USD.price).toLocaleString("en-GB", { maximumFractionDigits: 2 })} USD`
+        coinPriceConverter.textContent = `${new Number(marketG[0].market_data.current_price.usd).toLocaleString("en-GB", { maximumFractionDigits: 2 })} USD`
         inputAmountConverter.addEventListener("keyup", function () {
-            let newPrice = inputAmountConverter.value * (bitcoinD.data[0].quote.USD.price.toFixed(2) * curencyArray[currencySelect.value].currentPrice)
-            coinPriceAmountConverter.textContent = `${inputAmountConverter.value + " " + bitcoinD.data[0].symbol + " ="}`
+            let newPrice = inputAmountConverter.value * (marketG[0].market_data.current_price.usd.toFixed(2) * curencyArray[currencySelect.value].currentPrice)
+            coinPriceAmountConverter.textContent = `${inputAmountConverter.value + " " + marketG[0].symbol + " ="}`
             coinPriceConverter.textContent = newPrice.toLocaleString("en-GB", { maximumFractionDigits: 2 }) + " " + curencyArray[currencySelect.value].currenctName
         })
         currencySelect.addEventListener("change", function () {
-            let newPrice = inputAmountConverter.value * (bitcoinD.data[0].quote.USD.price.toFixed(2) * curencyArray[currencySelect.value].currentPrice)
+            let newPrice = inputAmountConverter.value * (marketG[0].market_data.current_price.usd.toFixed(2) * curencyArray[currencySelect.value].currentPrice)
             coinPriceConverter.textContent = newPrice.toLocaleString("en-GB", { maximumFractionDigits: 2 }) + " " + curencyArray[currencySelect.value].currenctName
 
         })
